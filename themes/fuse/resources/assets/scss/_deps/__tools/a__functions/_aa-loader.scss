@@ -1,0 +1,34 @@
+/**
+ * Name		: Loader
+ * Desc		: Handles importing/loading of all partial files in the specified group.
+ * Group	: Functions
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * ****************
+ * File Import List
+ * ****************
+ */
+
+	//
+	// All files are imported in alphabetical order unless otherwise specified.
+	//
+
+	/**
+	* First we have to import our helper functions
+	*/
+
+		@import '_func-helpers';
+
+	/**
+	* Now we can import our remaining functions
+	*/
+
+		@import '_func-colors';
+		@import '_func-spacing';
+		@import '_func-typography';
+		@import '_func-z-index';

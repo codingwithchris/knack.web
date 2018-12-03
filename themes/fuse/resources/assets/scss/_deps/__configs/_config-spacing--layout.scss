@@ -1,0 +1,29 @@
+/**
+ * Type		:	Config
+ * Group	:	Layout Spacing Scale
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ *
+ * The idea of the layout scale is pulled from http://www.carbondesignsystem.com/style/spacing
+ */
+
+$layout-spacing-unit_config: (
+
+	unit: px,
+
+);
+
+
+$layout-spacing-scale_config : (
+
+	2xs		:	16,
+	xs		:	24,
+	s		:	32,
+	m		: 	48,
+	l		:	64,
+	xl		:	96,
+	2xl		:	160,
+	3xl		: 	224
+
+);

@@ -1,0 +1,26 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Container
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * The Container mixin extends our default container to help with code-bloat
+ * since it will get applied throughout the project. It also sets a max-width
+ * within the div it is applied to based on the returned value from our grid config.
+ */
+@mixin container( $size: l ){
+
+	@if not map-has-key($grid_config , $size ){
+
+		@warn "The requested container size, `#{$size}`, does not exists in the $grid_config map. $grid_config contains the following keys: #{map_keys($grid_config)}";
+
+	}
+
+	@extend %container;
+	max-width: map_get( $grid_config, width--#{$size} );
+
+}

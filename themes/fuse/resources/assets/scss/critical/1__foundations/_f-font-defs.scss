@@ -1,0 +1,50 @@
+/**
+ * Type	: Foundation
+ * Name	: Fonts
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * ************************************
+ * Fonts • Class Definitions
+ * ************************************
+ */
+
+body{
+
+	line-height: map_get( $type_config, base-line-height );
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	font-family: "Open Sans", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+
+}
+
+strong{
+
+	font-weight: 700;
+
+}
+
+em{
+
+	font-style: italic;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+	font-family: "Lato", sans-serif;
+	font-style: normal;
+	font-weight: 200;
+
+}

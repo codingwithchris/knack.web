@@ -1,0 +1,129 @@
+/**
+ * Type : Library
+ * Name : Reset
+ * Desc: We use a modified version of minireset.css - github.com/jgthms/minireset.css
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ *
+ * 2. Set root font size
+ *
+ * Note that changing the font-size on the html element will affect the
+ * entire project since all fonts are being sized in rems based on
+ * the initial size of the html element.
+ */
+
+ *,
+ *:before,
+ *:after {
+  box-sizing: inherit;
+ }
+
+
+ html {
+
+    font-size: map_get( $type_config, root-font-size );
+    text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+
+  }
+
+  /**
+   * Set Body to Overflow Hidden
+   */
+
+  body {
+
+    overflow-x: hidden;
+
+  }
+
+  //*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+  html,
+  body,
+  p,
+  ol,
+  ul,
+  li,
+  dl,
+  dt,
+  dd,
+  blockquote,
+  figure,
+  fieldset,
+  legend,
+  textarea,
+  pre,
+  iframe,
+  hr,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  a{
+    color: unset;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+  }
+
+  img,
+  embed,
+  iframe,
+  object,
+  audio,
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+
+  iframe,
+  button {
+    border: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  td,
+  th {
+    padding: 0;
+    text-align: left;
+  }
+
+  /**
+   * It's bad practice to remove focus rings without a plan in place to handle
+   * keyboard-based navigation. See `scss/app/1__foundations/_f-accessibility
+   * for more information on how we are handling this.
+   */
+   a:focus,
+   button:focus,
+   input:focus,
+   textarea:focus,
+   select:focus{
+    outline: none;
+  }

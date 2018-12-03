@@ -1,0 +1,26 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Shadows
+ * Desc		:	Easily apply box-shadows based on element configs in our config map
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * Fetch a shadow configuration from our config map
+ * and apply it to any element of our choosing.
+ *
+ * @param	$type	- The config to fetch from our $shadows_config map.
+ */
+
+@mixin shadow( $type ) {
+
+	$_shadow-settings	:	get_config( $shadows_config, $type, base );
+	$_shadow-color		:	c( get_config( $shadows_config, $type, color ), get_config( $shadows_config, $type, tone ) );
+	$_shadow-opacity	:	get_config( $shadows_config, $type, opacity );
+	
+  	box-shadow: $_shadow-settings rgba( $_shadow-color, $_shadow-opacity );
+
+}

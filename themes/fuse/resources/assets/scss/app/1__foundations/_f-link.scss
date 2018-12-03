@@ -1,0 +1,47 @@
+/**
+ * Type	: Foundation
+ * Name	: Link
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Link • Settings
+ * *************************************
+ */
+
+	// Standard Link
+	$link__color--standard: c( green, dark );
+
+/**
+ * ************************************
+ * Link • Class Definitions
+ * ************************************
+ */
+
+ // Base link styles
+ .f-link{
+
+	padding-bottom: spacer( component, 3xs );
+
+	@include transition( link );
+
+ }
+
+
+// Links against a light background
+.f-link--standard{
+
+	color: $link__color--standard;
+
+	@include border( bottom, link, transparent );
+
+	&:hover{
+
+		border-color: $link__color--standard;
+
+	}
+
+}

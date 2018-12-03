@@ -1,0 +1,66 @@
+/**
+ * Type   : Mixin
+ * Group  : Breakpoints
+ * Desc   : Neatly employ breakpoints that work with a predefined sizing system.
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * The breakpoint mixin takes only 1 parameter.
+ *
+ * @param $size The size to fetch from our breakpoints config file
+ */
+
+//
+// @example - Usage
+//
+// @include breakpoint( xl ){
+//
+//    - Some code
+//
+// }
+//
+// --> the above example will use the `xl` value from our $breakpoints_config as a min-width to apply the defined styles to.
+//
+//
+
+@mixin breakpoint( $size ) {
+
+  // If we declare "mobile only"
+  @if $size == mobile-only {
+
+    /**
+      * Apply our defined styles at a max-width or "mobile-only"
+      * We are subtracting 1 from the `s` value returned from our config
+      * map so there is no usage conflict  or "overlap "if we also want
+      * to use the `s` size within a normal "min-width" media query.
+      */
+    @media (max-width: get_config( $breakpoints_config, s ) - 1) {
+
+      @content;
+
+    }
+
+  }
+
+  //Handle Errors if no matching value found in our config map.
+  @if not map-has-key($breakpoints_config, $size) {
+
+    @error "No value found for, `#{$size}` in the $breakpoints_config map. Available breakpoints are:"
+
+      "mobile-only,"+ " #{map-keys($breakpoints_config)}";
+
+  }
+
+  // By default...every breakpoint value uses "min-width",
+  // in keeping with a mobile-first approach.
+  @media (min-width: map_get( $breakpoints_config, $size ) ) {
+
+    @content;
+
+  }
+
+}

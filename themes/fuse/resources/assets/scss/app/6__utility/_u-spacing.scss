@@ -1,0 +1,72 @@
+/**
+ * Type		: Utility
+ * Group	: Spacing
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+//  @each $size, $value in $spacing-scale-values_config {
+
+// 	@each $side in $spacing-scale-sides{
+
+// 		// Handle spacing on all  sides
+// 	  	@if $side == 'all' {
+
+// 	      .u-m--#{$size} {
+// 	        margin: spacer( $size );
+// 	      }
+
+// 	      .u-p--#{$size} {
+// 	        padding: spacer( $size );
+// 	      }
+
+//     	}
+
+//     	// handle vertical only spacing
+//     	@else if $side == 'vertical' {
+
+// 	      .u-my--#{$size} {
+// 	        margin-top: spacer( $size );
+// 	        margin-bottom: spacer( $size );
+// 	      }
+
+// 	      .u-py--#{$size} {
+// 	        padding-top: spacer( $size );
+// 	        padding-bottom: spacer( $size );
+// 	      }
+
+//     	}
+
+
+//     	// Handle horizontal only spacing
+//     	@else if $side == 'horizontal' {
+
+// 	      .u-mx--#{$size} {
+// 	        margin-right: spacer( $size );
+// 	        margin-left: spacer( $size );
+// 	      }
+
+// 	      .u-px--#{$size} {
+// 	        padding-right: spacer( $size );
+// 	        padding-left: spacer( $size );
+// 	      }
+
+//     	}
+
+//     	// Handle spacing for directions
+//     	@else{
+
+// 	      .u-m#{str-slice( $side, 0, 1)}--#{$size} {
+// 	        margin-#{$side}: spacer( $size );
+// 	      }
+
+// 	      .u-p#{str-slice( $side, 0, 1)}--#{$size} {
+// 	        padding-#{$side}: spacer( $size );
+// 	      }
+
+//     	}
+
+
+//   }
+// }

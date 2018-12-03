@@ -1,0 +1,29 @@
+/**
+ * Type		:	Config
+ * Group	:	Transitions
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+$transitions_config: (
+
+	// Example Transition Definition
+
+	link :(
+
+	 	properties: all,
+	 	duration: .15s,
+		 timing: ease,
+
+	),
+
+	btn :(
+
+	 	properties: all,
+	 	duration: .2s,
+	 	timing: ease-in-out,
+
+	),
+
+);

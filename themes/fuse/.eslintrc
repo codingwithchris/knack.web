@@ -1,0 +1,156 @@
+{
+	"extends": [
+		"airbnb",
+		"prettier",
+		"prettier/react"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"jquery": true
+	},
+	"plugins": [
+		"jsdoc",
+		"prettier"
+	],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"impliedStrict": true,
+			"classes": true
+		}
+	},
+	"rules": {
+		"space-before-blocks": [
+			"error",
+			"always"
+		],
+		"quotes": [
+			2,
+			"single",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"space-in-parens": [
+			"error",
+			"always",
+			{
+				"exceptions": [
+					"{}",
+					"[]",
+					"()"
+				]
+			}
+		],
+		"no-unused-vars": [
+			2,
+			"local"
+		],
+		"no-use-before-define": [
+			"error",
+			{
+				"functions": false
+			}
+		],
+		"jsdoc/check-param-names": 1,
+		"jsdoc/check-tag-names": 1,
+		"jsdoc/check-types": 1,
+		"jsdoc/newline-after-description": 1,
+		"jsdoc/no-undefined-types": 1,
+		"jsdoc/require-description-complete-sentence": 0,
+		"jsdoc/require-example": 0,
+		"jsdoc/require-hyphen-before-param-description": 1,
+		"jsdoc/require-param": 1,
+		"jsdoc/require-param-description": 1,
+		"jsdoc/require-param-name": 1,
+		"jsdoc/require-param-type": 1,
+		"jsdoc/require-returns-description": 1,
+		"jsdoc/require-returns-type": 1,
+		"jsdoc/valid-types": 1,
+		"padded-blocks": [
+			"error",
+			{
+				"blocks": "always",
+				"classes": "never",
+				"switches": "never"
+			}
+		],
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "always-multiline",
+				"objects": "always-multiline",
+				"imports": "always-multiline",
+				"exports": "always-multiline",
+				"functions": "ignore"
+			}
+		],
+		"object-curly-newline": 0,
+		"import/no-extraneous-dependencies": 0,
+		"import/no-named-as-default": 0,
+		"import/prefer-default-export": 0,
+		"react/forbid-prop-types": 0,
+		"react/jsx-no-bind": 0,
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		],
+		"radix": 0,
+		"no-shadow": [
+			2,
+			{
+				"hoist": "all",
+				"allow": [
+					"resolve",
+					"reject",
+					"done",
+					"next",
+					"err",
+					"error"
+				]
+			}
+		],
+		"react/no-multi-comp": [
+			2,
+			{
+				"ignoreStateless": true
+			}
+		],
+		"react/require-default-props": 0,
+		"new-cap": 0,
+		"no-else-return": 0,
+		"indent": [
+			2,
+			4,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"max-len": [
+			1,
+			140,
+			2
+		],
+		"quote-props": [
+			2,
+			"consistent-as-needed"
+		]
+	},
+	"globals": {
+		"expect": false,
+		"mount": false,
+		"shallow": false,
+		"render": false,
+		"sinon": false
+	}
+}

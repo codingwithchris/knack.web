@@ -1,0 +1,60 @@
+/**
+ * Type	: Object
+ * Name	: Content Block
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Content Block • Settings
+ * *************************************
+ */
+
+/**
+ * ************************************
+ * Content Block • Class Definitions
+ * ************************************
+ */
+
+/**
+ * Content Block • Media
+ */
+
+ .o-content-block__media{
+
+    margin-bottom: spacer( component, 2xl );
+
+}
+
+ /**
+ * Content Block • Title
+ */
+
+ .o-content-block__title{
+
+    margin-bottom: spacer( component, l );
+
+ }
+
+
+/**
+ * Content Block • Actions
+ */
+.o-content-block__action{
+
+    margin-top: spacer( component, 2xl );
+
+}
+
+/**
+ * Content Block • Modifiers
+ */
+
+ // Multiple inline actions (such as multiple buttons)
+ .o-content-block__action--inline > * {
+
+    margin: spacer( component, s ) spacer( component, m );
+
+ }

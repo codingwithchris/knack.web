@@ -1,0 +1,27 @@
+/**
+ * Type		:	Config
+ * Group	:	Z-index
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+ $z-index_config:(
+
+	above-modal	: 		31,
+	modal		:       30,
+	below-modal	:       29,
+
+	above-nav	:       21,
+	nav			:       20,
+	below-nav	:       19,
+
+	above-front	:    	11,
+	front		:    	10,
+	below-front	:		 9,
+
+	above-base	:        2,
+	base		:        1,
+	below		: 	 	-1
+
+);

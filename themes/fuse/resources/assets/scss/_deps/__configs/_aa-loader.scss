@@ -1,0 +1,31 @@
+/**
+ * Name		: Loader
+ * Desc		: Handles importing/loading of all partial files in the specified group.
+ * Group	: Config
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * ****************
+ * File Import List
+ * ****************
+ */
+
+	//
+	// All files are imported in alphabetical order unless otherwise specified.
+	//
+
+	@import '_config-borders';
+	@import '_config-breakpoints';
+	@import '_config-colors';
+	@import '_config-grid';
+	@import '_config-shadows';
+	@import '_config-spacing--component';
+	@import '_config-spacing--layout';
+	@import '_config-transitions';
+	@import '_config-type';
+	@import '_config-widths';
+	@import '_config-z-index';

@@ -1,0 +1,73 @@
+/**
+ * Type	: Object
+ * Name	: Media
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Media • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Media • Class Definitions
+ * ************************************
+ */
+
+ .o-media{
+
+    display: flex;
+
+ }
+
+ .o-media__media{
+
+    align-items: flex-start;
+    display: flex;
+    margin-right: spacer( component, 4xl );
+
+ }
+
+ /**
+  * Media • Content Orientation Variation Definitions
+  */
+
+  .o-media--content-left{
+
+    //
+
+  }
+
+  .o-media--content-right{
+
+    //
+
+  }
+
+ /**
+  * Media • Spacing Size Variation Definitions
+  * TODO - each spacing variation has to get moved to left and right variations
+  */
+
+  .o-media--big .o-media__content{
+
+    margin-right: spacer( component, 4xl );
+
+  }
+
+  .o-media--medium .o-media__content{
+
+    margin-right: spacer( component, xl );
+
+  }
+
+  .o-media--small .o-media__content{
+
+    margin-right: spacer( component, m );
+
+  }

@@ -1,0 +1,21 @@
+{
+    "name" 			: "creativefuse/__config",
+    "description" 	: "A confguration file and class for use in the mu-plugin directory",
+    "type"          : "wordpress-muplugin",
+    "keywords" 		: ["wordpress", "wp", "plugin"],
+    "homepage" 		: "https://github.com/CreativeFuse/cf.mu.config",
+    "license" 		: "GPL-3.0+",
+    "authors": [
+        {
+            "name": "CreativeFuse",
+            "email": "support@creativefuse.org"
+        }
+     ],
+    "support": {
+      "issues": "https://github.com/CreativeFuse/cf.mu.config/issues"
+    },
+    "require": {
+        "php": ">=7.1",
+        "composer/installers" : "~1.0"
+    }
+}

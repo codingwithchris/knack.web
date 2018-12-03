@@ -1,0 +1,50 @@
+/**
+ * Type	: Foundation
+ * Name	: Icon
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Icon • Settings
+ * *************************************
+ */
+
+$icon_sizes: (
+
+	s:	24px,
+	m:	48px,
+	l:	64px,
+
+);
+
+/**
+ * ************************************
+ * Icon • Class Definitions
+ * ************************************
+ */
+
+.f-icon{
+
+	shape-rendering: geometricPrecision;
+
+}
+
+
+/**
+ * Loop over each size defined in our map above,
+ * and generate the necessary styles for each.
+ */
+@each $size, $value in $icon_sizes{
+
+	.f-icon--#{$size},
+	.f-icon--#{$size} > .f-icon__svg{
+
+		height: $value;
+		width: $value;
+
+	}
+
+}

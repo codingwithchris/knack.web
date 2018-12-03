@@ -1,0 +1,85 @@
+/**
+ * Type		: Utility
+ * Group	: Background
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * Blue
+ */
+ .u-bgc--blue{
+
+    background-color: c( blue );
+
+ }
+
+ .u-bgc--blue--l{
+
+    background-color: c( blue, light );
+
+ }
+
+ .u-bgc--blue--d{
+
+    background-color: c( blue, dark );
+
+ }
+
+
+ /**
+  * Green
+  */
+ .u-bgc--green{
+
+    background-color: c( green );
+
+ }
+
+ .u-bgc--green--l{
+
+    background-color: c( green, light );
+
+ }
+
+ .u-bgc--green--d{
+
+    background-color: c( green, dark );
+
+ }
+
+/**
+ * Gray
+ */
+
+.u-bgc--white{
+
+    background-color: c( grayscale, white );
+
+ }
+
+ .u-bgc--gray{
+
+    background-color: c( gray );
+
+ }
+
+ .u-bgc--gray--l{
+
+    background-color: c( gray, light );
+
+ }
+
+ .u-bgc--gray--d{
+
+    background-color: c( gray, dark );
+
+ }
+
+ .u-bgc--gray--xd{
+
+    background-color: c( gray, xdark );
+
+ }

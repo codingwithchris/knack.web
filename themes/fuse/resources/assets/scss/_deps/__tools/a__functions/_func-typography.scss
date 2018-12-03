@@ -1,0 +1,35 @@
+/**
+ * Type		:	Function
+ * Group	:	Typography
+ * Desc		:	Functions that make working with our typography scale easier.
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+ /**
+  * A function that gets typeface stack information from our type configuration map.
+  *
+  * @param  $type	- The key to retrieve our values from.
+  * @return			- The final, formatted font stack to return.
+  *
+  * @since 1.0.0
+  */
+
+
+  //
+  // @example - Usage
+  //
+  // get_font_stack( body )
+  //
+  // -> returns the fully formed font stack (font family and fallbacks) for the specified type, `body`
+
+
+@function get_font_stack( $type ){
+
+	$_font-family 	: get_config( $font_config, $type, family );
+	$_font-fallback : get_config( $font_config, $type, fallback );
+
+	@return $_font-family, $_font-fallback;
+
+}

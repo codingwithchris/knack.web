@@ -1,0 +1,28 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Clearfix
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * Simple and straightforward. It accepts no params and
+ * just performs a standard clearfix where applied.
+ */
+
+@mixin clearfix() {
+
+	&:before,
+	&:after{
+		
+		content: " ";
+  		display: table;
+
+	}
+
+	&:after{
+		clear: both;
+	}
+
+}

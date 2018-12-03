@@ -1,0 +1,103 @@
+/**
+ * Type     :   Config
+ * Group    :   Colors
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+// ----------------------------------------
+// The $colors map is where you define all
+// of your brand colors.
+//
+// This should be the ONLY place color hex values are defined in your project
+// ----------------------------------------
+
+$colors : (
+
+    // BASE COLORS
+    blue-sky    : #3676B3,
+    green-leaf  : #82C344,
+    limestone   : #B0B3B2
+
+);
+
+// ----------------------------------------
+// Define the color scale map to use with our project.
+//
+// Our color scale map is relative to the $colors defined above.
+// We do not declare arbitrary hex values, but rather, keep each
+// branded color relative to its base value, and either lighten(),
+// or darken() accordingly
+// ----------------------------------------
+
+$color_config: (
+
+    blue: (
+
+
+        light   :   #4A91D6,
+
+        base    :   map-get( $colors, blue-sky ),
+
+        dark    :   #1C64A6,
+
+    ),
+
+    green: (
+
+
+        light   :   #A3E763,
+
+        base    :   map-get( $colors, green-leaf ),
+
+        dark    :   #6EB927,
+
+
+    ),
+
+    gray: (
+
+        xlight  :   #F5F5F5,
+        light   :   #E2E5E4,
+
+        base    :   map-get( $colors, limestone ),
+
+        dark    :   #818383,
+        xdark   :   #3F3F3F,
+
+    ),
+
+    // ----------------------------------------
+    // A SASSY Grayscale courtesy of the awesome people at Sparkbox.
+    // Useful for any design system! Note that, when possible,
+    // use specified colors from the color scales above.
+    //
+    // https://seesparkbox.com/foundry/sassy_grayscale
+    // ----------------------------------------
+
+    grayscale: (
+
+        white   : #FFFFFF,
+        99      : #FCFCFC,
+        98      : #F3F3F3,
+        95      : #EDEDED,
+        90      : #E5E5E5,
+        85      : #D9D9D9,
+        80      : #CCCCCC,
+        75      : #C0C0C0,
+        70      : #B0B0B0,
+        60      : #999999,
+        50      : #808080,
+        45      : #727272,
+        40      : #696969,
+        30      : #4D4D4D,
+        20      : #363636,
+        15      : #262626,
+        10      : #171717,
+        5       : #0A0A0A,
+        black   : #000000,
+
+    )
+);

@@ -1,0 +1,46 @@
+/**
+ * Type		:	Function
+ * Group	:	Color
+ * Desc		:	Functions to help make working with colors a breeze!
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * A helper function that will be uses across the entire project for
+ * getting color and color tone values from the main color map.
+ *
+ * @param $color 	- a color in our color sass map in 1__settings
+ * @param $tone  	- a particular color tone we want to get ( defaults to 'base' )
+ * @return			- The resultant color
+ */
+
+
+//
+// @example - Usage
+//
+// c( red )
+// -> returns the base red value
+//
+// c( red, dark5 )
+// -> returns the base red value darkened 5%
+
+@function c($color, $tone: 'base') {
+
+
+	// If the specified color/tone combo does not exist
+	@if not map-has-key($color_config, $color) {
+
+		// Throw an error.
+		@error "No color found for `#{$color}` and tone `#{$tone}` in $color_config map. Color not applied.";
+
+	}
+
+	/**
+	* We use a deep `map-get( map-get () )` to retrieve the color and specified color tone )
+	*/
+	@return map-get( map-get($color_config, $color), $tone);
+
+}

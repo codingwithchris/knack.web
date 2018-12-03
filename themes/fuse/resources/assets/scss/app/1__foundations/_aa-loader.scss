@@ -1,0 +1,28 @@
+/**
+ * Name		: Loader
+ * Desc		: Handles importing/loading of all partial files in the specified group.
+ * Group	: Foundations
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * ****************
+ * File Import List
+ * ****************
+ */
+
+	//
+	// All files are imported in alphabetical order unless otherwise specified.
+	//
+	@import '_f-accessibility';
+	@import '_f-body';
+	@import '_f-grid';
+	@import '_f-icon';
+    @import '_f-link';
+    @import '_f-logo';
+
+
+    // Note that resets and typography are typically handled in our critical styles folder.

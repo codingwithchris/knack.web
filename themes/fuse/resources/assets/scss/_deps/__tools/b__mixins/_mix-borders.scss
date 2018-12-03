@@ -1,0 +1,89 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Borders
+ * Desc		:	Borders can vary wildly throughout a project. These mixins help us keep things consistent.
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * This mixin allows us to get a predefined border from our border configuration file.
+ * When need be, we can even pass in a color that falls outside our primary color config map.
+ *
+ * @param  $type                	The border to type to use from our map
+ * @param  $side:           		The "side" the border should be applied to
+ * @param  $custom_border_color: 	A color we pass in to our border
+ *
+ * @since 1.0.0
+ */
+
+//
+// @example - Usage
+//
+// .test{
+//
+// 		@include border( btn );
+//		-> This will retrieve all default values and use any defined values for `btn` in the border config map
+//
+// }
+//
+// .test{
+//
+// 		@include border( link, bottom );
+//		-> This will apply a `bottom` border using `link` values defined in the border config map.
+//
+// }
+
+
+@mixin border( $side: all, $type, $custom_border_color: '' ) {
+
+	// Set a null border color to prevent errors
+	$_border-color: '';
+
+	// If a custom color is defined
+	@if $custom_border_color != ''{
+
+		// Use the custom color
+		$_border-color	: $custom_border_color;
+
+	}
+
+	// If no custom border color is defined, and we want to set the border to a transparent color
+	@if( $custom_border_color == '' and get_config( $border_config, $type, color ) == transparent ){
+
+		$_border-color	: transparent;
+
+	}
+
+	// If no custom border color is defined, and we want to define a color from our scale
+	@if( $custom_border_color == '' and get_config( $border_config, $type, color ) != transparent ){
+
+		$_border-color : c( get_config( $border_config, $type, color ), get_config( $border_config, $type, tone ) );
+
+	}
+
+
+	$_border-width	:	get_config( $border_config, $type, width );
+	$_border-style	:	get_config( $border_config, $type, style );
+	$_border-radius	:	get_config( $border_config, $type, radius );
+
+	// By default, the border gets applied to all sides
+	@if( $side == all ){
+
+		border: $_border-width $_border-style $_border-color;
+	}
+
+	// If anything other than `all` is specified, we need to apply our
+	// border to a specific side.
+	@if( $side != all ){
+
+		border-#{$side}: $_border-width $_border-style $_border-color;
+
+	}
+
+	// Declaring important to fix mobile device hijacking
+	border-radius: $_border-radius !important;
+
+}

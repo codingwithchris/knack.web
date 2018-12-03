@@ -1,0 +1,21 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Transitions
+ * Desc		:	Build transitions based on configs from our transition map
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * Get an element to fetch from our $transitions_config map and apply the 
+ * results to the element where this mixin is called
+ * 
+ * @param  $element The element config to fetch from our map
+ */
+@mixin transition( $element ){
+	
+	transition: get_config( $transitions_config, $element, properties ) get_config( $transitions_config, $element, duration ) get_config( $transitions_config, $element, timing );
+
+}

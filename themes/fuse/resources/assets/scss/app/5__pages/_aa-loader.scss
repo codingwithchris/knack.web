@@ -1,0 +1,26 @@
+/**
+ * Name		: Loader
+ * Desc		: Handles importing/loading of all partial files in the specified group.
+ * Group	: Pages
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * ****************
+ * File Import List
+ * ****************
+ */
+
+	//
+	// All files are imported in alphabetical order unless otherwise specified.
+	//
+
+	@import '_about';
+	@import '_contact';
+	@import '_home';
+	@import '_privacy-policy';
+	@import '_thank-you';
+	@import '_work';

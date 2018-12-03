@@ -1,0 +1,22 @@
+/**
+ * Type		:	Extends
+ * Group	:	Container
+ * Desc		:	Define a silent class to use with our container grid.
+ * This keeps us from having to define it all over the place.
+ * 
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+%container{
+	
+	margin-left: auto;
+	margin-right: auto;
+	width: map_get( $grid_config, container-width-mobile );
+
+	@include breakpoint( s ){
+		width: map_get( $grid_config, container-width-desktop );
+	}
+
+}

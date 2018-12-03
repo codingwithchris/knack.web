@@ -1,0 +1,101 @@
+/**
+ * *********************************************************
+ *
+ * ***************************
+ *	Project Setup
+ * ***************************
+ *
+ *	Before any output happens, we need to pull in all of
+ *	our dependenices. These dependencies include:
+ *
+ * 1. Configuration Files
+ * 2. Mixins and Functions
+ *
+ * @since 1.0.0
+ *
+ * ********************************************************
+ */
+
+	/**
+	 * Load our Project's configurations and tool sets.
+	 */
+	@import '../_deps/aa-loader';
+
+/**
+ * *********************************************************
+ *
+ * ***************************
+ *	Project Styles
+ * ***************************
+ *
+ *	Now that our project has been configured and our
+ *	dependencies are in place, we can begin loading
+ *	files that will contain actual output that will
+ *	end up in our project's /dist folder. These are
+ *	loaded in an intentional order bases on selector
+ *	scope, function and specificity.
+ *
+ * 1. Foundations
+ * 2. Objects
+ * 3. Components
+ * 4. Libs
+ * 5. Pages
+ * 6. Utility
+ * 7. SHAME
+ *
+ * ********************************************************
+ *
+ * Note: We use the core concepts behind the following
+ * methodologies in this project:
+ *
+ * 1. BEM (modified) - http://getbem.com/introduction/
+ * 2. ITSCSS (modified) - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ * 3. Atomic Design (modified) - http://atomicdesign.bradfrost.com/table-of-contents/
+ *
+ * ********************************************************
+ */
+
+	/**
+	 * Load foundational styles
+	 */
+	@import '1__foundations/_aa-loader';
+
+	/**
+	 * Load our objects and abstractions
+	 */
+	@import '2__objects/_aa-loader';
+
+	/**
+	 * Load our components
+	 */
+	@import '3__components/_aa-loader';
+
+	/**
+	 * Load any 3rd party vendor code
+	 */
+	 @import '4__vendor/_aa-loader';
+
+	/**
+	 * Load page-specific code
+	 */
+	@import '5__pages/_aa-loader';
+
+
+	/**
+	 * Load our utilities and overrides
+	 */
+	@import '6__utility/_aa-loader';
+
+
+/**
+ * SHAME!!!
+ *
+ * In a perfect world. you should NEVER need to use this file...BUT...stuff happens
+ * and if you need to make a very quick hack to fix a bug, put your code in this file.
+ *
+ * Please move the code out of this file and properly fix whatever you need
+ * to fix as soon as possible. Code should never be left in _shame for any length of time.
+ *
+ */
+
+	@import '_shame';

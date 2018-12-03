@@ -1,0 +1,67 @@
+/**
+ * Type		:	Function
+ * Group	:	Spacing
+ * Desc		:	Functions that help us work with our spacing scale
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * A function for getting a predetermined value from the spacing configuration map.
+ *
+ * @param  $scale 	- Which spacing scale are we using? ( layout or component )
+ * @param  $size 	- The get to get our value from
+ * @return 			- a final spacing value with a unit attached.
+ *
+ * @since 1.0.0
+ */
+
+ //
+ // @example - Usage
+ //
+ // spacer( layout, xl )
+ //
+ // -> returns the value of the spacing size `xl` as defined in the layout spacing config map
+
+@function spacer( $scale, $size ){
+
+	// Init config and scale variables to be reassigned later
+	$spacing_config: '';
+	$spacing_unit: '';
+
+	// If we are working with our component scale
+	@if ($scale == component) {
+
+		$spacing_config: $component-spacing-scale_config;
+		$spacing_unit: $component-spacing-unit_config;
+
+	}
+
+	// If we are working with our layout scale
+	@if ($scale == layout) {
+
+		$spacing_config: $layout-spacing-scale_config;
+		$spacing_unit: $layout-spacing-unit_config;
+
+	}
+
+	// If they passed a value in other than `pattern` or `layout`
+	@if(($scale != component) and ($scale != layout) ){
+
+		@error "You requested a value from the `#{$scale}`, which does not exist. The spacer() function only accepts `component` or `layout` as scale options";
+
+	}
+
+	// If the requested size doesn't exist
+	@if not map-has-key( $spacing_config, $size ){
+
+		// Throw an error.
+		@error "No value was found for the key, `#{$size}`. The `#{$scale}` scale only accepts the following values: " + " #{map-keys($spacing_config)}";
+
+	}
+
+	@return map_get( $spacing_config, $size ) + map_get( $spacing_unit, unit );
+
+}

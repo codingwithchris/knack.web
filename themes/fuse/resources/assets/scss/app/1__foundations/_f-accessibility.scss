@@ -1,0 +1,46 @@
+/**
+ * Type	: Foundation
+ * Name	: Accessibility
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Accessibility • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Accessibility • Class Definitions
+ * ************************************
+ */
+
+  /**
+   * When our special class is added to the body, telling us the user is navigating with the TAB
+   * button, we need to add our focus styles. See the inspiration below, though we use a modified version of this.
+   *
+   * @see - https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
+   */
+  body.user-is-tabbing a:focus,
+  body.user-is-tabbing button:focus,
+  body.user-is-tabbing input:focus,
+  body.user-is-tabbing textarea:focus,
+  body.user-is-tabbing select:focus{
+
+    @include border( all, accessibility-focus );
+
+  }
+
+  .f-skip-link{
+
+    background: c( blue, dark );
+    color: c( grayscale, white );
+    padding: spacer( component, l );
+    text-align: center;
+    width: 100%;
+
+  }

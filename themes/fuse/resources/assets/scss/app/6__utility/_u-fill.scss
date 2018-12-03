@@ -1,0 +1,84 @@
+/**
+ * Type	: Utility
+ * Group	: Fill
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * Blue
+ */
+
+ .u-f--blue{
+
+    color: c( blue );
+
+ }
+
+ .u-f--blue--l{
+
+    color: c( blue, light );
+
+ }
+
+ .u-f--blue--d{
+
+    color: c( blue, dark );
+
+ }
+
+ /**
+  * Green
+  */
+ .u-f--green{
+
+    color: c( green );
+
+ }
+
+ .u-f--green--l{
+
+    color: c( green, light );
+
+ }
+
+ .u-f--green--d{
+
+    color: c( green, dark );
+
+ }
+
+/**
+ * Gray
+ */
+
+ .u-f--white{
+
+    color: c( grayscale, white );
+
+ }
+
+ .u-f--gray{
+
+    color: c( gray );
+
+ }
+
+ .u-f--gray--l{
+
+    color: c( gray, light );
+
+ }
+
+ .u-f--gray--d{
+
+    color: c( gray, dark );
+
+ }
+
+ .u-f--gray--xd{
+
+    color: c( gray, xdark );
+
+ }

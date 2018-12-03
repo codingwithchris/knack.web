@@ -1,0 +1,85 @@
+/**
+ * Type		: Utility
+ * Group	: Color
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * Blue
+ */
+ .u-c--blue{
+
+    color: c( blue );
+
+ }
+
+ .u-c--blue--l{
+
+    color: c( blue, light );
+
+ }
+
+ .u-c--blue--d{
+
+    color: c( blue, dark );
+
+ }
+
+
+ /**
+  * Green
+  */
+ .u-c--green{
+
+    color: c( green );
+
+ }
+
+ .u-c--green--l{
+
+    color: c( green, light );
+
+ }
+
+ .u-c--green--d{
+
+    color: c( green, dark );
+
+ }
+
+/**
+ * Gray
+ */
+
+.u-c--white{
+
+    color: c( grayscale, white );
+
+}
+
+ .u-c--gray{
+
+    color: c( gray );
+
+ }
+
+ .u-c--gray--l{
+
+    color: c( gray, light );
+
+ }
+
+ .u-c--gray--d{
+
+    color: c( gray, dark );
+
+ }
+
+ .u-c--gray--xd{
+
+    color: c( gray, xdark );
+
+ }

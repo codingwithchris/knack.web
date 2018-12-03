@@ -1,0 +1,110 @@
+/**
+ * Type   : Function
+ * Group  : Helpers
+ * Desc   : Useful functions that can be utilized throughout our project to make life easier.
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * A helper function for getting configuration values from multi-level nested sass maps.
+ * This makes our life much easier when getting config values.
+ *
+ * @param $map      - The map we want to get our config from
+ * @param $keys...  - We can traverse our map by using a comma-separated list.
+ * @return          - The final value of the requested key
+ *
+ * @since 1.0.0
+ */
+
+//
+// @example - Usage
+//
+// get_config( $some_map, btn, color )
+//
+// -> Looks in $some_map for `btn`
+// -> -> Looks in `btn` for `color`
+// -> -> -> Returns the value of the key `color`
+
+
+@function get_config($map, $keys...) {
+
+  $value: $map;
+
+  /**
+   * Loop through each key in the specified list...the idea being that the loop will
+   * execute until it comes to our final "key" in our key list, and return the result
+   * of that key.
+   */
+
+  @each $key in $keys {
+
+  	// Handle errors if no key found in specified map
+  	@if not map-has-key($value, $key) {
+
+      // Throw an error.
+  		@error "No value was found for the requested key, `#{$key}`. The map contains values for the following keys: `#{$map}`";
+
+  	}
+
+    // Get the result of that key
+    $value: map-get($value, $key);
+
+  }
+
+  @return $value;
+
+}
+
+
+/**
+ * A helper function to take any numerical value and
+ * strip out the unit associated with it ( ex. em, rem, px etc ).
+ * This is useful during calculations and conversions etc.
+ *
+ * @param $number - A number that we want to remove the unit from
+ * @return A unit-less number
+ *
+ * @since 1.0.0
+ */
+
+//
+// Example Usage
+//
+// strip-unit( 16px )
+// -> returns the unit-less number 16
+
+@function strip-unit($number) {
+
+  // Make sure we are dealing with a number and that it is, in fact, unit-less!
+  @if type-of($number) == 'number' and not unitless($number) {
+
+    // Strip the unit from the number but keep the
+    // number the same
+    @return $number / ($number * 0 + 1);
+
+  }
+
+  @return $number;
+
+}
+
+/**
+ * A sass function for finding and replacing strings
+ *
+ * Replace `$search` with `$replace` in `$string`
+ */
+ @function str-replace( $string, $search, $replace: '' ) {
+
+  $index: str-index( $string, $search );
+
+  @if $index {
+
+    @return str-slice( $string, 1, $index - 1) + $replace + str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace );
+
+  }
+
+  @return $string;
+}

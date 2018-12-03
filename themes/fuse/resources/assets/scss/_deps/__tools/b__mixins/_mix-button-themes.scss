@@ -1,0 +1,60 @@
+/**
+ * Type   : Mixin
+ * Group  : Button Themes
+ * Desc   : Mixins that help us effectively manage the application of our button themes!
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+  /**
+  * This mixin auto-generates the styling we need for our Common Buttons
+  */
+  @mixin common-button-theme( $name ){
+
+    @if not map_has_key( $common_button_themes, $name ){
+
+        @error "The `common` button theme you requested (`#{$name}`), does not exist in the $common_button_themes config map. Available themes are: #{map_keys( $common_button_themes )}";
+
+    }
+
+    $theme: map-get($common_button_themes, $name);
+
+    //Apply theme styles here
+
+  }
+
+/**
+* This mixin auto-generates the styling we need for our Fancy Buttons
+*/
+  @mixin fancy-button-theme( $name ){
+
+    @if not map_has_key( $fancy_button_themes, $name ){
+
+        @error "The `fancy` button theme you requested (`#{$name}`), does not exist in the $fancy_button_themes config map. Available themes are: #{map_keys( $fancy_button_themes )}";
+
+    }
+
+    $theme: map-get($fancy_button_themes, $name);
+
+    //Apply theme styles here
+
+  }
+
+/**
+* This mixin auto-generates the styling we need for our External Buttons
+*/
+@mixin external-button-theme( $name ){
+
+    @if not map_has_key( $external_button_themes, $name ){
+
+        @error "The `external` button theme you requested (`#{$name}`), does not exist in the $external_button_themes config map. Available themes are: #{map_keys( $external_button_themes )}";
+
+    }
+
+    $theme: map-get($external_button_themes, $name);
+
+    //Apply theme styles here
+
+}

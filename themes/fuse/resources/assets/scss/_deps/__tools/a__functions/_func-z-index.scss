@@ -1,0 +1,54 @@
+/**
+ * Type   : Function
+ * Group  : Z-Index
+ * Desc   : Functions for keeping our z-indexes consistent.
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+ /**
+  * A function that gets a z-index value from the z-index configuration map.
+  * 
+  * @param  $z-index	- The key to retrieve our value from.
+  * @return				- The resultant z-index. 
+  *
+  * @since 1.0.0
+  */
+ 
+
+ //
+ // @example - Usage
+ // 
+ // z( nav )
+ //
+ // -> returns the unitless z-index value for the `nav` as defined in the z-index map.
+
+@function z( $z-index ){	
+
+	// If the requested key does not exist.
+	@if not map-has-key( $z-index_config, $z-index ){
+
+		// Throw an error.
+		@error "No value found for the key, `#{$z-index}`. The `z()` function only accepts the following values: " + " #{map-keys($z-index_config)}";
+
+	}
+	
+	// Get our resulting value
+	$value: map-get( $z-index_config, $z-index );	
+	
+	// Check to see if the value is unitless
+	@if not unitless( $value ){
+		
+		// if it isn't, strip the unit and throw a warning.
+		@warn "The retrieved z-index value has a unit attached to it. It is being stripped out, but you should remove the unit from the z-index config map. Never define z-index with a unit.";
+		
+		// Strip the unit and set $value to the new unitless number
+		$value: strip_unit( $value );
+	
+	}
+	
+	// Return our final unitless z-index value;
+	@return $value;
+
+}

@@ -1,0 +1,210 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Typography
+ * Desc		:
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * Get the base settings for a typeface from
+ * our font config map.
+ *
+ * @param	$type	the typeface to get from our config
+ * @param	$weight	the font-weight to fetch from the typeface we chose
+ */
+
+@mixin font( $type, $weight: '' ){
+
+	// Set Vars
+	$_font-family	: get_font_stack( $type );
+	$_font-style	: get_config( $font_config, $type, style );
+	$_font-weight	: null; // Blank variable to be defined later
+
+	// If we passed in a weight
+	@if( $weight != '' ){
+
+		// Set it
+		$_font-weight: get_config( $font_config, $type, weights, $weight );
+
+	}
+
+	// If weight is empty, inherit line weight from the body as fallback
+	@if( $weight == '' ){
+
+		$_font-weight: inherit;
+
+	}
+
+	// Finally output our font styles
+	font-family: $_font-family;
+	font-style: $_font-style;
+	font-weight: $_font-weight;
+
+}
+
+
+/**
+ * Process a REM value and provide a pixel fallback
+ *
+ * @param	$size The font size to work with
+ */
+
+@mixin font-size($size) {
+
+	// Our base pixel scale ( should always be 16 for accurate/consistent REM conversions )
+	$base : 16;
+	$_size : strip-unit( $size );
+
+	// Round to the nearest whole number
+	font-size: round( ( $_size * $base ) ) + px; // This is our fallback
+	font-size: $size; // This is the REM font size
+
+}
+
+
+/**
+ * THE MOTHER OF ALL MIXINS
+ *
+ * This handles sizing font across our typography scale.
+ *
+ * @param  {[type]} $size [description]
+ * @return {[type]}       [description]
+ */
+@mixin font-scale( $size ){
+
+	// Define the point at which we want all fonts to
+	// scale across the entire project
+	$font-scale-breakpoint: s;
+
+	// Our Base font size
+	$base : get_config( $type_config, base-font-size );
+
+
+	/**
+	 * `ms` or Mobile Scale, applies a different "Scale" as defined in our type config
+	 * on smallish devices. This makes all fonts across the project to scale at exactly
+	 * the same rate and by exactly the same amount.
+	 */
+
+	$ms : get_config( $type_config, scale, mobile );
+
+
+	/**
+	 * `ds` or Desktop Scale, applies a different "Scale" as defined in our type config
+	 * on largeish devices. This makes all fonts across the project to scale at exactly
+	 * the same rate and by exactly the same amount.
+	 */
+	$ds : get_config( $type_config, scale, desktop );
+
+	/**
+	 * Small
+	 * - 1 step below base
+	 */
+
+	@if( $size == s ){
+
+		@include font-size( $base / $ms );
+
+		@include breakpoint( $font-scale-breakpoint ){
+
+			@include font-size( $base / $ds );
+
+		}
+
+	}
+
+	/**
+	 * Base
+	 */
+	@if( $size == base ){
+
+		@include font-size( $base );
+
+	}
+
+
+	/**
+	 * Medium
+	 * - 1 step above base
+	 */
+	@if( $size == m ){
+
+		@include font-size( $base * $ms );
+
+		@include breakpoint( $font-scale-breakpoint ){
+
+			@include font-size( $base * $ds );
+
+		}
+
+	}
+
+
+	/**
+	 * Large
+	 * - 2 steps above base
+	 */
+	@if( $size == l ){
+
+		@include font-size( $base * $ms * $ms );
+
+		@include breakpoint( $font-scale-breakpoint ){
+
+			@include font-size( $base * $ds * $ds );
+
+		}
+
+	}
+
+	/**
+	 * X-large
+	 * - 3 steps above base
+	 */
+	@if( $size == xl ){
+
+		@include font-size( $base * $ms * $ms * $ms );
+
+		@include breakpoint( $font-scale-breakpoint ){
+
+			@include font-size( $base * $ds * $ds * $ds );
+
+		}
+
+	}
+
+
+	/**
+	 * XXL
+	 * - 4 steps above base
+	 */
+	@if( $size == 2xl ){
+
+		@include font-size( $base * $ms * $ms * $ms * $ms );
+
+		@include breakpoint( $font-scale-breakpoint ){
+
+			@include font-size( $base * $ds * $ds * $ds * $ds );
+
+		}
+
+	}
+
+	/**
+	 * XXXL
+	 * - 5 steps above base
+	 */
+	@if( $size == 3xl ){
+
+		@include font-size( $base * $ms * $ms * $ms * $ms * $ms );
+
+		@include breakpoint( $font-scale-breakpoint ){
+
+			@include font-size( $base * $ds * $ds * $ds * $ds * $ds );
+
+		}
+
+	}
+
+}

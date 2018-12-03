@@ -1,0 +1,86 @@
+/**
+ * Type		:	Config
+ * Group	:	Typography
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * The core type settings for our project
+ * @type {[type]}
+ */
+$type_config : (
+
+	root-font-size		:	100%,	// sets the base for our entire project
+	base-font-size		:	.875rem, // used for base body
+	base-line-height	:	1.5,
+
+	scale : (
+
+		desktop	: 1.414,
+		mobile	: 1.250,
+
+	)
+
+);
+
+/**
+ * A configuration map to set up our fonts
+ */
+$font_config : (
+
+	// Configure the font
+	// used for our project's body
+	body: (
+
+		family 		: ( "Roboto" ),
+		fallback	: ( sans-serif ),
+		style		: normal,
+
+		// Delete weights you don't need
+		weights: (
+
+			regular		:	400,
+			bold 		:	700,
+
+		)
+
+	),
+
+	// Configure font options for our
+	// project's headings
+	primary-heading: (
+
+		family 		: ( "Rubik" ),
+		fallback	: ( sans-serif ),
+		style		: normal,
+
+		// Delete weights you don't need
+		weights: (
+
+			medium		:	500
+
+		)
+
+	),
+
+
+	// Configure font options for our
+	// project's headings
+	secondary-heading: (
+
+		family 		: ( "Montserrat" ),
+		fallback	: ( sans-serif ),
+		style		: normal,
+
+		// Delete weights you don't need
+		weights: (
+
+			medium		:	500
+
+		)
+
+	),
+
+);

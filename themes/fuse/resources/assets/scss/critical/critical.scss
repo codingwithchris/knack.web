@@ -1,0 +1,55 @@
+/**
+ * *********************************************************
+ *
+ * ***************************
+ *	Project Setup
+ * ***************************
+ *
+ *	Before any output happens, we need to pull in all of
+ *	our dependenices. These dependencies include:
+ *
+ * 1. Configuration Files
+ * 2. Mixins and Functions
+ *
+ * @since 1.0.0
+ *
+ * ********************************************************
+ */
+
+	/**
+	 * Load our Project's configurations and tool sets.
+	 */
+     @import '../_deps/aa-loader';
+
+/**
+ * *********************************************************
+ *
+ * ***************************
+ *	Project Styles
+ * ***************************
+ *
+ *	Now that our project has been configured and our
+ *	dependencies are in place, we can begin loading
+ *	our partial files.
+ *
+ * It should be understood that any file loaded into critical.scss will ultimately
+ * be injected into the head of our project on page load and will NOT be bundled with
+ * our core app styles.
+ *
+ * ********************************************************
+ *
+ * Note: We use the core concepts behind the following
+ * methodologies in this project:
+ *
+ * 1. BEM (modified) - http://getbem.com/introduction/
+ * 2. ITSCSS (modified) - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ * 3. Atomic Design (modified) - http://atomicdesign.bradfrost.com/table-of-contents/
+ *
+ * ********************************************************
+ */
+
+// Import our global reset
+@import '_reset';
+
+// Import foundational critical styles
+@import '1__foundations/_f-font-defs';

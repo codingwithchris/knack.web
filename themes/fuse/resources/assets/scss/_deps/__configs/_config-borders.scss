@@ -1,0 +1,40 @@
+/**
+ * Type		:	Config
+ * Group	:	Borders
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+$border_config : (
+
+	accessibility-focus:(
+
+		width: 1px,
+		style: solid,
+		color: gray,
+		tone: base,
+		radius: 4px,
+
+	),
+
+	link:(
+
+		width	: 2px,
+		style	: solid,
+		color	: transparent,
+		radius	: 0px,
+
+	),
+
+	btn:(
+
+		width	: 0px,
+		style	: solid,
+		color	: transparent,
+		radius	: 4px,
+
+	),
+
+);

@@ -1,0 +1,86 @@
+/**
+ * Type	: Component
+ * Name	: Global Form Fields
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Global Form Fields • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Global Form Fields • Class Definitions
+ * ************************************
+ */
+
+//  input,
+//  textarea{
+
+//     background-color: c( gray, xlight );
+//     color: c( gray, xdark );
+//     padding: spacer( component, m ) spacer( component, m );
+
+//     @include border( all, form-field );
+
+//     &:focus{
+
+//         border-color: c( gray );
+
+//     }
+
+//     &:disabled{
+
+//         border-color: c( gray, light );
+
+//         &::-webkit-input-placeholder {
+//             color: c( gray, light );
+//         }
+
+//         // Firefox 19+
+//         &::-moz-placeholder {
+//             color: c( gray, light );
+//         }
+
+//         // IE 10+
+//         &::-ms-input-placeholder {
+//             color: c( gray, light );
+//         }
+
+//         //  Firefox 18-
+//         &:-moz-placeholder {
+//             color: c( gray, light );
+//         }
+
+//     }
+
+//  }
+
+//  /**
+//   * Form Field Placeholder Styling
+//   */
+
+//   //Chrome/Opera/Safari
+//   ::-webkit-input-placeholder {
+//     color: c( gray );
+//   }
+
+//   // Firefox 19+
+//   ::-moz-placeholder {
+//     color: c( gray );
+//   }
+
+//   // IE 10+
+//   :-ms-input-placeholder {
+//     color: c( gray );
+//   }
+
+//   //  Firefox 18-
+//   :-moz-placeholder {
+//     color: c( gray );
+//   }

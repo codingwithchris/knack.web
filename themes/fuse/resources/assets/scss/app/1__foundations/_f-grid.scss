@@ -1,0 +1,54 @@
+/**
+ * Type	: Foundation
+ * Name	: Grid
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * ******************
+ * Class Definitions
+ * ******************
+ */
+
+.f-container{
+
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not( [class*="l-container--max"] ){
+
+    max-width: 100%;
+
+  }
+
+}
+
+.f-container--max--l{
+
+  max-width: map_get( $grid_config, width--l );
+
+}
+
+.f-container--max--s{
+
+    max-width: map_get( $grid_config, width--s );
+
+}
+
+.f-container--max--xs{
+
+    max-width: map_get( $grid_config, width--xs );
+
+}
+
+.f-container--width{
+
+  width: map_get( $grid_config, container-width-mobile );
+
+  @include breakpoint( s ){
+  	width: map_get( $grid_config, container-width-desktop );
+  }
+
+}

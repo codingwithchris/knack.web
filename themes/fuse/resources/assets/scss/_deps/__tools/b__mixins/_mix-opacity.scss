@@ -1,0 +1,59 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Opacity
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * A simple mixin that nicely handles opacity and
+ * provides fallbacks for IE.
+ *
+ * @param $opacity - takes any decimal number between 1 and 0 ( ad also takes the numbers 1 and 0 )
+ */
+
+//
+// @example - Usage
+//
+// @include opacity(.8);
+//
+
+@mixin opacity( $opacity ) {
+
+	// Make sure we are dealing with a number
+	@if not type-of($opacity) == 'number'{
+
+		@error "You can ony use numbers in the opacity mixin and you tried to use: `#{$opacity}`";
+
+	}
+
+	// Deal with numbers that aren't unitless numbers
+	@if not unitless($opacity) {
+
+		$opacity: strip-unit( $opacity );
+
+		@warn "The opacity mixin only accepts unitless numbers. The unit found in the passed value, `#{$opacity}`, was stripped off for you by the opacity mixin, but it's best if you remove the unit yourself";
+
+	}
+
+	// Handle numbers less than 0
+	@if $opacity < 0{
+
+		@error "The opacity mixin does not accept numbers less than 0. You attempted to pass in: `#{$opacity}`";
+
+	}
+
+	// Handle numbers greater than 1
+	@if $opacity > 1{
+
+		@error "The opacity mixin does not accept numbers greater than 1. You attempted to pass in: `#{$opacity}`";
+
+	}
+
+	$opacity-ie: $opacity * 100;
+
+	opacity: $opacity;
+  	filter: alpha(opacity=$opacity-ie); //IE8
+
+}

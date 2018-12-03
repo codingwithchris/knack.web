@@ -1,0 +1,67 @@
+
+/**
+ * Type		: Utility
+ * Group	: Alignment
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * Standard Alignment Classes
+ */
+.u-align--center{
+
+    text-align: center;
+
+}
+
+.u-align--left{
+
+    text-align: left;
+
+}
+
+.u-align--right{
+
+    text-align: right;
+
+}
+
+
+/**
+ * Loop over our defined breakpoints and create quick and easy to use
+ * helper classes for implementing breakpoints at various sizes
+ */
+ @each $bp, $value in $breakpoints_config{
+
+    @if $bp == 's' or $bp == 'm' or $bp == 'l' {
+
+        .u-align--left\@#{$bp}{
+
+            @include breakpoint( $bp ){
+                text-align: left;
+            }
+
+        }
+
+        .u-align--right\@#{$bp}{
+
+            @include breakpoint( $bp ){
+                text-align: right;
+            }
+
+        }
+
+        .u-align--center\@#{$bp}{
+
+            @include breakpoint( $bp ){
+                text-align: center;
+            }
+
+        }
+
+    }
+
+}

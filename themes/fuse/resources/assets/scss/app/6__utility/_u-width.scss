@@ -1,0 +1,18 @@
+/**
+ * Type		: Utility
+ * Group	: Widths
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+@each $width in $max-widths_config {
+
+    .u-max-w--#{$width} {
+
+        max-width: #{$width}px;
+
+    }
+
+}
