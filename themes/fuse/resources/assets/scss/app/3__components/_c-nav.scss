@@ -18,3 +18,25 @@
  * Navigation • Class Definitions
  * ************************************
  */
+
+ .c-nav--primary{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+
+ }
+
+ .c-nav--primary .f-logo{
+
+    max-width: 80px;
+    margin: 0 auto;
+
+ }
+
+ .c-nav--primary .f-logo:hover img{
+
+    @include opacity( .75 );
+
+ }

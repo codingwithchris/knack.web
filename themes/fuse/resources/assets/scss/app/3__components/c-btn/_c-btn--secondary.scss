@@ -1,6 +1,7 @@
 /**
  * Type	: Component
- * Name	: Menu
+ * Name	: Button -- Secondary
+ * Description: Styles for our `Secondary` buttons.
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -8,32 +9,13 @@
 
 /**
  * *************************************
- * Menu • Settings
+ * Button -- Secondary • Settings
  * *************************************
  */
 
 
 /**
  * ************************************
- * Menu • Class Definitions
+ * Button -- Secondary • Class Definitions
  * ************************************
  */
-
-.c-menu{
-
-    display: flex;
-
-}
-
-.c-menu .c-menu__link{
-
-    color: c( grayscale, 40 );
-    padding: 5px;
-
-}
-
-.c-menu .menu-item:not( :last-child ){
-
-    margin-right: 24px;
-
-}

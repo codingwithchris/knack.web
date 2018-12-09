@@ -178,9 +178,9 @@ function load_primary_nav(){
 	$data = [
 
 		'year' 				=> date("Y"),
-		'copyright_entity'	=> 'Client Name',
-		'creator_name'		=> 'CreativeFuse',
-		'creator_link' 		=> 'https://creativefuse.org/?utm_source=client_website&utm_medium=footer&utm_campaign=gm',
+		'copyright_entity'	=> 'Knack Creative',
+		'creator_name'		=> 'Cristopher Hahn',
+		'creator_link' 		=> 'https://www.linkedin.com/in/christopher-a-hahn/',
 		'privacy_page'		=> get_permalink( (int) get_option( 'wp_page_for_privacy_policy' ) )
 
 	];

@@ -1,6 +1,6 @@
 /**
  * Type	: Component
- * Name	: Menu
+ * Name	: Banner
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -8,32 +8,13 @@
 
 /**
  * *************************************
- * Menu • Settings
+ * Banner • Settings
  * *************************************
  */
 
 
 /**
  * ************************************
- * Menu • Class Definitions
+ * Banner • Class Definitions
  * ************************************
  */
-
-.c-menu{
-
-    display: flex;
-
-}
-
-.c-menu .c-menu__link{
-
-    color: c( grayscale, 40 );
-    padding: 5px;
-
-}
-
-.c-menu .menu-item:not( :last-child ){
-
-    margin-right: 24px;
-
-}

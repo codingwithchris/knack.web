@@ -17,27 +17,16 @@ use Fuse\AssetHandler;
  * *************************************
  */
 
-    $svg = [
-
-        'type'  => 'sprite',
-        'name'  => '',
-        'title'  => get_bloginfo('name') . ' Logo',
-
-    ];
-
 /**
  * *************************************
  * Logo • View Definition
  * *************************************
  */
 
-// Bail if no name is defined
-if( ! $svg['name'] )
-    return;
 ?>
 
 <div class="f-logo">
 
-    <?php echo AssetHandler\get_svg( $svg ); ?>
+    <img class="f-logo__media" src="<?php echo esc_url( '/wp-content/uploads/2018/12/knack-logo.png' ); ?>" alt="Knack Creative's Logo">
 
 </div>
