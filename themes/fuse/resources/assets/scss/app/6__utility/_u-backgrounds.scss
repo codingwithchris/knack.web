@@ -8,45 +8,45 @@
 
 
 /**
- * Blue
+ * Purple
  */
- .u-bgc--blue{
+ .u-bgc--purple{
 
-    background-color: c( blue );
-
- }
-
- .u-bgc--blue--l{
-
-    background-color: c( blue, light );
+    background-color: c( purple );
 
  }
 
- .u-bgc--blue--d{
+ .u-bgc--purple--l5{
 
-    background-color: c( blue, dark );
+    background-color: c( purple, light5 );
+
+ }
+
+ .u-bgc--purple--d5{
+
+    background-color: c( purple, dark5 );
 
  }
 
 
  /**
-  * Green
+  * gold
   */
- .u-bgc--green{
+ .u-bgc--gold{
 
-    background-color: c( green );
-
- }
-
- .u-bgc--green--l{
-
-    background-color: c( green, light );
+    background-color: c( gold );
 
  }
 
- .u-bgc--green--d{
+ .u-bgc--gold--l5{
 
-    background-color: c( green, dark );
+    background-color: c( gold, light5 );
+
+ }
+
+ .u-bgc--gold--d5{
+
+    background-color: c( gold, dark5 );
 
  }
 
@@ -56,30 +56,24 @@
 
 .u-bgc--white{
 
-    background-color: c( grayscale, white );
+    background-color: c( white );
 
  }
 
- .u-bgc--gray{
+ .u-bgc--gray--m{
 
-    background-color: c( gray );
+    background-color: c( gray--m );
 
  }
 
  .u-bgc--gray--l{
 
-    background-color: c( gray, light );
+    background-color: c( gray--l );
 
  }
 
  .u-bgc--gray--d{
 
-    background-color: c( gray, dark );
-
- }
-
- .u-bgc--gray--xd{
-
-    background-color: c( gray, xdark );
+    background-color: c( gray--d );
 
  }

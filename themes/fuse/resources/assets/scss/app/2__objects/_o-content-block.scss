@@ -18,6 +18,13 @@
  * ************************************
  */
 
+.o-content-block{
+
+   position: relative;
+   z-index: z( front );
+
+}
+
 /**
  * Content Block • Media
  */
@@ -38,6 +45,15 @@
 
  }
 
+  /**
+ * Content Block • Title
+ */
+
+ .o-content-block__copy{
+
+   margin-bottom: spacer( component, l );
+
+}
 
 /**
  * Content Block • Actions
@@ -45,6 +61,12 @@
 .o-content-block__action{
 
     margin-top: spacer( component, 2xl );
+
+}
+
+.o-content-block__{
+
+   margin-top: spacer( component, 2xl );
 
 }
 

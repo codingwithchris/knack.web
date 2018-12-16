@@ -1,0 +1,45 @@
+/**
+ * Type	: Component
+ * Name	: Hero -- Home
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Hero -- Home • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Hero -- Home • Class Definitions
+ * ************************************
+ */
+
+.c-hero--home{
+
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   padding: spacer( layout, l ) 0;
+   min-height: 60vh;
+   text-align: center;
+
+}
+
+.c-hero--home .c--hero__content{
+
+   flex: 1;
+   margin: 0 auto;
+
+}
+
+.c-hero__subtitle{
+
+   margin: 0 auto;
+   max-width: 700px;
+
+}

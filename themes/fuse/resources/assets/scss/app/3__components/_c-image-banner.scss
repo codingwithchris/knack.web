@@ -1,6 +1,6 @@
 /**
  * Type	: Component
- * Name	: Hero -- Global
+ * Name	: Image Banner
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -8,20 +8,20 @@
 
 /**
  * *************************************
- * Hero -- Global • Settings
+ * Image Banner • Settings
  * *************************************
  */
 
 
 /**
  * ************************************
- * Hero -- Global • Class Definitions
+ * Image Banner • Class Definitions
  * ************************************
  */
 
- .c-hero{
+ .c-image-banner{
 
-    position: relative;
-    overflow: hidden;
+    display: block;
+    width: 100%;
 
  }

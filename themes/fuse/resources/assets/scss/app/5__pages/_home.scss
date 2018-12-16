@@ -18,3 +18,48 @@
  * Home • Class Definitions
  * ************************************
  */
+
+
+ /**
+  * Intro Section
+  */
+ .p-home--intro{
+
+    padding: spacer( layout, 2xl ) 0;
+
+
+ }
+
+ .p-home--intro .o-content-block{
+
+    text-align: center;
+
+ }
+
+ .p-home--intro .o-content-block__copy{
+
+    margin: 0 auto;
+    max-width: 600px;
+
+ }
+
+ /**
+  * What We Do Section
+  */
+
+/**
+* Clients Section
+*/
+
+.p-home--clients{
+
+    padding: spacer( layout, 2xl ) 0;
+    text-align: center;
+
+}
+
+.p-home--clients .o-content-block{
+
+    margin-bottom: spacer( layout, l );
+
+}

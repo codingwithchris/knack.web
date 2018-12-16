@@ -1,6 +1,6 @@
 <?php
-namespace Fuse;
-use Fuse\Contollers;
+namespace Fuse\Components;
+use Fuse\Controllers;
 use Fuse\AssetHandler;
 ?>
 

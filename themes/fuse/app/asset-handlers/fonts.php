@@ -7,7 +7,7 @@ function load_google_fonts(){
 
     $base = 'https://fonts.googleapis.com/css?family=';
 
-    $families = 'Lato:200,500|Open+Sans:400,700';
+    $families = 'Lato:200,400,500,700|Open+Sans:400,700';
 
     $full_font_request_url = $base . $families;
 

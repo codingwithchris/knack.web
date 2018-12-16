@@ -13,7 +13,8 @@
  */
 
 	// Standard Link
-	$link__color--standard: c( green, dark );
+	$link__color--standard: c( gold );
+	$link__color--inverted: c( gold );
 
 /**
  * ************************************
@@ -26,6 +27,7 @@
 
 	padding-bottom: spacer( component, 3xs );
 
+	@include border( bottom, link, transparent );
 	@include transition( link );
 
  }
@@ -36,11 +38,23 @@
 
 	color: $link__color--standard;
 
-	@include border( bottom, link, transparent );
-
 	&:hover{
 
 		border-color: $link__color--standard;
+
+	}
+
+}
+
+// Links against a dark background
+.f-link--inverted{
+
+	color: $link__color--inverted;
+	font-weight: 700;
+
+	&:hover{
+
+		border-color: $link__color--inverted;
 
 	}
 

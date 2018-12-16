@@ -1,8 +1,7 @@
 <?php
-use Fuse\AssetHandler;
 /**
  * Type	: Component
- * Name	: Button
+ * Name	: Overlay
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -10,20 +9,16 @@ use Fuse\AssetHandler;
 
 /**
  * *************************************
- * Button • Settings
+ * Overlay • Settings
  * *************************************
  */
 
 
 /**
  * *************************************
- * Button • View Definition
+ * Overlay • View Definition
  * *************************************
  */
 ?>
 
-<a class="c-btn" href="" data-analytics-category="" data-analytics-label="">
-
-
-
-</a>
+<div class="c-overlay c-overlay--<?= esc_html( $data['overlay_type'] ); ?>"></div>

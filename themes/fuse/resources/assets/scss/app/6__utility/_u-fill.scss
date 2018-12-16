@@ -7,45 +7,45 @@
  */
 
 /**
- * Blue
+ * Purple
  */
 
- .u-f--blue{
+ .u-f--purple{
 
-    color: c( blue );
-
- }
-
- .u-f--blue--l{
-
-    color: c( blue, light );
+    color: c( purple );
 
  }
 
- .u-f--blue--d{
+ .u-f--purple--l5{
 
-    color: c( blue, dark );
+    color: c( purple, light5 );
+
+ }
+
+ .u-f--purple--d5{
+
+    color: c( purple, dark5 );
 
  }
 
  /**
-  * Green
+  * Gold
   */
- .u-f--green{
+ .u-f--gold{
 
-    color: c( green );
-
- }
-
- .u-f--green--l{
-
-    color: c( green, light );
+    color: c( gold );
 
  }
 
- .u-f--green--d{
+ .u-f--gold--l5{
 
-    color: c( green, dark );
+    color: c( gold, light5 );
+
+ }
+
+ .u-f--gold--d5{
+
+    color: c( gold, dark5 );
 
  }
 
@@ -55,30 +55,24 @@
 
  .u-f--white{
 
-    color: c( grayscale, white );
+    color: c( white );
 
  }
 
- .u-f--gray{
+ .u-f--gray--m{
 
-    color: c( gray );
+    color: c( gray--m );
 
  }
 
  .u-f--gray--l{
 
-    color: c( gray, light );
+    color: c( gray--l );
 
  }
 
  .u-f--gray--d{
 
-    color: c( gray, dark );
-
- }
-
- .u-f--gray--xd{
-
-    color: c( gray, xdark );
+    color: c( gray--d );
 
  }

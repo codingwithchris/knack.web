@@ -1,0 +1,39 @@
+/**
+ * Type	: Component
+ * Name	: Collection -- Logos
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Collection -- Logos • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Collection -- Logos • Class Definitions
+ * ************************************
+ */
+
+ .c-collection--logos{
+
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+ }
+
+ .c-collection--logos__logo{
+
+    display: block;
+    flex: 1;
+    max-width: 200px;
+    padding: spacer( component, l );
+    width: 100%;
+
+ }

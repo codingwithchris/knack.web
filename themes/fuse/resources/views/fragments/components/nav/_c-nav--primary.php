@@ -1,6 +1,6 @@
 <?php
-namespace Fuse;
-use Fuse\Contollers;
+namespace Fuse\Components;
+use Fuse\Controllers;
 /**
  * Type	: Component
  * Name	: Nav -- Primary
@@ -27,9 +27,9 @@ use Fuse\Contollers;
 <nav class="c-nav c-nav--primary">
 
         <a class="c-nav__logo" href="<?= esc_url( home_url('/') ); ?>" aria-label="Go to the store home page" title="Good Medicine Store">
-                <?php Controllers\render( 'fragments/patterns/foundations/_f-logo' ); ?>
+                <?php Controllers\render( 'fragments/foundations/_f-logo' ); ?>
         </a>
 
-        <?php Controllers\render( 'fragments/patterns/components/menu/_c-menu--primary' ); ?>
+        <?php Controllers\render( 'fragments/components/menu/_c-menu--primary' ); ?>
 
 </nav>

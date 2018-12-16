@@ -19,3 +19,53 @@
  * Button -- Secondary • Class Definitions
  * ************************************
  */
+
+.c-btn--secondary{
+
+    border: 2px solid transparent;
+    padding: spacer( component, s ) spacer( component, xl );
+
+    @include transition( link );
+
+}
+
+.c-btn--secondary--dark{
+
+    border-color: c( gray--d );
+    color: c( gray--d );
+
+    &:hover{
+
+        background-color: c( gray--d );
+        color: c(  white );
+
+    }
+
+    &:active{
+
+        background-color: c( gray--d, light10 );
+
+    }
+
+}
+
+.c-btn--secondary--white{
+
+    border-color: c( white );
+    color: c( white );
+
+}
+
+.c-btn--secondary--purple{
+
+    border-color: c( purple );
+    color: c( purple );
+
+}
+
+.c-btn--secondary--gold{
+
+    border-color: c( gold );
+    color: c( gold );
+
+}

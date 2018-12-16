@@ -1,0 +1,118 @@
+/**
+ * Type	: Component
+ * Name	: Overlay
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Overlay • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Overlay • Class Definitions
+ * ************************************
+ */
+
+ .c-overlay{
+
+   content: '';
+   display: block;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   z-index: z( base );
+
+ }
+
+ .c-overlay--white--90{
+
+   background-color: c( white );
+
+   @include opacity( .90 );
+
+ }
+
+
+ .c-overlay--white--85{
+
+   background-color: c( white );
+
+   @include opacity( .85 );
+
+ }
+
+.c-overlay--white--70{
+
+  background-color: c( white );
+
+  @include opacity( .85 );
+
+}
+
+ .c-overlay--white--60{
+
+  background-color: c( white );
+
+  @include opacity( .6 );
+
+}
+
+ .c-overlay--white--40{
+
+  background-color: c( white );
+
+  @include opacity( .40 );
+
+}
+
+ .c-overlay--white--30{
+
+  background-color: c( white );
+
+  @include opacity( .30 );
+
+}
+
+/**
+ * Dark Gray Overlay
+ */
+
+ .c-overlay--gray--d--30{
+
+  background-color: c( gray--d );
+
+   @include opacity( .3 );
+
+}
+
+.c-overlay--gray--d--40{
+
+  background-color: c( gray--d );
+
+   @include opacity( .4 );
+
+}
+
+.c-overlay--gray--d--50{
+
+  background-color: c( gray--d );
+
+   @include opacity( .5 );
+
+}
+
+.c-overlay--gray--d--60{
+
+  background-color: c( gray--d );
+
+   @include opacity( .6 );
+
+}

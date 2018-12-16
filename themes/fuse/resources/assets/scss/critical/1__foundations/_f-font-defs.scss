@@ -14,13 +14,14 @@
 
 body{
 
+	color: c( gray--d );
 	line-height: map_get( $type_config, base-line-height );
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-	font-family: "Open Sans", sans-serif;
-	font-style: normal;
-	font-weight: 400;
+	@include font( body, regular );
+	@include font-scale( base );
 
 }
 
@@ -36,15 +37,108 @@ em{
 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+/**
+ * Body Copy Styles
+ * Prefix: .f-b--
+ */
+ [class*="f-b--"]{
 
-	font-family: "Lato", sans-serif;
-	font-style: normal;
-	font-weight: 200;
+	@include font( body, regular );
+
+}
+
+.f-b--xs{
+
+	@include font-scale( base );
+
+}
+
+
+.f-b--s,
+input,
+textarea,{
+
+	font-size: 16px;
+	font-size: 1rem;
+
+}
+
+.f-b--base,
+.c-btn{
+
+	@include font-scale( m );
+
+}
+
+.f-b--l{
+
+	@include font-scale( l );
+
+}
+
+
+/**
+ * Primary Heading Styles
+ * Prefix: .f-h--
+ */
+
+
+// Heading Weight Bold
+.f-hw--b{
+
+	@include font( heading, bold );
+
+}
+
+// Heading Weight Medium
+.f-hw--r{
+
+	@include font( heading, regular );
+
+}
+
+// Heading Weight Light
+.f-hw--l{
+
+	@include font( heading, light );
+
+}
+
+/**
+ * Scale/Size Classes
+ * Heading Scale/Size: `hs`
+ */
+
+.f-hs--base{
+	// declare base heading styles
+}
+
+.f-hs--m{
+
+	@include font-scale( m );
+
+}
+
+.f-hs--l{
+
+	@include font-scale( l );
+
+}
+
+.f-hs--xl{
+
+	@include font-scale( xl );
+
+}
+
+.f-hs--2xl{
+
+	@include font-scale( 2xl );
+
+}
+
+.f-hs--3xl{
+
+	@include font-scale( 3xl );
 
 }

@@ -19,3 +19,106 @@
  * Button -- Primary • Class Definitions
  * ************************************
  */
+
+.c-btn--primary{
+
+    border: 2px solid transparent;
+    color: c( white );
+    padding: spacer( component, s ) spacer( component, 2xl );
+
+    @include transition( btn );
+
+}
+
+.c-btn--primary > .c-btn__icon{
+
+    // Temp
+    // background-color: c( gray--m );
+    // width: 25px;
+    // height: 25px;
+
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 20px;
+
+    @include opacity( 1 );
+
+}
+
+
+/**
+ * Btn Themes
+ */
+
+.c-btn--primary--dark{
+
+    background-color: c( gray--d );
+
+    &:hover{
+
+        background-color: c( gray--d, dark5 );
+
+    }
+
+    &:active{
+
+        background-color: c( gray--d, dark10 );
+
+    }
+
+}
+
+.c-btn--primary--white{
+
+    background-color: c( white );
+    color: c( gray--d );
+
+    &:hover{
+
+        background-color: c( white, dark5 );
+
+    }
+
+    &:active{
+
+        background-color: c( white, dark10 );
+
+    }
+
+}
+
+.c-btn--primary--purple{
+
+    background-color: c( purple );
+
+    &:hover{
+
+        background-color: c( purple, light10 );
+
+    }
+
+    &:active{
+
+        background-color: c( purple, dark5 );
+
+    }
+
+}
+
+.c-btn--primary--gold{
+
+    background-color: c( gold );
+
+    &:hover{
+
+        background-color: c( gold, dark5 );
+
+    }
+
+    &:active{
+
+        background-color: c( gold, dark10 );
+
+    }
+
+}

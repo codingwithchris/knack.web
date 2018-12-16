@@ -12,9 +12,36 @@
  * *************************************
  */
 
-
 /**
  * ************************************
  * Collection -- Islands • Class Definitions
  * ************************************
  */
+
+.c-collection--islands{
+
+    display: flex;
+    flex-direction: column;
+    padding: spacer( component, s );
+
+    @include breakpoint( m ){
+
+        flex-direction: row;
+
+    }
+
+}
+
+.c-collection--islands .c-island:first-child{
+
+    margin-bottom: spacer( component, s );
+    margin-right: 0;
+
+    @include breakpoint( m ){
+
+        margin-bottom: 0;
+        margin-right: spacer( component, s );
+
+    }
+
+}

@@ -26,10 +26,6 @@ function setup(){
 	// If we are on a 404 page
 	if( is_404() ){
 
-        // Remove WooCommerce Scripts & Styles
-        add_action( 'wp_enqueue_scripts', 'Reactor\Woo\Performance\dequeue_all_styles', 99 );
-        add_action( 'wp_enqueue_scripts', 'Reactor\Woo\Performance\dequeue_all_scripts', 99 );
-
         // Load 404 Content
 		add_action( 'fuse_no_content', __NAMESPACE__ . '\load_content', 1 );
 

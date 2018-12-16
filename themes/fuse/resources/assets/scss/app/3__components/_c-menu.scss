@@ -27,13 +27,30 @@
 
 .c-menu .c-menu__link{
 
-    color: c( grayscale, 40 );
+    color: c( gray--m );
     padding: 5px;
+
+    @include transition( link );
+
+    &:hover{
+
+        color: c( gold );
+
+    }
 
 }
 
 .c-menu .menu-item:not( :last-child ){
 
     margin-right: 24px;
+
+}
+
+
+// Active States
+.c-menu .current-menu-item .c-menu__link{
+
+    font-weight: 700;
+    color: c( purple );
 
 }

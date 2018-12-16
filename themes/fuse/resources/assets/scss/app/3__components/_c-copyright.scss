@@ -1,0 +1,40 @@
+/**
+ * Type	: Component
+ * Name	: Copyright
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Copyright • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Copyright • Class Definitions
+ * ************************************
+ */
+
+ .c-copyright{
+
+    background-color: c( gray--d, dark5 );
+    padding: spacer( component, l ) 0;
+    text-align: center;
+
+ }
+
+ .c-copyright__content{
+
+   margin-bottom: spacer( component, xs );
+
+ }
+
+ .c-copyright__designer{
+
+   margin-bottom: spacer( component, 3xs );
+
+ }

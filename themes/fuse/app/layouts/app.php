@@ -143,14 +143,14 @@ function close_site(){
 
  function load_utility_nav(){
 
-	Controllers\render( 'fragments/patterns/components/nav/_c-nav--utility' );
+	Controllers\render( 'fragments/components/nav/_c-nav--utility' );
 
 }
 
 
 function load_primary_nav(){
 
-	Controllers\render( 'fragments/patterns/components/nav/_c-nav--primary' );
+	Controllers\render( 'fragments/components/nav/_c-nav--primary' );
 
  }
 
@@ -165,7 +165,7 @@ function load_primary_nav(){
 	];
 
 	// Render out our view using the defined dataset
-	Controllers\render( 'fragments/patterns/components/footer/_c-footer__content', $data );
+	Controllers\render( 'fragments/components/footer/_c-footer__content', $data );
 
  }
 
@@ -179,12 +179,12 @@ function load_primary_nav(){
 
 		'year' 				=> date("Y"),
 		'copyright_entity'	=> 'Knack Creative',
-		'creator_name'		=> 'Cristopher Hahn',
+		'creator_name'		=> 'Christopher Hahn',
 		'creator_link' 		=> 'https://www.linkedin.com/in/christopher-a-hahn/',
 		'privacy_page'		=> get_permalink( (int) get_option( 'wp_page_for_privacy_policy' ) )
 
 	];
 
-	Controllers\render( 'fragments/patterns/components/_c-copyright', $data );
+	Controllers\render( 'fragments/components/_c-copyright', $data );
 
  }

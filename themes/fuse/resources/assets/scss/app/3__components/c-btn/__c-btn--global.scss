@@ -19,3 +19,23 @@
  * Button -- Global • Class Definitions
  * ************************************
  */
+
+ .c-btn{
+
+    display: inline-block;
+    position: relative;
+
+ }
+
+ .c-btn__text{
+
+    display: block;
+
+ }
+
+ .c-btn__text,
+ .c-btn__icon{
+
+    backface-visibility: hidden;
+
+ }

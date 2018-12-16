@@ -19,3 +19,29 @@
  * Button -- Tertiary • Class Definitions
  * ************************************
  */
+
+.c-btn--tertiary{
+
+    border-bottom: 2px solid transparent;
+
+    @include transition( link );
+
+}
+
+.c-btn--tertiary:hover{
+
+    border-color: currentColor;
+
+}
+
+.c-btn--tertiary--light{
+
+    color: c( white );
+
+}
+
+.c-btn--tertiary--dark{
+
+    color: c( gray--d );
+
+}

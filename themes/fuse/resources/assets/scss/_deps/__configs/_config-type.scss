@@ -34,7 +34,7 @@ $font_config : (
 	// used for our project's body
 	body: (
 
-		family 		: ( "Roboto" ),
+		family 		: ( "Open Sans" ),
 		fallback	: ( sans-serif ),
 		style		: normal,
 
@@ -50,37 +50,22 @@ $font_config : (
 
 	// Configure font options for our
 	// project's headings
-	primary-heading: (
+	heading: (
 
-		family 		: ( "Rubik" ),
+		family 		: ( "Lato" ),
 		fallback	: ( sans-serif ),
 		style		: normal,
 
 		// Delete weights you don't need
 		weights: (
 
-			medium		:	500
+			light		:	200,
+			regular		:	400,
+			medium		:	500,
+			bold		:	700,
 
 		)
 
-	),
-
-
-	// Configure font options for our
-	// project's headings
-	secondary-heading: (
-
-		family 		: ( "Montserrat" ),
-		fallback	: ( sans-serif ),
-		style		: normal,
-
-		// Delete weights you don't need
-		weights: (
-
-			medium		:	500
-
-		)
-
-	),
+	)
 
 );

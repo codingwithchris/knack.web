@@ -1,6 +1,6 @@
 <?php
-namespace Fuse;
-use Fuse\Contollers;
+namespace Fuse\Components;
+use Fuse\Controllers;
 /**
  * Type	: Component
  * Name	: Nav -- Utility
@@ -26,6 +26,6 @@ use Fuse\Contollers;
 
 <nav class="c-nav c-nav--utility">
 
-        <?php Controllers\render( 'fragments/patterns/components/menu/_c-menu--utility' ); ?>
+        <?php Controllers\render( 'fragments/components/menu/_c-menu--utility' ); ?>
 
 </nav>

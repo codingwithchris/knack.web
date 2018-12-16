@@ -15,8 +15,8 @@
  */
 
 namespace Fuse\Layout\FrontPage;
-use Fuse\Controllers;
-use Fuse\AssetHandler;
+use function Fuse\Controllers\render as render;
+use Fuse\AssetHandlers;
 use Samrap\Acf\Acf;
 
 
@@ -30,7 +30,11 @@ function setup(){
 
 
 		// Load page sections
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 1);
+		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero', 1);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_intro', 1);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_what_we_do', 2);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_image_banner', 3);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_clients', 4);
 
 	}
 }
@@ -41,8 +45,141 @@ function setup(){
  ************************************************************/
 
 
-function load_content(){
+function load_hero(){
 
-	the_content();
+	$data = [
+
+		'title'		=> Acf::field( 'title' )->get(),
+		'copy'		=> Acf::field( 'subtitle' )->get(),
+
+		'primary_action'	=> [
+
+			'btn_text'		=> Acf::field( 'primary_action_text' )->get(),
+			'btn_url'		=> Acf::field( 'primary_action_link' )->get(),
+			'btn_type'		=> 'primary',
+			'btn_theme'		=> 'purple',
+			'btn_modifier'	=> '',
+
+		],
+
+		'secondary_action'	=> [
+
+			'btn_text'		=> Acf::field( 'secondary_action_text' )->get(),
+			'btn_url'		=> Acf::field( 'secondary_action_link' )->get(),
+			'btn_type'		=> 'secondary',
+			'btn_theme'		=> 'dark',
+			'btn_modifier'	=> '',
+
+		],
+
+		'background'	=> [
+			'image_url'		=> Acf::field( 'background_image' )->get(),
+			'video_id'		=> Acf::field( 'background_video_id' )->get(),
+			'overlay_type'	=> 'white--90'
+		]
+
+	];
+
+	render( 'fragments/components/hero/_c-hero--home', $data );
+
+}
+
+function load_intro(){
+
+	$section_data = [
+
+	];
+
+	render( 'fragments/sections/home/_intro', $section_data );
+
+}
+
+function load_what_we_do(){
+
+	$section_data = [
+
+		'videography_island' => [
+
+			'title'		=> 'Videography',
+			'copy'		=> 'Gorgeous imagery and compelling storytelling that inspires connection.',
+			'type'		=> 'light',
+
+			'action'	=> [
+
+				'btn_text'	=> 'See Our Video Work',
+				'btn_link'	=>	site_url( '/work/' ),
+				'btn_type'	=> 'tertiary',
+				'btn_theme'	=> 'dark'
+
+			],
+
+			'background' => [
+
+				'image_url'	=> 'https://picsum.photos/1000/602',
+
+			]
+
+
+		],
+
+		'photography_island' => [
+
+			'title'		=> 'Photography',
+			'copy'		=> 'The essence of a story distilled into a single, impeccably-shot frame. ',
+			'type'		=> 'light',
+
+
+			'action'	=> [
+
+				'btn_text'	=> 'See Our Photography Work',
+				'btn_link'	=>	site_url( '/work/' ),
+				'btn_type'	=> 'tertiary',
+				'btn_theme'	=> 'dark'
+
+			],
+
+			'background' => [
+
+				'image_url'	=> 'https://picsum.photos/1000/600',
+
+			]
+
+
+		],
+
+	];
+
+	render( 'fragments/sections/home/_what-we-do', $section_data );
+
+
+}
+
+function load_image_banner(){
+
+
+	$section_data = [
+
+		'image_url'		=> '',
+		'image_alt'		=> '',
+		'image_width'	=> '1920',
+		'image_height'	=> '1080',
+
+	];
+
+	render( 'fragments/sections/home/_image-banner', $section_data );
+
+}
+
+function load_clients(){
+
+
+	$section_data = [
+
+		'title'			=> '',
+		'client_logos'	=> Acf::field('client_logos')->get()
+
+	];
+
+	render( 'fragments/sections/home/_clients', $section_data );
 
 }

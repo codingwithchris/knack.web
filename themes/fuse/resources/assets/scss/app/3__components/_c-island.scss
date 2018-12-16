@@ -18,3 +18,56 @@
  * Island • Class Definitions
  * ************************************
  */
+
+ .c-island{
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 400px;
+    padding: spacer( component, 4xl ) spacer( component, m ) 0px;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint( m ){
+
+        min-height: 600px;
+
+    }
+
+ }
+
+.c-island__title{
+
+    margin-bottom: spacer( component, xs );
+
+}
+
+ .c-island__copy{
+
+    margin: 0 auto;
+    max-width: 400px;
+
+ }
+
+ .c-island__action{
+
+    margin-top: spacer( component, l );
+
+ }
+
+ /**
+  * Island Color Themes
+  */
+
+  .c-island--dark{
+
+    color: c( white );
+
+  }
+
+  .c-island--light{
+
+    color: c( gray--d );
+
+  }
