@@ -24,7 +24,7 @@ use function Fuse\Controllers\render as render;
     <div class="o-content-block">
 
         <div class="o-content-block__title">
-            <h5 class="f-hw--b f-hs--xl u-c--gray--d">We’ve Worked With Some Incredible People<h5>
+            <h5 class="f-hw--b f-hs--l u-c--purple">We’ve Worked With Some Incredible People<h5>
         </div>
 
     </div>

@@ -1,0 +1,37 @@
+/**
+ * Type	: Component
+ * Name	: CTA
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * CTA • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * CTA • Class Definitions
+ * ************************************
+ */
+
+ .c-cta{
+
+    padding: spacer( layout, 2xl ) 0px;
+    text-align: center;
+
+ }
+
+ /**
+  * Home CTA
+  */
+  .c-cta--home{
+
+    background-color: c( purple );
+    color: c( white );
+
+  }

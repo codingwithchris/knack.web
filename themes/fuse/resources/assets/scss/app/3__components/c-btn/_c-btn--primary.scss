@@ -75,13 +75,13 @@
 
     &:hover{
 
-        background-color: c( white, dark5 );
+        background-color: c( gray--l );
 
     }
 
     &:active{
 
-        background-color: c( white, dark10 );
+        background-color: c( gray--l, dark10 );
 
     }
 

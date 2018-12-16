@@ -35,6 +35,7 @@ function setup(){
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_what_we_do', 2);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_image_banner', 3);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_clients', 4);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 5);
 
 	}
 }
@@ -181,5 +182,29 @@ function load_clients(){
 	];
 
 	render( 'fragments/sections/home/_clients', $section_data );
+
+}
+
+function load_cta(){
+
+
+	$cta_data = [
+
+		'type'			=> 'simple',
+		'title'			=> 'Ready to chat?',
+		'copy'			=> 'Drop us a line. We are excited to hear from you!',
+		'modifier_class'	=> 'c-cta--home',
+		'action'	=> [
+
+			'btn_type'	=> 'primary',
+			'btn_text'	=> 'Contact Us',
+			'btn_url'	=> '/contact-us/',
+			'btn_theme'	=> 'white',
+
+		]
+
+	];
+
+	render( 'fragments/components/_c-cta', $cta_data );
 
 }
