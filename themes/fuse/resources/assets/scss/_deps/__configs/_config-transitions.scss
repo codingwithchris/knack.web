@@ -26,4 +26,12 @@ $transitions_config: (
 
 	),
 
+	btn-icon :(
+
+		properties: all,
+		duration: .45s,
+		timing: cubic-bezier(.23,1,.32,1),
+
+	)
+
 );

@@ -22,15 +22,11 @@
 
 .c-btn--tertiary{
 
-    border-bottom: 2px solid transparent;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
     @include transition( link );
-
-}
-
-.c-btn--tertiary:hover{
-
-    border-color: currentColor;
 
 }
 
@@ -43,5 +39,52 @@
 .c-btn--tertiary--dark{
 
     color: c( gray--d );
+
+}
+
+
+/**
+ * Tertiary Text
+ */
+ .c-btn--tertiary > .c-btn__text{
+
+    margin-right: spacer( component, s );
+
+ }
+
+/**
+ * Tertiary Icon
+ */
+.c-btn--tertiary > .c-btn__icon{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include transition( btn-icon );
+
+}
+
+.c-btn--tertiary > .c-btn__icon > svg {
+
+    height: auto;
+    width: 16px;
+
+ }
+
+
+/**
+ * Hover State
+ */
+
+ .c-btn--tertiary:hover {
+
+    @include opacity( .7 );
+
+ }
+
+.c-btn--tertiary:hover > .c-btn__icon{
+
+    transform: translate3d( 8px, 0, 0 );
 
 }

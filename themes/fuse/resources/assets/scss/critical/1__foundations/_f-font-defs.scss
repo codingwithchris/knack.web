@@ -55,6 +55,7 @@ em{
 
 
 .f-b--s,
+.c-btn,
 input,
 textarea,{
 
@@ -63,8 +64,7 @@ textarea,{
 
 }
 
-.f-b--base,
-.c-btn{
+.f-b--base{
 
 	@include font-scale( m );
 

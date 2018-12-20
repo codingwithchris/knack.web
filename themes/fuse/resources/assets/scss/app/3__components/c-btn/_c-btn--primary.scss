@@ -22,28 +22,55 @@
 
 .c-btn--primary{
 
+    align-items: center;
     border: 2px solid transparent;
     color: c( white );
+    display: inline-flex;
+    justify-content: center;
     padding: spacer( component, s ) spacer( component, 2xl );
 
     @include transition( btn );
 
 }
 
-.c-btn--primary > .c-btn__icon{
+/**
+ * Primary Text
+ */
 
-    // Temp
-    // background-color: c( gray--m );
-    // width: 25px;
-    // height: 25px;
+.c-btn--primary > .c-btn__text{
 
-    position: absolute;
-    top: calc(50% - 12px);
-    right: 20px;
-
-    @include opacity( 1 );
+    margin-right: spacer( component, s );
 
 }
+
+/**
+ * Primary Icon
+ */
+
+.c-btn--primary > .c-btn__icon{
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+    @include transition( btn-icon );
+
+
+}
+
+.c-btn--primary > .c-btn__icon > svg {
+
+    height: 22px;
+    width: auto;
+
+ }
+
+ .c-btn--primary:hover > .c-btn__icon{
+
+    transform: translate3d( 8px, 0, 0 );
+
+ }
 
 
 /**
