@@ -25,8 +25,6 @@ function setup(){
 	// If we are on a normal page
 	if( is_page() && ! is_front_page() ){
 
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 1 );
-
 	}
 }
 
@@ -42,6 +40,5 @@ function load_hero(){
 
 function load_content(){
 
-	the_content();
 
 }

@@ -116,3 +116,11 @@
    @include opacity( .6 );
 
 }
+
+.c-overlay--gray--d--95{
+
+  background-color: c( gray--d );
+
+   @include opacity( .95 );
+
+}

@@ -18,3 +18,89 @@
  * Contact • Class Definitions
  * ************************************
  */
+
+body.contact-us article{
+
+    display: flex;
+
+}
+
+ .p-contact--split{
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: spacer( component, xl );
+    position: relative;
+
+ }
+
+ .p-contact--split__container{
+
+    display: flex;
+    flex-direction: column;
+
+ }
+
+/**
+ * Left Side
+ */
+ .p-contact--left{
+
+    flex: 0 0 40%;
+
+ }
+
+ .p-contact--left .c-bg-image{
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ }
+
+
+/**
+ * Right Side
+ */
+ .p-contact--right{
+
+    flex: 0 0 60%;
+
+ }
+
+ .p-contact--right .p-contact--split__container{
+
+    margin: 0 auto;
+    max-width: 600px;
+
+ }
+
+
+ /**
+  * Contact Title Block
+  */
+
+  .p-contact__title-group{
+
+    color: c( gold );
+
+    .o-content-block__title{
+
+        margin-bottom: 0;
+
+    }
+
+  }
+
+
+   /**
+  * Contact Info Block
+  */
+
+  .p-contact__info{
+
+    color: c( white );
+
+  }

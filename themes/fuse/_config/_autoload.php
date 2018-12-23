@@ -38,6 +38,7 @@ return [
         'layouts/page/404',
         'layouts/page/page',
         'layouts/page/front-page',
+        'layouts/page/contact',
 
         // Layout • Archive
         'layouts/archive/post',

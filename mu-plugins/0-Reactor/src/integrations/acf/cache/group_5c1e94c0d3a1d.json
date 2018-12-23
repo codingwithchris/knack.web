@@ -146,7 +146,7 @@
                 {
                     "key": "field_5c1e95b769fb0",
                     "label": "Instagram Text",
-                    "name": "instagram_link",
+                    "name": "instagram_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -190,7 +190,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -198,5 +198,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545526363
+    "modified": 1545617072
 }
