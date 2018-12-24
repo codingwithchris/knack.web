@@ -31,7 +31,6 @@ body.contact-us article{
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    padding: spacer( component, xl );
     position: relative;
 
  }
@@ -40,6 +39,7 @@ body.contact-us article{
 
     display: flex;
     flex-direction: column;
+    width: 100%;
 
  }
 
@@ -48,7 +48,14 @@ body.contact-us article{
  */
  .p-contact--left{
 
-    flex: 0 0 40%;
+   flex: 0 0 33.33%;
+
+ }
+
+ .p-contact--left .p-contact--split__container{
+
+   justify-content: space-between;
+   height: 100%;
 
  }
 
@@ -66,7 +73,7 @@ body.contact-us article{
  */
  .p-contact--right{
 
-    flex: 0 0 60%;
+    flex: 0 0 66.66%;
 
  }
 
@@ -77,6 +84,26 @@ body.contact-us article{
 
  }
 
+ .p-contact__logo{
+
+   margin-bottom: spacer( component, s );
+   max-width: 75px;
+
+ }
+
+ .p-contact__intro{
+
+   border-bottom: 2px solid c( gray--l );
+   margin-bottom: spacer( component, 3xl );
+   padding-bottom: spacer( component, 3xl );
+
+ }
+
+ .p-contact__intro .o-content-block__title{
+
+   margin-bottom: 0;
+
+ }
 
  /**
   * Contact Title Block
@@ -84,7 +111,8 @@ body.contact-us article{
 
   .p-contact__title-group{
 
-    color: c( gold );
+    color: c( gray--d );
+    padding: spacer( component, xl );
 
     .o-content-block__title{
 
@@ -95,12 +123,58 @@ body.contact-us article{
   }
 
 
-   /**
+ /**
   * Contact Info Block
   */
 
   .p-contact__info{
 
-    color: c( white );
+    color: c( gray--d );
+    margin-bottom: 0;
+    margin-top: auto;
+    padding: spacer( component, xl );
+
+    .o-content-block__title{
+
+      margin-bottom: spacer( component, s );
+
+    }
+
+    .o-content-block__copy{
+
+      margin-bottom: 0;
+
+    }
 
   }
+
+  .c-contact__item{
+
+   display: block;
+   margin-bottom: spacer( component, 2xs );
+
+  }
+
+  .c-contact__address--top,
+  .c-contact__address--bottom{
+
+   display: block;
+
+  }
+
+
+  /**
+   * Action Block
+   */
+   .p-contact__action{
+
+      background-color: c( gray--d );
+      color: c( white );
+      display: block;
+      margin-bottom: 0;
+      padding: spacer( component, xl );
+      text-align: center;
+      width: 100%;
+      z-index: z( front );
+
+   }

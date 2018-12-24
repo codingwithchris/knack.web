@@ -22,6 +22,10 @@ use function Fuse\Controllers\render as render;
 
         <div class="p-contact--split__container">
 
+            <div class="p-contact__logo">
+                <?php render( 'fragments/foundations/_f-logo' ); ?>
+            </div>
+
             <div class="p-contact__intro o-content-block">
 
                 <div class="o-content-block__title">

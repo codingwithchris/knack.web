@@ -26,7 +26,7 @@ use function Fuse\Controllers\render as render;
             <div class="p-contact__title-group o-content-block">
 
                 <div class="o-content-block__title">
-                    <h1 class="f-hw--b f-hs--xl">
+                    <h1 class="f-hw--b f-hs--2xl">
                         <?= esc_html( $data['title'] ); ?>
                     </h1>
                 </div>
@@ -87,8 +87,9 @@ use function Fuse\Controllers\render as render;
 
             </div>
 
+            <!-- Back Home -->
             <a class="p-contact__action" href="<?= esc_url( site_url('/') ); ?>">
-                <p class="p-contact__action__text f-b--small"><?= esc_html( 'Head Home' ); ?></p>
+                <p class="p-contact__action__text f-b--small"><strong><?= esc_html( 'Head Home' ); ?></strong></p>
             </a>
 
         </div>

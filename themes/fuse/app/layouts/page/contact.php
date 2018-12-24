@@ -70,7 +70,7 @@ function load_left_section(){
         'background'    => [
 
             'image_url'     => Acf::field( 'background_image' )->get(),
-            'overlay_type'	=> 'gray--d--95',
+            'overlay_type'	=> 'white--90',
         ],
 
     ];
