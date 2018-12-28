@@ -1,0 +1,61 @@
+/**
+ * Type	: Component
+ * Name	: Social
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Social • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Social • Class Definitions
+ * ************************************
+ */
+
+.c-social{
+
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-top: spacer( component, s );
+    padding-top: spacer( component, m );
+    border-top: 1px solid c( gray--l );
+
+}
+
+ .c-social__account{
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+ }
+
+.c-social__account:first-child{
+
+    margin-bottom: spacer( component, xs );
+
+}
+
+
+ .c-social__icon{
+
+    margin-right: spacer( component, xs );
+
+ }
+
+ .c-social__icon,
+ .c-social__icon > svg{
+
+    height: 16px;
+    width: 16px;
+
+ }

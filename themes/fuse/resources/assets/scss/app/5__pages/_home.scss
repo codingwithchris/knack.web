@@ -42,9 +42,24 @@
 
  }
 
+
+
  /**
-  * What We Do Section
+  * Featured Projects Section
   */
+
+  .p-home--projects{
+
+    background-color: c( purple );
+
+  }
+
+
+  .p-home--projects__wrapper{
+
+    background-color: c( white );
+
+  }
 
 /**
 * Clients Section
@@ -60,5 +75,11 @@
 .p-home--clients .o-content-block{
 
     margin-bottom: spacer( layout, l );
+
+}
+
+.p-home--clients__action{
+
+    margin-top: spacer( component, xl );
 
 }

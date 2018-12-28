@@ -15,7 +15,7 @@ $border_config : (
 		style: solid,
 		color: gray--m,
 		tone: base,
-		radius: 4px,
+		radius: 0px,
 
 	),
 
@@ -33,7 +33,16 @@ $border_config : (
 		width	: 0px,
 		style	: solid,
 		color	: transparent,
-		radius	: 4px,
+		radius	: 0px,
+
+	),
+
+	card:(
+
+		width	: 2px,
+		style	: solid,
+		color	: transparent,
+		radius	: 0px,
 
 	),
 

@@ -24,7 +24,7 @@ use function Fuse\Controllers\render as render;
     <div class="o-content-block">
 
         <div class="o-content-block__title">
-            <h5 class="f-hw--b f-hs--l u-c--purple">We’ve Worked With Some Incredible People<h5>
+            <h5 class="f-hw--b f-hs--l u-c--purple"><?= esc_html( $data['title'] ); ?><h5>
         </div>
 
     </div>
@@ -40,6 +40,10 @@ use function Fuse\Controllers\render as render;
 
         } ?>
     </div>
+
+    <div class="p-home--clients__action">
+            <?php render( 'fragments/components/_c-btn', $data['action'] ); ?>
+        </div>
 
     </div>
 </section>

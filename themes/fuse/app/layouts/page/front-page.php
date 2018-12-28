@@ -32,10 +32,11 @@ function setup(){
 		// Load page sections
 		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_intro', 1);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_what_we_do', 2);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_image_banner', 3);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_clients', 4);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 5);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_featured_projects', 2);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_what_we_do', 3);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_image_banner', 4);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_clients', 5);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 6);
 
 	}
 }
@@ -95,6 +96,18 @@ function load_intro(){
 
 }
 
+
+
+function load_featured_projects(){
+
+	$section_data = [
+
+	];
+
+	render( 'fragments/sections/home/_featured-projects', $section_data );
+
+}
+
 function load_what_we_do(){
 
 	$section_data = [
@@ -108,7 +121,7 @@ function load_what_we_do(){
 			'action'	=> [
 
 				'btn_text'	=> 'See Our Video Work',
-				'btn_link'	=>	site_url( '/work/' ),
+				'btn_url'	=>	site_url( '/work/' ),
 				'btn_type'	=> 'tertiary',
 				'btn_theme'	=> 'dark'
 
@@ -133,7 +146,7 @@ function load_what_we_do(){
 			'action'	=> [
 
 				'btn_text'	=> 'See Our Photography Work',
-				'btn_link'	=>	site_url( '/work/' ),
+				'btn_url'	=>	site_url( '/work/' ),
 				'btn_type'	=> 'tertiary',
 				'btn_theme'	=> 'dark'
 
@@ -176,8 +189,17 @@ function load_clients(){
 
 	$section_data = [
 
-		'title'			=> '',
-		'client_logos'	=> Acf::field('client_logos')->get()
+		'title'			=> 'We’ve Worked With Some Incredible People',
+		'client_logos'	=> Acf::field('client_logos')->get(),
+
+		'action'	=> [
+
+			'btn_text'	=> 'See More Clients',
+			'btn_url'	=>	site_url( '/clients/' ),
+			'btn_type'	=> 'tertiary',
+			'btn_theme'	=> 'dark'
+
+		],
 
 	];
 
@@ -198,7 +220,7 @@ function load_cta(){
 
 			'btn_type'	=> 'primary',
 			'btn_text'	=> 'Contact Us',
-			'btn_url'	=> '/contact-us/',
+			'btn_url'	=> site_url( '/contact-us/' ),
 			'btn_theme'	=> 'white',
 
 		]

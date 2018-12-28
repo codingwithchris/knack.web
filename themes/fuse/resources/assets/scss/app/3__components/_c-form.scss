@@ -18,3 +18,377 @@
  * Form • Class Definitions
  * ************************************
  */
+
+$form_breakpoint: m;
+
+/**
+ * This styles the "footer" of Gravity Forms
+ */
+
+.gform_page_footer{
+
+    text-align: center;
+
+    @include breakpoint( $form_breakpoint ){
+
+        text-align: left;
+
+    }
+
+}
+
+
+/**
+ * Gravity Forms Layout
+ */
+
+.gfield{
+
+    flex-direction: column;
+
+}
+
+.textarea.large{
+
+    height: 130px;
+
+}
+
+.gform_fields{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+
+    > .gfield{
+
+        margin-bottom: 40px;
+
+    }
+
+ }
+
+.ginput_container,
+.ginput_complex{
+
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint( $form_breakpoint ){
+
+        flex-direction: row;
+
+    }
+
+}
+
+ .ginput_complex span{
+
+    display: block;
+    flex: 0 0 100%;
+
+    @include breakpoint( $form_breakpoint ){
+
+        flex: 1;
+
+    }
+
+ }
+
+ .name_first{
+
+    margin-bottom: 24px;
+    margin-right: 0%;
+
+    @include breakpoint( $form_breakpoint ){
+
+        margin-right: 4%;
+        margin-bottom: 0px;
+
+    }
+
+ }
+
+/**
+ * Gravity Forms Input Layouts
+ */
+
+ // Any form field not given a special GF class is full width
+ .gfield:not( .gf_right_half ):not( .gf_left_half ){
+
+    flex: 100%;
+
+ }
+
+ // Handle half width gform classes
+ .gf_left_half,
+ .gf_right_half{
+
+    flex: 0 0 100%;
+
+    @include breakpoint( $form_breakpoint ){
+
+        flex: 0 0 48%;
+
+    }
+
+ }
+
+/**
+ * Gravity Forms Inline List Layout
+ */
+
+.gfield_radio{
+
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+
+ }
+
+ /**
+  * GForms Radio Buttons
+  */
+
+  .gfield_radio [class*="gchoice"]{
+
+    align-items: center;
+    background-color: c( purple );
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    margin-right: 16px;
+    margin-top: 16px;
+    padding: 16px;
+
+    @include breakpoint( $form_breakpoint ){
+
+        margin-top: 0px;
+
+    }
+
+    > [type="radio"]{
+
+        margin-right: 8px;
+
+    }
+
+    > [for*="choice"]{
+
+        position: relative;
+        top: 1px;
+
+    }
+
+
+  }
+
+
+/**
+ * This styles the "submit button" for Gravity Forms
+ */
+.gform_button,
+.gform_next_button,
+.gform_previous_button{
+
+	border-radius: 0px;
+    cursor: pointer !important;
+	letter-spacing: 1px;
+	font-weight: 700;
+	padding: spacer( component, m ) spacer( component, l );
+	text-transform: uppercase;
+    text-align: center;
+    transition: transition( btn_bg );
+
+}
+
+.gform_next_button,
+.gform_button{
+
+    margin-right: 12px;
+
+}
+
+.gform_button{
+
+    border: 1px solid c(purple);
+    background-color: c( purple );
+    color: c( white );
+
+    &:focus,
+    &:active{
+        outline: none;
+    }
+
+}
+
+.gform_button:hover{
+
+    background-color: c( purple, dark5 );
+	border-color: c( purple, dar5 );
+
+}
+
+.gform_next_button{
+
+    border: 1px solid c( purple );
+    background-color: c( purple );
+    color: c( white );
+
+    &:focus,
+    &:active{
+        outline: none;
+    }
+
+}
+
+.gform_next_button:hover{
+
+    background-color: c( purple, dark10 );
+	border-color: c( purple, dark10 );
+    color: c( white );
+
+}
+
+.gform_previous_button{
+
+    border: 1px solid c( grayscale, 50 );
+    background-color: c( white );
+    color: c( grayscale, 50 );
+    margin-bottom: 12px;
+    margin-right: 16px;
+
+    &:focus,
+    &:active{
+        outline: none;
+    }
+
+    @include breakpoint( $form_breakpoint ){
+
+        margin-bottom: 0px;
+
+    }
+
+}
+
+.gform_previous_button:hover{
+
+	border-color: c( grayscale, 30 );
+	color: c( grayscale, 50 );
+
+}
+
+/**
+ * This styles the "text area and input" of Gravity Forms
+ */
+.gform_fields .ginput_container textarea,
+.gform_fields .ginput_container input[type="text"],
+.gform_fields .ginput_container input[type="name"],
+.gform_fields .ginput_container input[type="email"],
+.gform_fields .ginput_container input[type="tel"],
+.gform_fields .ginput_container input[type="number"]{
+
+    background-color: c( white ) !important;
+    border: none;
+    border-bottom: 1px solid c( gray--d );
+    border-radius: 0px;
+    color: c( gray--d );
+    display: block;
+    padding: 10px 15px !important;
+    font-size: 16px !important;
+    transition: transition( form );
+    width: 100%;
+    appearance: none;
+
+}
+
+/**
+ * This styles error states for gravity forms
+ */
+
+ .gfield_error .ginput_container textarea,
+ .gfield_error .ginput_container input[type="text"],
+ .gfield_error .ginput_container input[type="name"],
+ .gfield_error .ginput_container input[type="email"],
+ .gfield_error .ginput_container input[type="number"],
+ .gfield_error .ginput_container input[type="tel"]{
+
+     border-color: c( error );
+
+ }
+
+ .gfield_error .validation_message{
+
+     color: c( error );
+     margin-top: spacer(component, s );
+
+}
+
+.validation_error{
+
+    color: c( error );
+    margin-bottom: spacer( component, xl );
+
+
+}
+
+/**
+ * This styles the "input and text area focus states" of Gravity Forms
+ */
+.gform_fields .ginput_container textarea:focus,
+.gform_fields .ginput_container input[type="text"]:focus,
+.gform_fields .ginput_container input[type="name"]:focus,
+.gform_fields .ginput_container input[type="email"]:focus,
+.gform_fields .ginput_container input[type="number"]:focus,
+.gform_fields .ginput_container input[type="tel"]:focus{
+
+    border-color: c( purple );
+    outline: none;
+}
+
+/**
+ * This styles the "field required tag" of Gravity Forms
+ */
+.gform_fields label.gfield_label .gfield_required{
+
+    color: c( purple );
+
+}
+
+
+/**
+ * Hidden Fields
+ */
+
+  .c-form__hidden{
+
+    display: none;
+
+  }
+
+  /**
+   * Gforms Ajax Spinner
+   */
+   .gform_ajax_spinner{
+
+    filter: grayscale( 1 );
+
+   }
+
+   /**
+    * Validations
+    */
+
+    .gform_validation_container{
+
+        display: none !important;
+
+    }
+
+    .hidden_label .gfield_label,
+    .hidden_sub_label{
+
+        display: none;
+
+    }
