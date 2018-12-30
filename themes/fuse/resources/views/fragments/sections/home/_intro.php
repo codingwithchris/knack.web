@@ -24,6 +24,10 @@ use function Fuse\Controllers\render as render;
 
         <div class="o-content-block">
 
+            <div class="o-content-block__media">
+                <?= render( 'fragments/foundations/_f-logo' ); ?>
+            </div>
+
             <div class="o-content-block__title">
                 <h3 class="f-hs--3xl">
                     <span class="f-hw--b u-c--gray--d">Knack</span> <span class="f-hw--l u-c--gray--m">Creative</span><span class="f-hw--b u-c--purple">.</span>

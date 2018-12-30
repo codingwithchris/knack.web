@@ -35,6 +35,19 @@
 
  }
 
+ .p-home--intro .o-content-block__media{
+
+  margin-bottom: spacer( component, l );
+
+ }
+
+ .p-home--intro .o-content-block__media .f-logo{
+
+  margin: 0 auto;
+  max-width: 100px;
+
+ }
+
  .p-home--intro .o-content-block__copy{
 
     margin: 0 auto;
@@ -55,14 +68,23 @@
 
   .p-home--projects__intro{
 
-    color: c( gray--d );
+    background-color: c( gray--d );
+    color: c( white );
+    display: block;
     margin-bottom: spacer( component, 2xl );
+    padding: spacer( component, l ) spacer( component, 2xl );
+
+  }
+
+  .p-home--projects__intro .o-content-block__copy{
+
+    margin-bottom: spacer( component, m );
 
   }
 
   .p-home--projects__content{
 
-    margin-top: spacer( layout, xl );
+    margin-top: spacer( layout, 3xl );
 
   }
 

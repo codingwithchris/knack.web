@@ -23,13 +23,13 @@
 
     background-position: center center;
     background-size: cover;
-    padding: spacer( layout, xl );
+    padding: spacer( layout, 2xl ) spacer( layout, xl );
     position: relative;
     z-index: z( base );
 
     &:not( :last-child ){
 
-        margin-bottom: spacer( layout, 2xl );
+        margin-bottom: spacer( layout, 3xl );
 
     }
 
@@ -82,11 +82,13 @@
   .c-featured-project__card{
 
     background-color: c(  white );
-    padding: spacer(  layout, l );
+    padding: spacer(  layout, m );
     position: relative;
-    top: -125px;
+    top: -250px;
     max-width: 450px;
     z-index: z( front );
+
+    @include shadow( media--subtle );
 
   }
 
@@ -106,32 +108,13 @@
 
    }
 
-/**
- * Featured Project Meta
- */
-
- .c-featured-project__meta{
-
-    border-top: 1px solid c( gray--l );
-    color: c( gray--m );
-    display: inline-block;
-    margin-top: spacer( component, m );
-    padding-top: spacer( component, m );
-
- }
-
- .c-featured-project__pre-meta{
-
-    font-weight: 700;
-
- }
-
  /**
   * Featured Project Action
   */
 
   .c-featured-project__action{
 
-    margin-top: spacer( component, 3xl );
+    display: inline-block;
+    margin-top: spacer( component, xl );
 
   }
