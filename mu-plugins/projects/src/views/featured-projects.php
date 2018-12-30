@@ -41,13 +41,6 @@ while ( $projects->have_posts() ) {
 
 				<div class="c-featured-project__meta">
 
-					<p class="c-featured-project__client">
-						<span class="c-featured-project__pre-meta">
-							<?= esc_html( 'Client: ' ); ?>
-						</span>
-						<?= esc_html( $client_name ); ?>
-					</p>
-
 					<p class="c-featured-project__industry f-b--xs">
 						<span class="c-featured-project__pre-meta">
 							<?= esc_html( 'Industry: ' ); ?>

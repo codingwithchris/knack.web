@@ -125,6 +125,8 @@ textarea,{
 
 .f-hs--l{
 
+	line-height: 1.3;
+
 	@include font-scale( l );
 
 }
@@ -136,6 +138,8 @@ textarea,{
 }
 
 .f-hs--2xl{
+
+	line-height: 1.3;
 
 	@include font-scale( 2xl );
 
