@@ -52,8 +52,6 @@ while ( $projects->have_posts() ) {
 
 		</div>
 
-		<div class="c-featured-project__overlay"></div>
-
 	</div>
 
 <?php }
