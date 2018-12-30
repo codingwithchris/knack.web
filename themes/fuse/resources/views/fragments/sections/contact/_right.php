@@ -39,7 +39,7 @@ use function Fuse\Controllers\render as render;
             </div>
 
             <div class="p-contact__form c-form">
-                <?= do_shortcode( "[gravityform id={$data['form_id']} title=false ajax=false description=false]" ); ?>
+                <?= do_shortcode( "[gravityform id={$data['form_id']} title=false ajax=true description=false]" ); ?>
             </div>
 
         </div>

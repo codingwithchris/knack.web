@@ -42,22 +42,27 @@
 
  }
 
-
-
  /**
   * Featured Projects Section
   */
 
   .p-home--projects{
 
-    background-color: c( purple );
+    background-color: c( gray--l );
+    padding: spacer( layout, xl ) 0;
 
   }
 
+  .p-home--projects__intro{
 
-  .p-home--projects__wrapper{
+    color: c( gray--d );
+    margin-bottom: spacer( component, 2xl );
 
-    background-color: c( white );
+  }
+
+  .p-home--projects__content{
+
+    margin-top: spacer( layout, xl );
 
   }
 

@@ -22,6 +22,9 @@ return array_merge(
 			'src/custom/taxonomy.php',
 			'src/custom/post-type.php',
 
+			// Load in Shortcodes
+			'src/shortcodes/featured-projects/shortcode.php',
+
 		],
 
 		// Our Views directory for Shortcodes

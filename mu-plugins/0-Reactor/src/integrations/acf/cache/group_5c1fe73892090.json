@@ -19,11 +19,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_5c1fe742dabd9",
-            "label": "Description",
-            "name": "description",
+            "key": "field_5c28062cd1d2e",
+            "label": "Short Description",
+            "name": "short_description",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "This description is shown on the home page if the project is featured.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -36,6 +36,73 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_5c1fe742dabd9",
+            "label": "Long Description",
+            "name": "long_description",
+            "type": "wysiwyg",
+            "instructions": "This description is shown on the main page for this project.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c28056d654d8",
+            "label": "Featured Image • Desktop",
+            "name": "featured_image_desktop",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c28058b654d9",
+            "label": "Featured Image • Mobile",
+            "name": "featured_image_mobile",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5c1fe80adabdb",
@@ -275,8 +342,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "featured_image"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1545614222
+    "modified": 1546145046
 }

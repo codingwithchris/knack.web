@@ -26,11 +26,7 @@ return array(
 
 	'defaults'                    => array(
 
-		'count'			=> 1,
-		'layout'		=> '',
-		'group'			=> '',
-		'location'		=> '',
-		'class'			=> '',
+		'count'			=> 3
 
 	),
 

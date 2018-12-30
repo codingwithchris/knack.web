@@ -30,7 +30,6 @@ function process_shortcode(  $config, $attributes, $content, $shortcode_name ){
 			// If we have stories that match the query
 			if ( $projects->have_posts() ) {
 
-
 					// Render our shortcode and pass all available variables
 					render_shortcode( $projects, $config, $attributes, $content, $shortcode_name );
 
@@ -63,22 +62,15 @@ function render_shortcode( $projects, $config, $attributes, $content, $shortcode
 
 function query_featured_work( $attributes ){
 
-	// Tax Query is null by default
-	$tax_query = null;
+	// Set Up Tax Query
+	$tax_query = array(
 
-	// If we define groups to query from
-	if( $attributes['featured'] ){
+		'taxonomy' 	=> 'featured',
+		'terms' 	=> array( 'yes' ),
+		'field' 	=> 'slug',
+		'operator'	=> 'IN'
 
-		$tax_query = array(
-
-			'taxonomy' 	=> 'featured',
-			'terms' 	=> array( $attributes['featured'] ),
-			'field' 	=> 'slug',
-			'operator'	=> 'IN'
-
-		);
-
-	}
+	);
 
 	// Default WP_Query arguments
 	$args = array(
@@ -86,8 +78,8 @@ function query_featured_work( $attributes ){
 		'post_type'              => array( 'projects' ),
 		'post_status'            => array( 'publish' ),
 		'order'                  => 'ASC',
-		'orderby'                => 'name',
-		'posts_per_page'		 => -1,
+		'orderby'                => 'menu_order',
+		'posts_per_page'		 => $attributes['count'],
 		'tax_query'				 => array( $tax_query )
 
 	);

@@ -52,6 +52,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 1px;
 
 
     @include transition( btn-icon );

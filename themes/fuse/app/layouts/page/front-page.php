@@ -223,6 +223,9 @@ function load_cta(){
 			'btn_url'	=> site_url( '/contact-us/' ),
 			'btn_theme'	=> 'white',
 
+		],
+		'bg_image'	=> [
+			'image_url' => 'https://picsum.photos/1920/500'
 		]
 
 	];

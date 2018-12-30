@@ -25,7 +25,7 @@ use function Fuse\Controllers\render as render;
 
         <div class="c-cta__content o-content-block">
 
-            <div class="c-cta__title o-content-block__title">
+            <div class="c-cta__title o-content-block__title u-mbn">
                 <h5 class="f-hw--b f-hs--2xl">
                     <?= $data['title']; ?>
                 <h5>

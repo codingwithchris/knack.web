@@ -1,0 +1,137 @@
+/**
+ * Type	: Component
+ * Name	: Featured-project
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Featured-project • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Featured-project • Class Definitions
+ * ************************************
+ */
+
+ .c-featured-project{
+
+    background-position: center center;
+    background-size: cover;
+    padding: spacer( layout, xl );
+    position: relative;
+    z-index: z( base );
+
+    &:not( :last-child ){
+
+        margin-bottom: spacer( layout, 2xl );
+
+    }
+
+ }
+
+ .c-featured-project__wrapper{
+
+    display: flex;
+
+ }
+
+ .c-featured-project--mobile-featured{
+
+    display: none;
+
+ }
+
+
+// Handle Odd Projects
+.c-featured-project:nth-child( odd ) > .c-featured-project__wrapper{
+
+    justify-content: flex-end;
+
+}
+
+ // Handle Even Projects
+ .c-featured-project:nth-child( even ) > .c-featured-project__wrapper{
+
+    justify-content: flex-start;
+
+ }
+
+ .c-featured-project__overlay{
+
+    //background-color: c( white );
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: z( zero );
+
+ }
+
+ /**
+  * Featured Project • Card
+  */
+
+  .c-featured-project__card{
+
+    background-color: c(  white );
+    padding: spacer(  layout, l );
+    position: relative;
+    top: -125px;
+    max-width: 450px;
+    z-index: z( front );
+
+  }
+
+  /**
+   * Card Contents
+   */
+
+   .c-featured-project__services{
+
+        color: c( gold );
+
+   }
+
+   .c-featured-project__title{
+
+    margin-bottom: spacer( component, m );
+
+   }
+
+/**
+ * Featured Project Meta
+ */
+
+ .c-featured-project__meta{
+
+    border-top: 1px solid c( gray--l );
+    color: c( gray--m );
+    display: inline-block;
+    margin-top: spacer( component, m );
+    padding-top: spacer( component, m );
+
+ }
+
+ .c-featured-project__pre-meta{
+
+    font-weight: 700;
+
+ }
+
+ /**
+  * Featured Project Action
+  */
+
+  .c-featured-project__action{
+
+    margin-top: spacer( component, 3xl );
+
+  }

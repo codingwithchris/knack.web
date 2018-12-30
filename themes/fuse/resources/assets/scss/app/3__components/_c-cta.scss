@@ -23,6 +23,7 @@
 
     padding: spacer( layout, 2xl ) 0px;
     text-align: center;
+    position: relative;
 
  }
 
@@ -31,7 +32,7 @@
   */
   .c-cta--home{
 
-    background-color: c( purple );
+    background-color: rgba( c( purple ), .95 );
     color: c( white );
 
   }
