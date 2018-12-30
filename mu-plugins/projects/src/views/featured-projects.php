@@ -50,9 +50,11 @@ while ( $projects->have_posts() ) {
 
 				</div>
 
-				<a class="c-featured-project__action c-btn c-btn--secondary c-btn--secondary--dark" href="<?= esc_url( get_the_permalink() ) ?>">
-					<span class="c-btn__text"><?= esc_html( 'View Project' ); ?></span>
-				</a>
+				<div class="c-featured-project__action">
+					<a class="c-btn c-btn--secondary c-btn--secondary--dark" href="<?= esc_url( get_the_permalink() ) ?>">
+						<span class="c-btn__text"><?= esc_html( 'View Project' ); ?></span>
+					</a>
+				</div>
 
 			</div>
 
