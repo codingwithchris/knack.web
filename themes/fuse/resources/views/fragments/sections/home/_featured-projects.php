@@ -28,7 +28,7 @@ use function Fuse\Controllers\render as render;
                 <h5 class="f-hw--b f-hs--xl">Featured Projects<h5>
             </div>
 
-            <div class="o-content-block__copy u-max-w--500">
+            <div class="o-content-block__copy">
                 <p class="f-b--s">Take a look at some of our favorite work.</p>
             </div>
 

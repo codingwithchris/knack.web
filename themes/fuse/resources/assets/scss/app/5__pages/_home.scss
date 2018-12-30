@@ -62,17 +62,22 @@
   .p-home--projects{
 
     background-color: c( gray--l );
-    padding: spacer( layout, xl ) 0;
+    padding: spacer( layout, 2xl ) 0;
 
   }
 
   .p-home--projects__intro{
 
-    background-color: c( gray--d );
-    color: c( white );
+    background-color: c( white );
+    color: c( gray--d );
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: spacer( component, 2xl );
     padding: spacer( component, l ) spacer( component, 2xl );
+    width: 100%;
+
+    @include border( left, card, c( purple ) );
 
   }
 

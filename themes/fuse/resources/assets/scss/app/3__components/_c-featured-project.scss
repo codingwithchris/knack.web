@@ -27,6 +27,8 @@
     position: relative;
     z-index: z( base );
 
+    @include shadow( media--subtle );
+
     &:not( :last-child ){
 
         margin-bottom: spacer( layout, 3xl );
