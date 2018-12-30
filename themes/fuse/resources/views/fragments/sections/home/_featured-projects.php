@@ -46,5 +46,9 @@ use function Fuse\Controllers\render as render;
 
         </div>
 
+        <div class="p-home--projects__action">
+            <?php render( 'fragments/components/_c-btn', $data['action'] ); ?>
+        </div>
+
     </div>
 </section>

@@ -25,7 +25,7 @@
   */
  .p-home--intro{
 
-   padding: spacer( layout, 3xl ) 0;
+   padding: spacer( layout, 2xl ) 0;
 
  }
 
@@ -61,6 +61,12 @@
   }
 
   .p-home--projects__content{
+
+    margin-top: spacer( layout, xl );
+
+  }
+
+  .p-home--projects__action{
 
     margin-top: spacer( layout, xl );
 

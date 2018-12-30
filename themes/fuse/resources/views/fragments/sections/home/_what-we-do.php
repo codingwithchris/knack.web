@@ -18,7 +18,7 @@ use function Fuse\Controllers\render as render;
 
 ?>
 
-<section id="home-what-we-do" class="p-home--what-we-do">
+<section id="home-what-we-do" class="p-home--what-we-do" data-anim-in="false">
     <div class="f-container">
 
         <div class="c-collection--islands">

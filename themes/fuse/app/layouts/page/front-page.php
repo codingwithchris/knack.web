@@ -101,7 +101,14 @@ function load_intro(){
 function load_featured_projects(){
 
 	$section_data = [
+		'action'	=> [
 
+			'btn_text'	=> 'See All Projects',
+			'btn_url'	=>	site_url( '/projects/' ),
+			'btn_type'	=> 'tertiary',
+			'btn_theme'	=> 'dark'
+
+		],
 	];
 
 	render( 'fragments/sections/home/_featured-projects', $section_data );
@@ -121,7 +128,7 @@ function load_what_we_do(){
 			'action'	=> [
 
 				'btn_text'	=> 'See Our Video Work',
-				'btn_url'	=>	site_url( '/work/' ),
+				'btn_url'	=>	site_url( '/projects/' ),
 				'btn_type'	=> 'tertiary',
 				'btn_theme'	=> 'dark'
 
@@ -146,7 +153,7 @@ function load_what_we_do(){
 			'action'	=> [
 
 				'btn_text'	=> 'See Our Photography Work',
-				'btn_url'	=>	site_url( '/work/' ),
+				'btn_url'	=>	site_url( '/projects/' ),
 				'btn_type'	=> 'tertiary',
 				'btn_theme'	=> 'dark'
 

@@ -19,7 +19,7 @@ use function Fuse\Controllers\render as render;
 ?>
 
 
-<section id="home-intro" class="p-home--intro">
+<section id="home-intro" class="p-home--intro" data-anim-in="false">
     <div class="f-container f-container--width f-container--max--l">
 
         <div class="o-content-block">
