@@ -11,6 +11,7 @@ return [
         'admin',
         'filters',
         'menus',
+        'optimizations',
 
         // Enqueues
         'asset-handlers/manifest',
@@ -38,6 +39,7 @@ return [
         'layouts/page/404',
         'layouts/page/page',
         'layouts/page/front-page',
+        'layouts/page/about-us',
         'layouts/page/contact',
 
         // Layout • Archive

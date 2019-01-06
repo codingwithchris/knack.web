@@ -1,0 +1,61 @@
+/**
+ * Type	: Component
+ * Name	: Split
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Split • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Split • Class Definitions
+ * ************************************
+ */
+
+ .c-split{
+
+    display: flex;
+    position: relative;
+
+    @include shadow( media--subtle );
+
+ }
+
+ .c-split__half{
+
+    flex: 1 0 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: z( base );
+
+ }
+
+ .c-split__content{
+
+    background-color: c( white );
+    padding: spacer( layout, xl ) spacer( component, 4xl );
+
+ }
+
+ .c-split__media{
+
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+ }
+
+ .c-split__media > .c-bg-image{
+
+    background-position: center center;
+
+ }

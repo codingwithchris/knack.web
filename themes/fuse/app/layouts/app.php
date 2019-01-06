@@ -18,6 +18,12 @@ add_action( 'wp_head', __NAMESPACE__ . '\inject_critical_scripts_and_styles', 1)
  */
 add_action( 'init',  'Reactor\Optimize\RemoveEmbeds\disable_wp_embeds', 9999 );
 
+
+// Get the heck out autop!!
+remove_filter ('acf_the_content', 'wpautop', 10, 1);
+remove_filter ('the_content', 'wpautop', 10, 1 );
+
+
 // Bring in site assets
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_app_styles_bundle', 9999999999 ); // LOAD LAST to make sure we override any plugin styles
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_app_script_bundle', 1 );

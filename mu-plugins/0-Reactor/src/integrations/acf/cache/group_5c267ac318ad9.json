@@ -20,8 +20,8 @@
         },
         {
             "key": "field_5c267b1b7bab4",
-            "label": "Mission",
-            "name": "mission",
+            "label": "Quote",
+            "name": "quote",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -33,25 +33,6 @@
             },
             "layout": "row",
             "sub_fields": [
-                {
-                    "key": "field_5c267b567bab7",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
                 {
                     "key": "field_5c267b307bab5",
                     "label": "Copy",
@@ -94,8 +75,8 @@
         },
         {
             "key": "field_5c267ad67bab1",
-            "label": "Intro",
-            "name": "intro",
+            "label": "Philosophy",
+            "name": "philosophy",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -130,7 +111,7 @@
                     "key": "field_5c267b007bab3",
                     "label": "Copy",
                     "name": "copy",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -140,10 +121,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br"
                 }
             ]
         },
@@ -213,7 +194,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -573,5 +554,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546044608
+    "modified": 1546811528
 }

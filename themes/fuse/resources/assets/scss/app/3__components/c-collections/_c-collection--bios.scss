@@ -1,0 +1,45 @@
+/**
+ * Type	: Component
+ * Name	: Collection -- Bios
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Collection -- Bios • Settings
+ * *************************************
+ */
+
+/**
+ * ************************************
+ * Collection -- Bios • Class Definitions
+ * ************************************
+ */
+
+ .c-collection--bios > .c-bio:not( :last-child ){
+
+    margin-bottom: spacer( layout, 2xl );
+
+}
+
+.c-collection--bios > .c-bio:nth-child( even ){
+
+    @include breakpoint( m ){
+
+        > .c-bio__media{
+
+            order: 2;
+
+        }
+
+        > .c-bio__content{
+
+            order: 1;
+
+        }
+
+    }
+
+}

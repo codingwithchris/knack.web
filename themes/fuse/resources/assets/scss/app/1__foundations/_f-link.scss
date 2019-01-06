@@ -13,7 +13,7 @@
  */
 
 	// Standard Link
-	$link__color--standard: c( gold );
+	$link__color--standard: c( purple );
 	$link__color--inverted: c( gold );
 
 /**
@@ -24,8 +24,6 @@
 
  // Base link styles
  .f-link{
-
-	padding-bottom: spacer( component, 3xs );
 
 	@include border( bottom, link, transparent );
 	@include transition( link );

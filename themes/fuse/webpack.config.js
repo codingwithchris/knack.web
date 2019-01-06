@@ -52,7 +52,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const projectSettings = {
 
     // Replace with the local dev URL for your site
-    proxy: 'https://gmstore.build',
+    proxy: 'https://knack.build',
 
     jsEntryFiles: {
         app: './resources/assets/js/app.js',
