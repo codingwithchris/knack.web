@@ -1,0 +1,44 @@
+/**
+ * Type	: Component
+ * Name	: Hero -- Project
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Hero -- Project • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Hero -- Project • Class Definitions
+ * ************************************
+ */
+
+ .c-hero--project{
+
+	align-items: flex-end;
+	display: flex;
+    justify-content: flex-end;
+	min-height: 75vh;
+
+ }
+
+ .c-hero--project .c--hero__content{
+
+	background-color: c( white );
+	margin: 0 auto;
+	max-width: 500px;
+	padding: spacer( component, l );
+	position: relative;
+	text-align: center;
+	top: 75px;
+	z-index: z( base );
+
+	@include shadow( media--subtle );
+
+ }

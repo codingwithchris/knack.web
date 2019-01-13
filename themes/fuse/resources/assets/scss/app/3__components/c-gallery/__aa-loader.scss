@@ -1,7 +1,7 @@
 /**
  * Name		: Loader
  * Desc		: Handles importing/loading of all partial files in the specified group.
- * Group	: Button
+ * Group	: Gellery
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -19,7 +19,6 @@
     //
 
 	// Cards
-    @import '__c-hero--global';
-    @import '_c-hero--home';
-    @import '_c-hero--page';
-    @import '_c-hero--project';
+    @import '__c-gallery--global';
+    @import '_c-gallery--photo';
+    @import '_c-gallery--video';

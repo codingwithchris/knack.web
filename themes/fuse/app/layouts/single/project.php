@@ -1,6 +1,6 @@
 <?php
 /**
- * This file controls what content is rendered on a singular work custom post type page
+ * This file controls what content is rendered on a singular project custom post type page
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -13,9 +13,10 @@
  *
  */
 
-namespace Fuse\Layout\SingleWork;
+namespace Fuse\Layout\SingleProject;
 use Fuse\Controllers;
 use Fuse\AssetHandler;
+use Samrap\Acf\Acf;
 
 
 // Fire our setup once we have all  Wordpress data
@@ -24,13 +25,14 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on a normal page
-	if( is_singular( 'work' ) ){
+	if( is_singular( 'projects' ) ){
 
 		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero' );
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 5);
+
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_gallery', 5);
 
 		// Handle Custom Scripts & Styles
-		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_work_script', 1 );
+		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_projects_script', 1 );
 
 	}
 
@@ -41,16 +43,26 @@ function setup(){
  * setup() returns true.
  ************************************************************/
 
-
-function load_header_content(){
-
-}
-
 function load_hero(){
 
+	$header_data = [
+
+
+	];
+
+	Controllers\render( 'fragments/components/hero/_c-hero--project', $header_data );
+
 }
 
-function load_content(){
+function load_gallery(){
+
+	$gallery_data = [
+
+		'photos' => Acf::field( 'photos' )->get()
+
+	];
+
+	Controllers\render( 'fragments/components/_c-gallery--photo', $gallery_data );
 
 }
 
@@ -62,12 +74,12 @@ function load_footer_content(){
 /**
  * Load custom post page scripts.
  */
-function load_work_script(){
+function load_projects_script(){
 
 	$script = [
 
-		'handle' 			=> 'work-script',
-		'location'			=> AssetHandler\get_asset_from_manifest( 'work.js' ),
+		'handle' 			=> 'project-script',
+		'location'			=> AssetHandler\get_asset_from_manifest( 'project.js' ),
 		'dependencies'		=> ['app-script'],
 		'version'			=> null,
         'load_in_footer'	=> 'true',

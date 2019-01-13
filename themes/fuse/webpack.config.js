@@ -57,6 +57,7 @@ const projectSettings = {
     jsEntryFiles: {
         app: './resources/assets/js/app.js',
         critical: './resources/assets/js/critical.js',
+        project: './resources/assets/js/project.js',
     },
 };
 

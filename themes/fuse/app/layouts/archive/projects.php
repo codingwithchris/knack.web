@@ -1,6 +1,6 @@
 <?php
 /**
- * This file controls what content is rendered on the custom post type archive for Work.
+ * This file controls what content is rendered on the custom post type archive for Projects.
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -13,7 +13,7 @@
  *
  */
 
-namespace Fuse\Layout\ArchiveWork;
+namespace Fuse\Layout\ArchiveProjects;
 use Fuse\Controllers;
 use Fuse\AssetHandler;
 use Samrap\Acf\Acf;
@@ -25,7 +25,7 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on our custom post type
-	if( is_archive( 'work' ) ){
+	if( is_archive( 'projects' ) ){
 
         add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 5);
 

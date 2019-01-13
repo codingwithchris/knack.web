@@ -44,10 +44,10 @@ return [
 
         // Layout • Archive
         'layouts/archive/post',
-        'layouts/archive/work',
+        'layouts/archive/projects',
 
         // Layout • Single
-        'layouts/single/work',
+        'layouts/single/project',
 
         // Layout • Page Templates
         'layouts/template/landing',
