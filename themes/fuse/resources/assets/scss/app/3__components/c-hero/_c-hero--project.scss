@@ -27,18 +27,3 @@
 	min-height: 75vh;
 
  }
-
- .c-hero--project .c--hero__content{
-
-	background-color: c( white );
-	margin: 0 auto;
-	max-width: 500px;
-	padding: spacer( component, l );
-	position: relative;
-	text-align: center;
-	top: 75px;
-	z-index: z( base );
-
-	@include shadow( media--subtle );
-
- }

@@ -64,6 +64,7 @@
 	},
 	"dependencies": {
 		"gsap": "^2.0.2",
+		"intersection-observer": "^0.5.1",
 		"js-cookie": "^2.2.0",
 		"lodash.throttle": "^4.1.1",
 		"luminous-lightbox": "^2.3.2",

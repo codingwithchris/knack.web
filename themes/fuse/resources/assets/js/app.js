@@ -20,3 +20,5 @@ import './app/accessibility/user-tab-detect';
  *
  * Load any scripts dealing specifically with components here :)
  */
+
+import './app/components/c-progressive';

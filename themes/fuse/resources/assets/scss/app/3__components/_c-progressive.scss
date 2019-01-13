@@ -41,5 +41,25 @@
 	min-width: 100%;
 	object-fit: cover;
 	object-position: 50% 50%;
+	transform: scale( 1.1 );
+
+}
+
+
+.c-progressive__image{
+
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: opacity 1s ease;
+	transition-delay: .1s;
+    will-change: opacity;
+
+	@include opacity( 0 );
+
+}
+
+.c-progressive__image.--loaded{
+
+	@include opacity( 1 );
 
 }
