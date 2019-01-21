@@ -52,13 +52,13 @@
             },
             "default_value": "",
             "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
+            "toolbar": "full",
+            "media_upload": 1,
             "delay": 0
         },
         {
             "key": "field_5c28056d654d8",
-            "label": "Featured Image",
+            "label": "Featured Image • Desktop",
             "name": "featured_image_desktop",
             "type": "image",
             "instructions": "",
@@ -147,9 +147,9 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5c1fe8b646efb",
-                    "label": "Testimonial",
-                    "name": "testimonial",
+                    "key": "field_5c44fe47f95a3",
+                    "label": "Description",
+                    "name": "description",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -265,41 +265,19 @@
             "sub_fields": [
                 {
                     "key": "field_5c1fece549ede",
-                    "label": "Vimeo ID",
-                    "name": "viemo_id",
-                    "type": "text",
+                    "label": "Video URL",
+                    "name": "video_url",
+                    "type": "oembed",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "100",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5c1fecfb49edf",
-                    "label": "Short Description",
-                    "name": "short_description",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "width": "",
+                    "height": ""
                 }
             ]
         }
@@ -323,5 +301,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1547434439
+    "modified": 1548051268
 }

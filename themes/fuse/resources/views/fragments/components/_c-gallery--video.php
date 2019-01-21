@@ -4,7 +4,7 @@ use function Fuse\Controllers\render as render;
 
 /**
  * Type	: Section
- * Name	:  Collection - Photos
+ * Name	:  Collection - Videos
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -12,18 +12,18 @@ use function Fuse\Controllers\render as render;
 
 /**
  * *************************************
- *  Collection - Photos • View Settings
+ *  Collection - Videos • View Settings
  * *************************************
  */
 
 /**
  * *************************************
- *  Collection - Photos • View Definition
+ *  Collection - Videos • View Definition
  * *************************************
  */
 ?>
 
-<div class="c-gallery c-gallery--photo">
+<div class="c-gallery c-gallery--video">
 
 	<?php foreach( $data as $media ){ ?>
 
@@ -33,16 +33,11 @@ use function Fuse\Controllers\render as render;
 
 				$media_data = [
 
-					'media' 	=> $media['photo'] ,
-					'atts'		=> [
-
-						"data-lightbox-img={$media['photo']['url']}"
-
-					]
+					'video' 	=> $media['video_url'] ,
 
 				];
 
-				render( 'fragments/components/_c-progressive', $media_data );
+				render( 'fragments/components/_c-responsive-video', $media_data );
 
 			?>
 

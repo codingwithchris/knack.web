@@ -24,6 +24,27 @@
 	align-items: flex-end;
 	display: flex;
     justify-content: flex-end;
-	min-height: 75vh;
+	min-height: 65vh;
+	text-align: left;
+
+ }
+
+ .c-hero--project .c-hero__container{
+
+	position: relative;
+	z-index: z( front );
+
+ }
+
+ .c-hero--project .c--hero__content{
+
+	background-color: c( white );
+	padding: spacer( layout, m ) spacer( component, xl );
+	margin-bottom: spacer( component, 2xl );
+	max-width: 700px;
+
+	@include border( left, card, c( purple ) );
+	@include shadow( media--subtle );
+
 
  }

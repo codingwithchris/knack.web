@@ -23,13 +23,12 @@ use function Fuse\Controllers\render as render;
  */
 ?>
 
-<section id="project-description" class="p-project__description" data-anim-in="false">
+<section id="project-intro" class="p-project__intro" data-anim-in="false">
 
-	<div class="f-container f-container--width f-container--max--xs">
+	<div class="f-container f-container--width f-container--max--s">
 
-		<div class="p-project__description__container o-content-block">
-			<p class="o-content-block__title f-hw--b f-hs--l"><?= esc_html( $data['title'] ); ?></p>
-			<p class="f-b--base o-content-block__copy"><?= wp_kses_post( $data['description'] ); ?></p>
+		<div class="p-project__intro__container o-content-block">
+			<p class="o-content-block__title f-hw--b f-hs--xl"><?= esc_html( $data['title'] ); ?></p>
 		</div>
 
 	</div>

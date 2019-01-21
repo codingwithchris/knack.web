@@ -10,14 +10,6 @@ use Reactor\Helpers;
  */
 add_action( 'wp_head', __NAMESPACE__ . '\inject_critical_scripts_and_styles', 1);
 
-/**
- * Disable oEmbeds across the site using a function from our Reactor Plugin.
- *
- * Note that if we want to re-enable oEmbed on specific pages, we will
- * need to remove this action :)
- */
-add_action( 'init',  'Reactor\Optimize\RemoveEmbeds\disable_wp_embeds', 9999 );
-
 
 // Get the heck out autop!!
 remove_filter ('acf_the_content', 'wpautop', 10, 1);

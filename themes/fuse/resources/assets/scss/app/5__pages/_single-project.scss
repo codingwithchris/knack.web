@@ -1,14 +1,112 @@
-.p{
+
+/**
+ * Project Intro
+ */
+
+
+ /**
+  * Meta Info
+  */
+
+  .p-project__meta{
+
+	display: flex;
+	padding: 0 spacer( component, l );
+	margin-top: spacer( layout, xl );
+
+}
+
+.p-project__client{
 
 	background-color: c( white );
-	margin: 0 auto;
-	max-width: 500px;
-	padding: spacer( component, l );
-	position: relative;
-	text-align: center;
-	top: 75px;
-	z-index: z( base );
+	display: flex;
+	margin-bottom: spacer( component,2xl );
+	padding-bottom: spacer( component, 2xl );
 
-	@include shadow( media--subtle );
+	@include border( bottom, link, c( gray--l ) );
+
+}
+
+.p-project__client__left{
+
+	width: 100%;
+    margin-right: spacer( component, 2xl );
+
+}
+
+.p-project__client__website{
+
+	color: c( purple );
+
+}
+
+.p-project__client__description{
+
+	max-width: 400px;
+
+}
+
+.p-project__client__right{
+
+	//
+
+}
+
+.p-project__client__industries{
+
+	margin-bottom: spacer( component, m );
+	padding-bottom: spacer( component, xs );
+
+	@include border( bottom, link, c( gray--l ) );
+
+}
+
+
+/**
+ * Project Overview
+ */
+
+ .p-project__description{
+
+	padding: spacer( component, s ) 0 spacer( layout, l );
+
+ }
+
+
+/**
+ * Project photos and videos
+ */
+
+ .p-project__photos{
+
+	padding: spacer( layout, l ) 0 spacer( layout, l );
+
+ }
+
+ .p-project__videos{
+
+	padding: spacer( layout, xl ) 0 0;
+
+ }
+
+ .p-project__photos__intro,
+ .p-project__videos__intro{
+
+	align-items: center;
+	background-color: c( gray--d );
+	display: flex;
+	justify-content: center;
+	margin: 0 auto spacer( component, xl ) auto;
+	max-width: 600px;
+	padding: spacer( component, m ) spacer( component, m );
+	text-align: center;
+
+	.o-content-block__title{
+
+		color: c( gold );
+		display: inline-block;
+		padding-bottom: spacer( component, xs );
+
+	}
 
  }

@@ -21,10 +21,11 @@
 
  .c-gallery--photo{
 
-	grid-template-columns: 100%;
-	grid-template-rows: auto;
+	display: grid;
 	grid-column-gap: spacer( component, xs );
 	grid-row-gap: spacer( component, xs );
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
 	padding: spacer( component, xs );
 
 
@@ -46,9 +47,18 @@
 
 .c-gallery--photo .c-gallery__media{
 
+	cursor: pointer;
 	height: 350px;
 	overflow: hidden;
 	position: relative;
+
+	@include transition( link );
+
+}
+
+.c-gallery--photo .c-gallery__media:hover{
+
+	@include opacity( .8 );
 
 }
 
