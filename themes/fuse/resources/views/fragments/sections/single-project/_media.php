@@ -28,8 +28,12 @@ use function Fuse\Controllers\render as render;
 
 	<?php } ?>
 
-	<div class="p-project__media__photos">
-		<?= render( 'fragments/components/_c-gallery--photo', $data['photos'] ); ?>
-	</div>
+	<?php if( $data['photos'] ){ ?>
+
+		<div class="p-project__media__photos">
+			<?= render( 'fragments/components/_c-gallery--photo', $data['photos'] ); ?>
+		</div>
+
+	<?php } ?>
 
 </section>
