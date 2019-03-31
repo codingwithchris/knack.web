@@ -26,7 +26,6 @@
 	grid-row-gap: spacer( component, xs );
 	grid-template-columns: 100%;
 	grid-template-rows: auto;
-	padding: spacer( component, xs );
 
 
 	@include breakpoint( s ){
@@ -48,7 +47,7 @@
 .c-gallery--photo .c-gallery__media{
 
 	cursor: pointer;
-	height: 350px;
+	height: 600px;
 	overflow: hidden;
 	position: relative;
 

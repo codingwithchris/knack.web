@@ -1,5 +1,10 @@
 import { LuminousGallery } from 'luminous-lightbox';
 
+/**
+ * Currently Using: https://github.com/imgix/luminous
+ * Replace with: https://photoswipe.com/
+ */
+
 function initLightbox() {
 
     const lightboxDataSrc = 'data-lightbox-img';

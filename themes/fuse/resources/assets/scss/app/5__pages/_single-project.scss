@@ -1,112 +1,115 @@
 
 /**
- * Project Intro
+ * Project Hero
  */
+.p-project__hero{
 
+	border-top: 2px solid c( gray--l );
+	padding: spacer( layout, m ) 0;
 
- /**
-  * Meta Info
-  */
-
-  .p-project__meta{
-
-	display: flex;
-	padding: 0 spacer( component, l );
-	margin-top: spacer( layout, xl );
+	@include breakpoint( m ){
+		padding: spacer( layout, 2xl ) 0;
+	}
 
 }
 
-.p-project__client{
+.p-project__hero__container{
 
-	background-color: c( white );
 	display: flex;
-	margin-bottom: spacer( component,2xl );
+	flex-direction: column;
+
+	@include breakpoint( m ){
+		flex-direction: row;
+	}
+
+}
+
+.p-project__hero__left{
+
+	border-bottom: 1px solid c( gray--m );
+	flex: 1;
 	padding-bottom: spacer( component, 2xl );
+	padding-right: 0;
 
-	@include border( bottom, link, c( gray--l ) );
-
-}
-
-.p-project__client__left{
-
-	width: 100%;
-    margin-right: spacer( component, 2xl );
-
-}
-
-.p-project__client__website{
-
-	color: c( purple );
+	@include breakpoint( m ){
+		border-bottom: none;
+		border-right: 1px solid c( gray--l, dark10 );
+		flex: 1 0 60%;
+		padding-bottom: 0;
+		padding-right: spacer( component, 2xl );
+	}
 
 }
 
-.p-project__client__description{
+.p-project__hero__right{
 
-	max-width: 400px;
+	flex: 1;
+	padding-left: 0;
+	padding-top: spacer( component, 2xl );
+
+	@include breakpoint( m ){
+		flex: 1 0 40%;
+		padding-left: spacer( component, 2xl );
+		padding-top: 0;
+	}
 
 }
 
-.p-project__client__right{
 
+.p-project__hero__left,
+.p-project__hero__right{
 	//
-
 }
 
-.p-project__client__industries{
+
+.p-project__client-header,
+.p-project__info-header{
+	color: c( purple );
+	margin-bottom: spacer( component, l );
+}
+
+/**
+ * Project Info
+ */
+ .p-project__title{
+
+	 margin-bottom: spacer( component, xs );
+
+ }
+
+.p-project__description{
 
 	margin-bottom: spacer( component, m );
-	padding-bottom: spacer( component, xs );
-
-	@include border( bottom, link, c( gray--l ) );
 
 }
 
+ /**
+  * Client Info
+  */
+
+
+.p-project__client-website{
+
+	color: c( gold );
+
+}
+
+.p-project__client-info{
+	margin-bottom: spacer( component, m );
+}
+
+.p-project__client-description{
+
+	margin-bottom: spacer( component, m );
+
+}
 
 /**
- * Project Overview
+ * Project Media
  */
 
- .p-project__description{
+ .p-project__media{
 
-	padding: spacer( component, s ) 0 spacer( layout, l );
-
- }
-
-
-/**
- * Project photos and videos
- */
-
- .p-project__photos{
-
-	padding: spacer( layout, l ) 0 spacer( layout, l );
-
- }
-
- .p-project__videos{
-
-	padding: spacer( layout, xl ) 0 0;
-
- }
-
- .p-project__photos__intro,
- .p-project__videos__intro{
-
-	align-items: center;
-	background-color: c( gray--d );
-	display: flex;
-	justify-content: center;
-	margin: 0 auto spacer( component, xl ) auto;
-	max-width: 600px;
-	padding: spacer( component, m ) spacer( component, m );
-	text-align: center;
-
-	.o-content-block__title{
-
-		color: c( gold );
-		display: inline-block;
-		padding-bottom: spacer( component, xs );
-
-	}
+	padding: spacer( component, xs );
 
  }

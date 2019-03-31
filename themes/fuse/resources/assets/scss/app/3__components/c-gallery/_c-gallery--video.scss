@@ -25,19 +25,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: spacer( component, xs );
 
 }
 
 .c-gallery--video .c-gallery__media{
 
-	flex: 0 1 calc( 50% - #{spacer( component, xs )} );
+	flex: 1;
 	margin-bottom: spacer( component, xs );
-
-}
-
-.c-gallery--video .c-gallery__media:not( :last-child ){
-
-	margin-right: spacer( component, xs );
 
 }

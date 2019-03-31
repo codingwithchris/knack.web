@@ -32,6 +32,14 @@
 
  }
 
+ .c-overlay--white--95{
+
+	background-color: c( white );
+
+	@include opacity( .95 );
+
+  }
+
  .c-overlay--white--90{
 
    background-color: c( white );

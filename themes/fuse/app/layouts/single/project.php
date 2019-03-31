@@ -27,12 +27,10 @@ function setup(){
 	// If we are on a normal page
 	if( is_singular( 'projects' ) ){
 
-		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero' );
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_meta', 2);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_description', 3);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_photo_gallery', 4);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_video_gallery', 5);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 6);
+
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_hero', 1);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_media', 2);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 4);
 
 		// Handle Custom Scripts & Styles
 		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_projects_script', 1 );
@@ -50,89 +48,60 @@ function setup(){
 
 function load_hero(){
 
-	$header_data = [
+	$mediums = get_terms( array(
+		'object_ids'	=> get_the_id(),
+		'taxonomy'		=> 'type',
+		'fields'		=> 'names',
+	));
 
-		'title'	=> get_the_title(),
-		'background' => [
+	$industries = get_terms( array(
+		'object_ids'	=> get_the_id(),
+		'taxonomy'		=> 'industry',
+		'fields'		=> 'names',
+	));
 
-			'overlay_type'	=> 'white--70'
+	$hero_data = [
 
+		'info'	=> [
+			'title'	=> get_the_title(),
+			'description' => Acf::field( 'long_description' )->get(),
+			'mediums'	=> implode( ', ', $mediums ),
+		],
+
+		'client' => [
+			'name' 			=> Acf::field( 'client_name' )->get(),
+			'website' 		=> Acf::field( 'client_website' )->get(),
+			'description' 	=> Acf::field( 'client_description' )->get(),
+			'industries'	=> implode( ', ', $industries ),
+		],
+
+		'image' => [
+			'media'	=> Acf::field( 'featured_image_desktop' )->get(),
+		],
+
+		'overlay'	=> [
+			'overlay_type'	=> 'white--95',
 		]
 
 	];
 
-	Controllers\render( 'fragments/components/hero/_c-hero--project', $header_data );
-
-}
-
-function load_intro(){
-
-	$section_data = [
-
-		'title' 		=> get_the_title(),
-		'description'	=> Acf::field( 'long_description' )->get()
-
-	];
-
-	Controllers\render( 'fragments/sections/single-project/_intro', $section_data );
-
-}
-
-function load_meta(){
-
-	$section_data = [
-
-		'client_name' => Acf::field( 'client_name' )->get(),
-		'client_website' => Acf::field( 'client_website' )->get(),
-		'client_description' => Acf::field( 'client_description' )->get(),
-		'industries'  => wp_get_post_terms( get_the_id(), 'industry', array( 'fields' => 'names' ) )
-
-	];
-
-	Controllers\render( 'fragments/sections/single-project/_meta', $section_data );
-
-
-}
-
-function load_description(){
-
-	$section_data = [
-
-		'title' => 'The Project',
-		'description' => Acf::field( 'long_description' )->get(),
-
-	];
-
-	Controllers\render( 'fragments/sections/single-project/_description', $section_data );
-
+	Controllers\render( 'fragments/sections/single-project/_hero', $hero_data );
 
 }
 
 
-function load_photo_gallery(){
+function load_media(){
 
-	$gallery_data = [
+	$media_data = [
 
-		'photos' => Acf::field( 'photos' )->get()
-
-	];
-
-	Controllers\render( 'fragments/sections/single-project/_photo-gallery', $gallery_data );
-
-}
-
-function load_video_gallery(){
-
-	$gallery_data = [
-
+		'photos' => Acf::field( 'photos' )->get(),
 		'videos' => Acf::field( 'videos' )->get()
 
 	];
 
-	Controllers\render( 'fragments/sections/single-project/_video-gallery', $gallery_data );
+	Controllers\render( 'fragments/sections/single-project/_media', $media_data );
 
 }
-
 
 
 function load_cta(){
