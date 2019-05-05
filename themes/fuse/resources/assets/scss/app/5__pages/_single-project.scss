@@ -8,7 +8,7 @@
 	padding: spacer( layout, m ) 0;
 
 	@include breakpoint( m ){
-		padding: spacer( layout, 2xl ) 0;
+		padding: spacer( layout, xl ) 0;
 	}
 
 }
