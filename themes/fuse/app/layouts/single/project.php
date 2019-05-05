@@ -137,18 +137,40 @@ function load_cta(){
  */
 function load_projects_script(){
 
+	$local_data = [];
+
+	$photos = Acf::field( 'photos' )->get();
+
+	if( $photos ){
+		foreach( $photos as $photo ){
+
+			$local_data[] = [
+
+				'src'	=> $photo['photo']['url'],
+				'w'		=> $photo['photo']['width'],
+				'h'		=> $photo['photo']['height'],
+				'msrc'	=> $photo['photo']['sizes']['thumbnail'],
+
+			];
+		}
+	}
+
 	$script = [
 
 		'handle' 			=> 'project-script',
 		'location'			=> AssetHandler\get_asset_from_manifest( 'project.js' ),
 		'dependencies'		=> ['app-script'],
 		'version'			=> null,
-        'load_in_footer'	=> 'true',
+		'load_in_footer'	=> 'true',
+		'local_var'			=> 'knackProjectPhotos',
+		'local_data'		=> $local_data,
 
 	];
 
 	wp_register_script( $script['handle'], $script['location'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
 
 	wp_enqueue_script( $script['handle'] );
+
+	wp_localize_script( $script['handle'], $script['local_var'], $script['local_data'] );
 
 }

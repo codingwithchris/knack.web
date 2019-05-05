@@ -1,7 +1,6 @@
 <?php
 namespace Fuse\AssetHandler;
 
-
 function get_app_script_bundle(){
 
     $script = [
@@ -10,7 +9,7 @@ function get_app_script_bundle(){
 		'src'				=> get_asset_from_manifest( 'app.js' ),
 		'dependencies'		=> ['jquery'],
 		'version'			=> null,
-        'load_in_footer'	=> true,
+		'load_in_footer'	=> true,
 
 	];
 

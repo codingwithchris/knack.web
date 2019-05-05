@@ -1,4 +1,5 @@
 {
+	"ignoreFiles": "./resources/assets/scss/app/4__vendor/**",
 	"rules": {
 		"color-no-invalid-hex": true,
 		"property-no-unknown": true,

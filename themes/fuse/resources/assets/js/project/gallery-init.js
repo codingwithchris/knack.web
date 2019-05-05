@@ -1,30 +1,44 @@
-import { LuminousGallery } from 'luminous-lightbox';
+import * as PhotoSwipe from './photoswipe/photoswipe'
+import * as PhotoSwipeUI_Default from './photoswipe/photoswipe-ui-default' // eslint-disable-line
 
 /**
- * Currently Using: https://github.com/imgix/luminous
- * Replace with: https://photoswipe.com/
+ * Currently Using: https://photoswipe.com/
  */
 
-function initLightbox() {
+const photos = document.querySelectorAll( '.js-lightbox' );
 
-    const lightboxDataSrc = 'data-lightbox-img';
+let galleryData = []; // eslint-disable-line
+const galleryElement = document.querySelectorAll( '.pswp' )[0];
 
-    const galleryItems = document.querySelectorAll( `[${lightboxDataSrc}]` );
+// define options (if needed)
+const options = {
+    index: 0, // start at first slide
+};
 
-    const galleryOptions = {}
+const gallery = new PhotoSwipe( galleryElement, PhotoSwipeUI_Default, photos, options ); // eslint-disable-line
 
-    // Lightbox Options
-    const lightboxOptions = {
-
-        sourceAttribute: lightboxDataSrc,
-        showCloseButton: true,
-        injectBaseStyles: true,
-
-    }
-
-    const gallery = () => new LuminousGallery( galleryItems, galleryOptions, lightboxOptions );
-    gallery();
+const handlePhotoClick = ( index ) => {
 
 }
 
-document.addEventListener( 'DOMContentLoaded', initLightbox );
+photos.forEach(( photo, index ) => {
+
+    photo.addEventListener( 'click', ( event ) => {
+
+        event.preventDefault();
+ 		handlePhotoClick( index );
+
+    });
+
+});
+
+photos.forEach(( photo, index ) => {
+
+    //    galleryData.index.src = photo.getAttribute( 'href' );
+
+});
+
+
+
+console.log( photos );
+console.log( galleryData );
