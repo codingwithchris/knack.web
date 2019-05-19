@@ -19,35 +19,19 @@
  * ************************************
  */
 
- .c-gallery--photo{
+.c-gallery--photo{
+	display: block;
+}
 
-	display: grid;
-	grid-column-gap: spacer( component, xs );
-	grid-row-gap: spacer( component, xs );
-	grid-template-columns: 100%;
-	grid-template-rows: auto;
-
-
-	@include breakpoint( s ){
-
-		grid-template-columns: repeat( 2, 50% );
-
-	}
-
-
-	@include breakpoint( l ){
-
-		grid-template-columns: repeat( 3, 33.33333% );
-
-	}
-
-
+.c-gallery__grid-sizer,
+.c-gallery--photo .c-gallery__media {
+	width: 25%;
 }
 
 .c-gallery--photo .c-gallery__media{
 
+	display: block;
 	cursor: pointer;
-	height: 600px;
 	overflow: hidden;
 	position: relative;
 
@@ -58,22 +42,5 @@
 .c-gallery--photo .c-gallery__media:hover{
 
 	@include opacity( .8 );
-
-}
-
-.c-gallery--photo .c-progressive__placeholder,
-.c-gallery--photo .c-progressive__image{
-
-	display: block;
-    position: absolute;
-    left: -1000%;
-    right: -1000%;
-    top: -1000%;
-    bottom: -1000%;
-    margin: auto;
-    min-height: 100%;
-	min-width: 100%;
-	object-fit: cover;
-	object-position: 50% 50%;
 
 }

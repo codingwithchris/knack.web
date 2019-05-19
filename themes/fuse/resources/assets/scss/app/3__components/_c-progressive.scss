@@ -19,16 +19,72 @@
  * ************************************
  */
 
-.c-progressive__placeholder{
 
+ /**
+  * Global Progressive Settings
+  */
+
+  .c-progressive{
+	line-height: 0;
+  }
+
+  .c-progressive__placeholder{
 	filter: blur(25px) grayscale(0);
+	transform: scale( 1.05 );
+  }
+
+  .c-progressive__image{
+
+	backface-visibility: hidden;
 	position: relative;
-	transform: translateZ(0);
+	transform-style: preserve-3d;
+	transition: opacity 1s ease;
+	transition-delay: .1s;
+	will-change: opacity;
+
+	@include opacity( 0 );
 
 }
 
-.c-progressive__placeholder,
-.c-progressive__image{
+.c-progressive__image.--loaded{
+
+	@include opacity( 1 );
+
+}
+
+
+ /**
+  * Standard Progressive Image
+  */
+ .c-progressive.--img{
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+
+.c-progressive.--img .c-progressive__placeholder{
+
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: auto;
+	z-index: z( base );
+
+}
+
+.c-progressive.--img .c-progressive__image{
+	z-index: z( above-base );
+}
+
+
+/**
+  * Background Progressive Image
+  */
+
+.c-progressive.--bg .c-progressive__placeholder,
+.c-progressive.--bg .c-progressive__image{
 
 	display: block;
 	position: absolute;
@@ -41,25 +97,5 @@
 	min-width: 100%;
 	object-fit: cover;
 	object-position: 50% 50%;
-	transform: scale( 1.1 );
-
-}
-
-
-.c-progressive__image{
-
-	backface-visibility: hidden;
-	transform-style: preserve-3d;
-	transition: opacity 1s ease;
-	transition-delay: .1s;
-    will-change: opacity;
-
-	@include opacity( 0 );
-
-}
-
-.c-progressive__image.--loaded{
-
-	@include opacity( 1 );
 
 }

@@ -25,6 +25,8 @@ use function Fuse\Controllers\render as render;
 
 <div class="c-gallery c-gallery--photo">
 
+	<div class="c-gallery__grid-sizer"></div>
+
 	<?php foreach( $data as $media ){ ?>
 
 		<a class="c-gallery__media js-lightbox" href="<?= $media['photo']['url']; ?>" data-size="<?= $media['photo']['width'] . 'x' . $media['photo']['height']; ?>" data-placeholder-url="<?= $media['photo']['sizes']['thumbnail']; ?>">

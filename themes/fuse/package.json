@@ -64,10 +64,11 @@
 	},
 	"dependencies": {
 		"gsap": "^2.0.2",
+		"imagesloaded": "^4.1.4",
 		"intersection-observer": "^0.5.1",
 		"js-cookie": "^2.2.0",
 		"lodash.throttle": "^4.1.1",
-		"luminous-lightbox": "^2.3.2",
+		"masonry-layout": "^4.2.2",
 		"svg4everybody": "^2.1.9"
 	},
 	"scripts": {
