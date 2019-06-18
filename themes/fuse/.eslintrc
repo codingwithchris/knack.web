@@ -106,20 +106,6 @@
 			}
 		],
 		"radix": 0,
-		"no-shadow": [
-			2,
-			{
-				"hoist": "all",
-				"allow": [
-					"resolve",
-					"reject",
-					"done",
-					"next",
-					"err",
-					"error"
-				]
-			}
-		],
 		"react/no-multi-comp": [
 			2,
 			{
