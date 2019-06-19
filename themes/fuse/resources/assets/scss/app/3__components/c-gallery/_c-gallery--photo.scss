@@ -19,13 +19,13 @@
  * ************************************
  */
 
-.c-gallery--photo{
-	display: block;
-}
+ // https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb
 
-.c-gallery__grid-sizer,
-.c-gallery--photo .c-gallery__media {
-	width: 25%;
+.c-gallery--photo{
+	display: grid;
+	grid-gap: 10px;
+  	grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  	grid-auto-rows: 1fr;
 }
 
 .c-gallery--photo .c-gallery__media{

@@ -1,21 +1,44 @@
-import Masonry from 'masonry-layout'
-import imagesLoaded from 'imagesloaded'
+function resizeGridItem( item ) {
 
-// Using https://masonry.desandro.com
+    const grid = document.querySelector( '.c-gallery--photo' );
 
-const container = document.querySelector( '.c-gallery--photo' );
-const images = document.querySelectorAll( '.c-progressive__placeholder' );
+    const rowHeight = parseInt( window.getComputedStyle( grid ).getPropertyValue( 'grid-auto-rows' ));
 
-const masonryGrid = new Masonry( container, {
-    columnWidth: '.c-gallery__grid-sizer',
-    itemSelector: '.c-gallery__media',
-    percentPosition: true,
-    gutter: 8,
-});
+    const rowGap = parseInt( window.getComputedStyle( grid ).getPropertyValue( 'grid-row-gap' ));
 
-// create an instance
-imagesLoaded( images, () => {
+    const rowSpan = Math.ceil(( item.querySelector( '.c-progressive' ).getBoundingClientRect().height+rowGap )/( rowHeight+rowGap ));
 
-    masonryGrid.layout();
+    /* eslint-disable */
+    item.style.gridRowEnd = `span ${rowSpan}`;
 
-});
+}
+
+function resizeAllGridItems() {
+
+	const allItems = document.querySelectorAll( '.c-gallery--photo .c-gallery__media' );
+
+    allItems.forEach( item => {
+
+        resizeGridItem( item )
+
+    })
+
+}
+
+function resizeInstance( instance ) {
+
+    // const item = instance.elements[0];
+    resizeGridItem( instance );
+
+}
+
+window.onload = resizeAllGridItems();
+window.addEventListener( 'resize', resizeAllGridItems );
+
+const allItems = document.querySelectorAll( '.c-gallery--photo .c-gallery__media' );
+
+allItems.forEach( item => {
+
+	item.addEventListener( 'progressiveImageLoaded', resizeInstance( item ) )
+
+})

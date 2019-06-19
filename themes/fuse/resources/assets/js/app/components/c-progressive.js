@@ -1,6 +1,7 @@
 import 'intersection-observer';
 
 const images = document.querySelectorAll( '.c-progressive' );
+const imageLoadedEvent = new CustomEvent( 'progressiveImageLoaded' );
 
 function watchImages() {
 
@@ -43,12 +44,17 @@ function triggerProgressiveLoad( element ) {
     // Set the new image src to the real image, which triggers an image fetch
     image.src = placeholder.getAttribute( 'data-src' );
 
+
+
     // Wait until the image loads
     image.onload = () => {
 
         newImage.src = image.src;
         placeholder.classList.add( '--hidden' );
         newImage.classList.add( '--loaded' );
+
+        // Dispatch DOM Event after a new image is laoded
+        newImage.dispatchEvent( imageLoadedEvent );
 
     }
 
