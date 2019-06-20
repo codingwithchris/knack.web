@@ -59,7 +59,7 @@ const openPhotoSwipe = ( index, photo ) => {
         preloaderEl: true,
         shareEl: false,
         zoomEl: false,
-        bgOpacity: .99,
+        bgOpacity: 1,
 
     };
 
