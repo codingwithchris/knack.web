@@ -91,6 +91,7 @@
 
 .pswp__button--close {
 	background-position: 0 -44px;
+	filter: brightness(.1);
 }
 
 .pswp__button--share {
@@ -516,7 +517,7 @@ a.pswp__share--download {
 
 .pswp__top-bar,
 .pswp__caption {
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba( 255,255,255, 0 );
 }
 
 /* pswp__ui--fit class is added when main image "fits" between top bar and bottom bar (caption) */

@@ -44,8 +44,6 @@ function triggerProgressiveLoad( element ) {
     // Set the new image src to the real image, which triggers an image fetch
     image.src = placeholder.getAttribute( 'data-src' );
 
-
-
     // Wait until the image loads
     image.onload = () => {
 

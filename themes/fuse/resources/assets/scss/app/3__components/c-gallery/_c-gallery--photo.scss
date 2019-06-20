@@ -23,9 +23,11 @@
 
 .c-gallery--photo{
 	display: grid;
-	grid-gap: 10px;
-  	grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
-  	grid-auto-rows: 1fr;
+	grid-gap: 8px;
+  	grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr ));
+	grid-auto-rows: 1fr;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 .c-gallery--photo .c-gallery__media{
@@ -34,9 +36,16 @@
 	cursor: pointer;
 	overflow: hidden;
 	position: relative;
+	transition: all .2s ease;
 
 	@include transition( link );
 
+}
+
+
+.c-gallery--photo .c-gallery__media .c-progressive,
+.c-gallery--photo .c-gallery__media .c-progressive__image{
+	display: block;
 }
 
 .c-gallery--photo .c-gallery__media:hover{

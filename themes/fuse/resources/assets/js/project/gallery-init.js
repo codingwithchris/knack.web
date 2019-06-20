@@ -52,10 +52,15 @@ const openPhotoSwipe = ( index, photo ) => {
             return getElementPagePosition( image )
 
         },
+
         captionEl: false,
         counterEl: false,
+        fullscreenEl: false,
+        preloaderEl: true,
         shareEl: false,
         zoomEl: false,
+        bgOpacity: .99,
+
     };
 
     // Build and init the gallery with our defined options

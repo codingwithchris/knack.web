@@ -8,7 +8,7 @@
 
 @import "main-settings";
 
- 
+
 /* pswp = photoswipe */
 .pswp {
 	display: none;
@@ -31,7 +31,7 @@
 			box-sizing: border-box;
 		}
 	}
-	
+
 	img {
 		max-width: none;
 	}
@@ -99,7 +99,7 @@
 
 .pswp__container,
 .pswp__zoom-wrap {
-	-ms-touch-action: none; 
+	-ms-touch-action: none;
 	touch-action: none;
 	position: absolute;
 	left: 0;

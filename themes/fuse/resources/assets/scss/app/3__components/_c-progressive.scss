@@ -36,11 +36,13 @@
   .c-progressive__image{
 
 	backface-visibility: hidden;
+	height: auto;
 	position: relative;
 	transform-style: preserve-3d;
 	transition: opacity 1s ease;
 	transition-delay: .1s;
 	will-change: opacity;
+	max-width: 100%;
 
 	@include opacity( 0 );
 
