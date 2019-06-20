@@ -40,11 +40,11 @@ return [
         'layouts/page/page',
         'layouts/page/front-page',
         'layouts/page/about-us',
+        'layouts/page/projects',
         'layouts/page/contact',
 
         // Layout • Archive
         'layouts/archive/post',
-        'layouts/archive/projects',
 
         // Layout • Single
         'layouts/single/project',
