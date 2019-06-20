@@ -52,9 +52,17 @@ function maybe_load_jquery_from_google_cdn(){
     // Set the site protocol for our final request
     $protocol = is_ssl() ? 'https' : 'http';
 
-    // Build the final request url
-    $jquery_cdn_url 	= $protocol . '://ajax.googleapis.com/ajax/libs/jquery/' . $jquery['version'] . '/jquery.min.js';
+    /**
+	 * Wordpress added the `-wp` string to it's jquery script in 5.2.1
+	 * We need to account and strip it out of our version so Google can load the
+	 * correct version of the script.
+	 *
+	 * @since 1.1.5
+	 */
+	$jquery_version = str_replace( '-wp', '', $jquery['version']  );
 
+    // Build the final request url
+    $jquery_cdn_url 	= $protocol . '://ajax.googleapis.com/ajax/libs/jquery/' . $jquery_version . '/jquery.min.js';
     // deregisters the default WordPress jQuery
     wp_deregister_script( 'jquery' );
 
