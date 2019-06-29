@@ -25,6 +25,10 @@ function setup(){
 	// If we are on a normal page
 	if( is_page( 'contact-us' ) ){
 
+		// Remove hero and CTA the standard pages load
+		remove_action( 'fuse_before_content', 'Fuse\Layout\Page\load_hero', 1 );
+		remove_action( 'fuse_content', 'Fuse\Layout\Page\load_cta', 10 );
+
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_left_section', 1 );
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_right_section', 1 );
 

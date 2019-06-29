@@ -76,7 +76,7 @@ function load_hero(){
 		],
 
 		'image' => [
-			'media'	=> Acf::field( 'featured_image_desktop' )->get(),
+			'media'	=> Acf::field( 'featured_image' )->get(),
 		],
 
 		'overlay'	=> [

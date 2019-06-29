@@ -42,6 +42,8 @@ return [
         'layouts/page/about-us',
         'layouts/page/projects',
         'layouts/page/contact',
+        'layouts/page/studio-rental',
+        'layouts/page/privacy-policy',
 
         // Layout • Archive
         'layouts/archive/post',

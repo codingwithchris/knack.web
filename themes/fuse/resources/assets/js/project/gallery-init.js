@@ -60,6 +60,7 @@ const openPhotoSwipe = ( index, photo ) => {
         shareEl: false,
         zoomEl: false,
         bgOpacity: 1,
+        barsSize: {top:48, bottom:48},
 
     };
 

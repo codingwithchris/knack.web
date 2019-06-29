@@ -216,23 +216,28 @@ function load_clients(){
 
 function load_cta(){
 
+	if( ! get_field( 'load_cta' ) ){
+		return;
+	}
+
+	global $post;
 
 	$cta_data = [
 
 		'type'			=> 'simple',
-		'title'			=> 'Ready to chat?',
-		'copy'			=> 'Drop us a line. We are excited to hear from you!',
+		'title'			=> Acf::field( 'cta_title' )->escape( 'esc_html' )->get(),
+		'copy'			=> Acf::field( 'cta_copy' )->escape( 'esc_html' )->get(),
 		'modifier_class'	=> 'c-cta--home',
 		'action'	=> [
 
 			'btn_type'	=> 'primary',
-			'btn_text'	=> 'Contact Us',
-			'btn_url'	=> site_url( '/contact-us/' ),
+			'btn_text'	=> Acf::field( 'cta_action_text' )->escape()->get(),
+			'btn_url'	=> Acf::field( 'cta_action_link' )->default( home_url('/contact') )->escape( 'esc_url' )->get(),
 			'btn_theme'	=> 'white',
 
 		],
 		'bg_image'	=> [
-			'image_url' => 'https://picsum.photos/1920/500'
+			'image_url' => Acf::field( 'cta_bg' )->default( 'https://picsum.photos/1920/500' )->get()
 		]
 
 	];

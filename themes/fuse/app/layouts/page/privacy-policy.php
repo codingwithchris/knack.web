@@ -14,7 +14,7 @@
  *
  */
 
-namespace Fuse\Layout\projectsPage;
+namespace Fuse\Layout\PrivacyPolicyPage;
 use function Fuse\Controllers\render as render;
 use Fuse\AssetHandlers;
 use Samrap\Acf\Acf;
@@ -26,8 +26,10 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on the Front Page of our site
-	if( is_page('projects') ){
+	if( is_page('privacy-policy') ){
 
+		remove_action( 'fuse_content', 'Fuse\Layout\Page\load_cta', 10 );
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_content_container', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 2);
 
 	}
@@ -37,6 +39,13 @@ function setup(){
  * The following will be loaded when the conditional check in
  * setup() returns true.
  ************************************************************/
+
+function load_content_container(){
+
+	echo '<section class="f-section p-privacy-policy">';
+		echo '<div class="f-container f-container--max--xs f-container--width">';
+
+}
 
 function load_content(){
 
