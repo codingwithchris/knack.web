@@ -90,6 +90,8 @@ function load_intro(){
 
 	$section_data = [
 
+		'copy'	=> Acf::field( 'intro_copy' )->get()
+
 	];
 
 	render( 'fragments/sections/home/_intro', $section_data );
@@ -101,13 +103,15 @@ function load_intro(){
 function load_featured_projects(){
 
 	$section_data = [
-		'action'	=> [
 
-			'btn_text'	=> 'See All Projects',
-			'btn_url'	=>	site_url( '/projects/' ),
+		'title'	=> Acf::field( 'projects_section_title' )->get(),
+		'copy'	=> Acf::field( 'projects_section_copy' )->get(),
+
+		'action'	=> [
+			'btn_text'	=>	Acf::field( 'projects_section_action_text' )->get(),
+			'btn_url'	=>	Acf::field( 'projects_section_action_link' )->get(),
 			'btn_type'	=> 'tertiary',
 			'btn_theme'	=> 'dark'
-
 		],
 	];
 
@@ -121,14 +125,14 @@ function load_what_we_do(){
 
 		'videography_island' => [
 
-			'title'		=> 'Videography',
-			'copy'		=> 'Gorgeous imagery and compelling storytelling that inspires connection.',
+			'title'		=> Acf::field( 'videography_section_title' )->get(),
+			'copy'		=> Acf::field( 'videography_section_copy' )->get(),
 			'type'		=> 'light',
 
 			'action'	=> [
 
-				'btn_text'	=> 'See Our Video Work',
-				'btn_url'	=>	site_url( '/projects/' ),
+				'btn_text'	=> Acf::field( 'videography_section_action_text' )->get(),
+				'btn_url'	=> Acf::field( 'videography_section_action_link' )->get(),
 				'btn_type'	=> 'tertiary',
 				'btn_theme'	=> 'dark'
 
@@ -145,15 +149,15 @@ function load_what_we_do(){
 
 		'photography_island' => [
 
-			'title'		=> 'Photography',
-			'copy'		=> 'The essence of a story distilled into a single, impeccably-shot frame. ',
+			'title'		=> Acf::field( 'photography_section_title' )->get(),
+			'copy'		=> Acf::field( 'photography_section_copy' )->get(),
 			'type'		=> 'light',
 
 
 			'action'	=> [
 
-				'btn_text'	=> 'See Our Photography Work',
-				'btn_url'	=>	site_url( '/projects/' ),
+				'btn_text'	=> Acf::field( 'photography_section_action_text' )->get(),
+				'btn_url'	=> Acf::field( 'photography_section_action_link' )->get(),
 				'btn_type'	=> 'tertiary',
 				'btn_theme'	=> 'dark'
 
@@ -196,13 +200,13 @@ function load_clients(){
 
 	$section_data = [
 
-		'title'			=> 'We’ve Worked With Some Incredible People',
+		'title'			=> Acf::field('clients_section_title')->get(),
 		'client_logos'	=> Acf::field('client_logos')->get(),
 
 		'action'	=> [
 
-			'btn_text'	=> 'See More Clients',
-			'btn_url'	=>	site_url( '/clients/' ),
+			'btn_text'	=> Acf::field('clients_section_action_text')->get(),
+			'btn_url'	=> Acf::field('clients_section_action_link')->get(),
 			'btn_type'	=> 'tertiary',
 			'btn_theme'	=> 'dark'
 

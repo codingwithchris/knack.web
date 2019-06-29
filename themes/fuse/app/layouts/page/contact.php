@@ -45,8 +45,8 @@ function load_left_section(){
 
     $section_data = [
 
-        'title'     => Acf::field( 'title' )->get(),
-        'subtitle'  => Acf::field( 'subtitle' )->get(),
+        'title'     => Acf::field( 'hero_title' )->get(),
+        'subtitle'  => Acf::field( 'hero_subtitle' )->get(),
 
         'contact'   => [
 
@@ -73,7 +73,7 @@ function load_left_section(){
 
         'background'    => [
 
-            'image_url'     => Acf::field( 'background_image' )->get(),
+            'image_url'     => Acf::field( 'hero_bg' )->get(),
             'overlay_type'	=> 'white--70',
         ],
 

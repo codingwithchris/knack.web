@@ -35,7 +35,7 @@ use function Fuse\Controllers\render as render;
             </div>
 
             <div class="o-content-block__copy">
-                <h3 class="f-b--base">Imbuing memorable imagery with meaning and purpose to convey the unique stories of our clients.</h3>
+                <h3 class="f-b--base"><?= esc_html( $data['copy'] ); ?></h3>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 {
     "key": "group_5c157c9ed0c2f",
-    "title": "Hero",
+    "title": "Section » Page Hero",
     "fields": [
         {
             "key": "field_5c157cb40af12",
@@ -76,15 +76,10 @@
                 "param": "page",
                 "operator": "!=",
                 "value": "9"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "31"
             }
         ]
     ],
-    "menu_order": 8,
+    "menu_order": 9,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -96,5 +91,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561785355
+    "modified": 1561835671
 }
