@@ -71,11 +71,18 @@ function load_left_section(){
 
         ],
 
-        'background'    => [
+        'background_image'    => [
 
-            'image_url'     => Acf::field( 'hero_bg' )->get(),
-            'overlay_type'	=> 'white--70',
-        ],
+			'media'     => Acf::field( 'hero_bg' )->get(),
+			'type'		=> 'bg'
+
+		],
+
+		'background_overlay' => [
+
+			'overlay_type'	=> 'white--70',
+
+		]
 
     ];
 

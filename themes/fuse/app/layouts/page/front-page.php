@@ -75,7 +75,10 @@ function load_hero(){
 		],
 
 		'background'	=> [
-			'image_url'		=> Acf::field( 'background_image' )->get(),
+			'image'		=> [
+				'media' => Acf::field( 'background_image' )->get(),
+				'type'	=> 'bg'
+			],
 			'video_id'		=> Acf::field( 'background_video_id' )->get(),
 			'overlay_type'	=> 'white--90'
 		]
@@ -140,10 +143,10 @@ function load_what_we_do(){
 
 			'background' => [
 
-				'image_url'	=> 'https://picsum.photos/1000/602',
+				'media'	=> Acf::field( 'videography_section_image' )->get(),
+				'type'	=> 'bg'
 
 			]
-
 
 		],
 
@@ -165,7 +168,8 @@ function load_what_we_do(){
 
 			'background' => [
 
-				'image_url'	=> 'https://picsum.photos/1000/600',
+				'media'	=> Acf::field( 'photography_section_image' )->get(),
+				'type'	=> 'bg'
 
 			]
 
@@ -184,10 +188,9 @@ function load_image_banner(){
 
 	$section_data = [
 
-		'image_url'		=> '',
-		'image_alt'		=> '',
-		'image_width'	=> '1920',
-		'image_height'	=> '1080',
+		'image' => [
+			'media' => Acf::field('image_banner')->get(),
+		]
 
 	];
 

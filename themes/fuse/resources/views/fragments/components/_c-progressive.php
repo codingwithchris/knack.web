@@ -50,6 +50,11 @@ $svg_aspect_ratio_placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 ?>
 
 <figure class="c-progressive" <?= $data_atts; ?> data-src="<?= $full_image; ?>" data-sizes="<?= $sizes; ?>" data-srcset="<?= $srcset; ?>" data-type=<?= $type; ?> style="background-color:<?php $background_color; ?>">
+
 	<img class="c-progressive__image --preview" alt="<?= $alt_text; ?>" src="<?= $placeholder; ?>">
-	<img class="c-progressive__aspect-ratio-sizer"src="<?= $svg_aspect_ratio_placeholder; ?>">
+
+	<?php if( $type === 'img' ){ ?>
+		<img class="c-progressive__aspect-ratio-sizer" src="<?= $svg_aspect_ratio_placeholder; ?>">
+	<?php } ?>
+
 </figure>

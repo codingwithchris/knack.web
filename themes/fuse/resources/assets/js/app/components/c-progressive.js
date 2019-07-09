@@ -1,6 +1,6 @@
 import 'intersection-observer';
 
-const images = document.querySelectorAll( '.c-progressive' );
+const progressiveImages = document.querySelectorAll( '.c-progressive' );
 const imageLoadedEvent = new CustomEvent( 'progressiveImageLoaded' );
 
 // inspo - https://www.sitepoint.com/how-to-build-your-own-progressive-image-loader/
@@ -18,7 +18,7 @@ function createProgressiveImageIntersectionObserver() {
     // If we don't have support for intersection observer, load all the images immediately
     if ( ! ( 'IntersectionObserver' in window )) {
 
-        images.forEach( image =>  {
+        progressiveImages.forEach( image =>  {
 
             prepareProgressiveImage( image )
 
@@ -35,7 +35,7 @@ function createProgressiveImageIntersectionObserver() {
         const observer = new IntersectionObserver( handleImageVisible, observerConfig );
 
         // Watch each of our images
-        images.forEach( image => {
+        progressiveImages.forEach( image => {
 
             observer.observe( image );
 
@@ -96,11 +96,21 @@ function prepareProgressiveImage( element ) {
 
     }
 
-    fullImage.src = element.dataset.src;
 
+    // eslint-disable-next-line
+	fullImage.src = element.dataset.src;
     fullImage.className = 'c-progressive__image --full --revealing';
 
-    loadImageByType( fullImage, previewImage, element );
+    if( fullImage.complete ) {
+
+        loadImageByType( fullImage, previewImage, element );
+
+    } else {
+
+        fullImage.onload = loadImageByType( fullImage, previewImage, element );
+
+    }
+
 
 }
 
@@ -133,19 +143,12 @@ function loadImageByType( fullImage, previewImage, element ) {
  */
 function loadAsImage( fullImage, previewImage, element ) {
 
-    // eslint-disable-next-line
-    fullImage.onload = () => {
+    element.appendChild( fullImage ).addEventListener( 'animationend', ( event ) => {
 
-        const finalImage =  element.appendChild( fullImage );
+        element.removeChild( previewImage );
+        event.target.classList.remove( '--revealing' );
 
-        finalImage.addEventListener( 'animationend', ( event ) => {
-
-            element.removeChild( previewImage );
-            event.target.classList.remove( '--revealing' );
-
-        });
-
-    }
+    });
 
 }
 
@@ -154,7 +157,21 @@ function loadAsImage( fullImage, previewImage, element ) {
  * @param {*} fullImage
  * @param {*} element
  */
-function loadAsBackground(  fullImage, element ) {
+function loadAsBackground(  fullImage, previewImage, element ) {
+
+    element.appendChild( fullImage ).addEventListener( 'animationend', ( event ) => {
+
+        // eslint-disable-next-line
+        element.style['background-image'] = `url("${  fullImage.src  }")`;
+
+        element.removeChild( previewImage );
+
+        // eslint-disable-next-line
+		fullImage.style.display = 'none';
+
+        event.target.classList.remove( '--revealing' );
+
+    });
 
 }
 

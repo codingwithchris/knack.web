@@ -44,8 +44,14 @@ function load_hero(){
 		'title'		=> Acf::field( 'hero_title' )->get(),
 		'copy'		=> Acf::field( 'hero_subtitle' )->get(),
 
-		'background'	=> [
-			'image_url'		=> Acf::field( 'hero_bg' )->get(),
+		'background_image'	=> [
+
+			'media' => Acf::field( 'hero_bg' )->get(),
+			'type'	=> 'bg'
+
+		],
+
+		'background_overlay'	=> [
 			'overlay_type'	=> 'white--90'
 		]
 

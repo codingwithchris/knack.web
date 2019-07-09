@@ -22,7 +22,7 @@ use function Fuse\Controllers\render as render;
 <section id="home-image-banner" class="p-home--image-banner">
     <div class="f-container">
 
-        <img class="c-image-banner" src="https://picsum.photos/1920/600">
+		<?php render( 'fragments/components/_c-progressive', $data['image'] ); ?>
 
     </div>
 </section>

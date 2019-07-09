@@ -101,7 +101,7 @@ use function Fuse\Controllers\render as render;
 
         </div>
 
-        <?php render( 'fragments/components/_c-overlay', $data['background'] ); ?>
-        <?php render( 'fragments/components/_c-bg-image', $data['background'] ); ?>
+        <?php render( 'fragments/components/_c-overlay', $data['background_overlay'] ); ?>
+        <?php render( 'fragments/components/_c-progressive', $data['background_image'] ); ?>
 
 </section>

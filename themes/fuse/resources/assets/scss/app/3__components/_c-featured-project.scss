@@ -39,21 +39,37 @@
 
  .c-featured-project__wrapper{
 
-    display: flex;
+	display: flex;
+	position: relative;
+	z-index: 2;
 
  }
 
- .c-featured-project--mobile-featured{
+ .c-featured-project__background,
+ .c-featured-project__background .c-progressive{
 
-    display: none;
+	 display: block;
+	 height: 100%;
+	 left: 0;
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+	 z-index: 1;
+
+	 @include breakpoint( m ){
+		//
+	 }
 
  }
 
+ .c-featured-project__background .c-progressive .c-progressive__image{
 
-// Handle Odd Projects
-.c-featured-project:nth-child( odd ) > .c-featured-project__wrapper{
+	object-fit: cover;
+	height: 100%;
 
-    justify-content: flex-end;
+	@include breakpoint( m ){
+		//
+	}
 
 }
 

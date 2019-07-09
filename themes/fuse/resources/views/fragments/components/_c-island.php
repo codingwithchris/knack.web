@@ -59,6 +59,6 @@ $overlay_data = [
     </div>
 
     <?php render( 'fragments/components/_c-overlay', $overlay_data ); ?>
-    <?php render( 'fragments/components/_c-bg-image', $data['background'] ); ?>
+    <?php render( 'fragments/components/_c-progressive', $data['background'] ); ?>
 
 </div>

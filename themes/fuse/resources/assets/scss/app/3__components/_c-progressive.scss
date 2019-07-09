@@ -44,6 +44,27 @@ $progressive-scale: scale( 1.05 );
 
   }
 
+
+  .c-progressive[data-type="bg"]{
+
+	display: block;
+	position: absolute;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: z( below );
+
+	.c-progressive__image{
+		height: 100%;
+		object-fit: cover;
+	}
+
+ }
+
   .c-progressive__aspect-ratio-sizer{
 	display: inherit;
   }
@@ -57,7 +78,7 @@ $progressive-scale: scale( 1.05 );
 
   .c-progressive__image.--revealing{
 
-	will-change: transform, opacity;
+	will-change: opacity;
 	animation: revealFullImage 1s ease-out;
 
   }
@@ -67,14 +88,12 @@ $progressive-scale: scale( 1.05 );
 	from {
 
 		opacity: 0;
-		transform: $progressive-scale;
 
 	}
 
 	to {
 
 		opacity: 1;
-		transform: scale(1);
 
 	}
 

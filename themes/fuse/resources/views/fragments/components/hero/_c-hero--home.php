@@ -57,6 +57,6 @@ use function Fuse\Controllers\render as render;
 
     <?php render( 'fragments/components/_c-overlay', $data['background'] ); ?>
     <?php render( 'fragments/components/_c-bg-video', $data['background'] ); ?>
-    <?php render( 'fragments/components/_c-bg-image', $data['background'] ); ?>
+    <?php render( 'fragments/components/_c-progressive', $data['background']['image'] ); ?>
 
 </div>

@@ -32,7 +32,7 @@ use function Fuse\Controllers\render as render;
 
 	</div>
 
-	<?= render( 'fragments/components/_c-overlay', $data['overlay'] ); ?>
-	<?= render( 'fragments/components/_c-progressive-bg', $data['image'] ); ?>
+	<?php render( 'fragments/components/_c-overlay', $data['overlay'] ); ?>
+	<?php render( 'fragments/components/_c-progressive', $data['image'] ); ?>
 
 </section>
