@@ -22,30 +22,24 @@
  // https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb
 
 .c-gallery--photo{
-	display: grid;
-	grid-gap: 8px;
-  	grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr ));
-	grid-auto-rows: 1fr;
 	max-width: 1920px;
 	margin: 0 auto;
 }
 
 .c-gallery--photo .c-gallery__media{
 
-	display: block;
 	cursor: pointer;
+	margin-bottom: spacer( component, xs );
 	overflow: hidden;
-	position: relative;
 	transition: all .2s ease;
 
 	@include transition( link );
 
 }
 
-
-.c-gallery--photo .c-gallery__media .c-progressive,
-.c-gallery--photo .c-gallery__media .c-progressive__image{
-	display: block;
+.c-gallery__grid-sizer,
+.c-gallery--photo .c-gallery__media{
+	width: 25%;
 }
 
 .c-gallery--photo .c-gallery__media:hover{

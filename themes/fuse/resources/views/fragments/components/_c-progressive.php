@@ -13,7 +13,22 @@
  * *************************************
  */
 $data_atts = isset( $data['atts'] ) ? esc_attr( implode( " ", $data['atts'] ) ) : '';
-$type  = 'image';
+
+$type = isset( $data['type'] )
+		? $data['type']
+		: 'img';
+
+$sizes = isset( $data['sizes'] )
+		? $data['sizes']
+		: '';
+
+$srcset = isset( $data['srcset'] )
+	? $data['srcset']
+	: '';
+
+$background_color = isset( $data['bg_color'] )
+					? $data['bg_color']
+					: 'transparent';
 
 // Define Image Sizes
 $alt_text = esc_html( $data['media']['alt'] );
@@ -23,18 +38,18 @@ $full_image = esc_url( $data['media']['url'] );
 $full_image_width = esc_attr( $data['media']['width'] );
 $full_image_height =  esc_attr( $data['media']['height'] );
 
+$svg_aspect_ratio_placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${full_image_width} ${full_image_height}'%3E%3C/svg%3E";
+
+
 /**
  * *************************************
  * Progressive Image • View Definition
  * *************************************
  */
 
-$type = isset( $data['type'] )
-		? $data['type']
-		: $type;
-
 ?>
 
-<figure class="c-progressive" <?= $data_atts; ?>>
-	<img class="c-progressive__<?= $type ?> --not-loaded" alt="<?= $alt_text; ?>" width="<?= $full_image_width; ?>" height="<?= $full_image_height; ?>" src="<?= $placeholder; ?>" data-progressive="<?= $full_image ?>" cross-origin="anonymous">
+<figure class="c-progressive" <?= $data_atts; ?> data-src="<?= $full_image; ?>" data-sizes="<?= $sizes; ?>" data-srcset="<?= $srcset; ?>" data-type=<?= $type; ?> style="background-color:<?php $background_color; ?>">
+	<img class="c-progressive__image --preview" alt="<?= $alt_text; ?>" src="<?= $placeholder; ?>">
+	<img class="c-progressive__aspect-ratio-sizer"src="<?= $svg_aspect_ratio_placeholder; ?>">
 </figure>

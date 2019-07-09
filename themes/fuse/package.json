@@ -63,10 +63,13 @@
 		"webpack-svgstore-plugin": "^4.1.0"
 	},
 	"dependencies": {
+		"bricks.js": "^1.8.0",
 		"gsap": "^2.0.2",
+		"imagesloaded": "^4.1.4",
 		"intersection-observer": "^0.5.1",
 		"js-cookie": "^2.2.0",
 		"lodash.throttle": "^4.1.1",
+		"masonry-layout": "^4.2.2",
 		"svg4everybody": "^2.1.9"
 	},
 	"scripts": {

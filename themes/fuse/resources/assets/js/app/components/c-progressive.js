@@ -3,6 +3,9 @@ import 'intersection-observer';
 const images = document.querySelectorAll( '.c-progressive' );
 const imageLoadedEvent = new CustomEvent( 'progressiveImageLoaded' );
 
+// inspo - https://www.sitepoint.com/how-to-build-your-own-progressive-image-loader/
+// inspo - https://github.com/thinker3197/progressively
+
 /**
  * Create an intersection observer according to the Intersection Observer API
  * to watch all of the "progressive" images on the page. This method is preferred
@@ -15,7 +18,11 @@ function createProgressiveImageIntersectionObserver() {
     // If we don't have support for intersection observer, load all the images immediately
     if ( ! ( 'IntersectionObserver' in window )) {
 
-        images.forEach( image =>  loadProgressiveImage( image ));
+        images.forEach( image =>  {
+
+            prepareProgressiveImage( image )
+
+        });
 
     } else {
 
@@ -53,7 +60,7 @@ function handleImageVisible( entries, observerInstance ) {
 
             // Stop watching and load the image
             observerInstance.unobserve( entry.target );
-            loadProgressiveImage( entry.target );
+            prepareProgressiveImage( entry.target );
 
         }
 
@@ -65,30 +72,89 @@ function handleImageVisible( entries, observerInstance ) {
  *
  * @param {*} element
  */
-function loadProgressiveImage( image ) {
+function prepareProgressiveImage( element ) {
 
-    // The direct child of `.c-progressive` is always the actual image element
-    const imageElement = image.firstElementChild;
-    const pseudoImage = new Image();
+    // Can't continue if a full image is not defined
+    if ( ! element || ! element.getAttribute( 'data-src' )) return;
 
-    pseudoImage.src = imageElement.getAttribute( 'data-progressive' );
+    const fullImage = new Image();
+    const previewImage = element.firstElementChild;
 
-    pseudoImage.onload = () => {
+    // Handle working with responsive images! yay!!!
+    if( element.dataset ) {
 
-        imageElement.classList.remove( '--not-loaded' );
-        imageElement.classList.add( '--loaded' );
-
-        if ( imageElement.classList.contains( '.c-progressive__bg' )) {
-
-            imageElement.style['background-image'] = `url( ${imageElement.src} )`
-
-        }else{
-
-            imageElement.src = pseudoImage.src;
-
-        }
+        fullImage.srcset = element.dataset.srcset || '';
+        fullImage.sizes = element.dataset.sizes || '';
 
     }
+
+    if( previewImage ) {
+
+        fullImage.alt = previewImage.alt || '';
+        fullImage.width = previewImage.width || '';
+        fullImage.height = previewImage.height || '';
+
+    }
+
+    fullImage.src = element.dataset.src;
+
+    fullImage.className = 'c-progressive__image --full --revealing';
+
+    loadImageByType( fullImage, previewImage, element );
+
+}
+
+/**
+ *
+ * @param {*} fullImage
+ * @param {*} element
+ */
+function loadImageByType( fullImage, previewImage, element ) {
+
+    if(  element.dataset.type === 'img' ) {
+
+        loadAsImage( fullImage, previewImage, element );
+
+    }
+
+    if(  element.dataset.type === 'bg' ) {
+
+        loadAsBackground( fullImage, previewImage, element );
+
+    }
+
+}
+
+/**
+ *
+ * @param {*} fullImage
+ * @param {*} previewImage
+ * @param {*} element
+ */
+function loadAsImage( fullImage, previewImage, element ) {
+
+    // eslint-disable-next-line
+    fullImage.onload = () => {
+
+        const finalImage =  element.appendChild( fullImage );
+
+        finalImage.addEventListener( 'animationend', ( event ) => {
+
+            element.removeChild( previewImage );
+            event.target.classList.remove( '--revealing' );
+
+        });
+
+    }
+
+}
+
+/**
+ *
+ * @param {*} fullImage
+ * @param {*} element
+ */
+function loadAsBackground(  fullImage, element ) {
 
 }
 

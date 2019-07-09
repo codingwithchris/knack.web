@@ -11,7 +11,7 @@
  * Progressive • Settings
  * *************************************
  */
-$progressive-blur: blur( 30px );
+$progressive-blur: blur( 2vw );
 $progressive-scale: scale( 1.05 );
 
 /**
@@ -25,48 +25,56 @@ $progressive-scale: scale( 1.05 );
   * Global Progressive Settings
   */
 
-  .c-progressive {
+  .c-progressive{
 
+	display: block;
 	overflow: hidden;
 	position: relative;
-	background: c( white );
 
   }
 
   .c-progressive__image{
 
-	height: 100%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: auto;
 	width: 100%;
-  	transform: translateZ(0);
 
   }
 
-  .c-progressive > .--not-loaded{
+  .c-progressive__aspect-ratio-sizer{
+	display: inherit;
+  }
+
+  .c-progressive__image.--preview{
 
 	filter: $progressive-blur;
+	transform: $progressive-scale;
 
   }
 
-  .c-progressive > .--loaded {
+  .c-progressive__image.--revealing{
 
-	filter: $progressive-blur;
-	animation: loadProgressiveImage .5s both;
+	will-change: transform, opacity;
+	animation: revealFullImage 1s ease-out;
 
   }
 
-  @keyframes loadProgressiveImage {
+  @keyframes revealFullImage {
 
 	from {
 
-	  filter: $progressive-blur;
-	  transform: $progressive-scale;
+		opacity: 0;
+		transform: $progressive-scale;
 
 	}
 
 	to {
 
-	  filter: blur(0px);
-	  transform: scale(1);
+		opacity: 1;
+		transform: scale(1);
 
 	}
 

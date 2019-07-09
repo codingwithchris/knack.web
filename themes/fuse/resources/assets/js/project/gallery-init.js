@@ -47,7 +47,7 @@ const openPhotoSwipe = ( index, photo ) => {
         // Must take index, find the proper image, and return the element coordinates as defined in the options
         getThumbBoundsFn: ( imageIndex ) => {
 
-            const image = document.querySelectorAll( '.c-gallery--photo .c-progressive__image' )[imageIndex];
+            const image = document.querySelectorAll( '.c-gallery--photo .c-progressive' )[imageIndex];
 
             return getElementPagePosition( image )
 
