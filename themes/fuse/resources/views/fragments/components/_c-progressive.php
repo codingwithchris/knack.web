@@ -13,15 +13,28 @@
  * *************************************
  */
 $data_atts = isset( $data['atts'] ) ? esc_attr( implode( " ", $data['atts'] ) ) : '';
+$type  = 'image';
+
+// Define Image Sizes
+$alt_text = esc_html( $data['media']['alt'] );
+$placeholder = esc_url( $data['media']['sizes']['thumbnail'] );
+
+$full_image = esc_url( $data['media']['url'] );
+$full_image_width = esc_attr( $data['media']['width'] );
+$full_image_height =  esc_attr( $data['media']['height'] );
 
 /**
  * *************************************
  * Progressive Image • View Definition
  * *************************************
  */
+
+$type = isset( $data['type'] )
+		? $data['type']
+		: $type;
+
 ?>
 
-<div class="c-progressive --img" <?= $data_atts; ?>>
-	<img class="c-progressive__image" alt="<?= esc_html( $data['media']['alt'] ); ?>" width="<?= esc_attr( $data['media']['width'] ); ?>" height="<?= esc_attr( $data['media']['height'] ); ?>" cross-origin="anonymous">
-	<img class="c-progressive__placeholder" data-src="<?= esc_url( $data['media']['url'] ); ?>" src="<?= esc_url( $data['media']['sizes']['thumbnail'] ); ?>" width="<?= esc_attr( $data['media']['sizes']['thumbnail-width'] ); ?>" height="<?= esc_attr( $data['media']['sizes']['thumbnail-height'] ); ?>" aria-hidden="true" cross-origin="anonymous">
-</div>
+<figure class="c-progressive" <?= $data_atts; ?>>
+	<img class="c-progressive__<?= $type ?> --not-loaded" alt="<?= $alt_text; ?>" width="<?= $full_image_width; ?>" height="<?= $full_image_height; ?>" src="<?= $placeholder; ?>" data-progressive="<?= $full_image ?>" cross-origin="anonymous">
+</figure>

@@ -20,11 +20,29 @@
  */
 .c-responsive-video{
 
+	background-color: c( gray--l );
 	position: relative;
 	padding-bottom: 56.25%;
 	overflow: hidden;
 	max-width: 100%;
 	height: auto;
+
+	&:before {
+        animation: 2s linear infinite videoLoadingSpinner;
+        border: solid 3px c(  white );
+        border-bottom-color: c( purple );
+        border-radius: 50%;
+        content: "";
+        height: 40px;
+        left: 50%;
+        opacity: inherit;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        transform-origin: center;
+        width: 40px;
+        will-change: transform;
+    }
 
 }
 
@@ -36,4 +54,16 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+@keyframes videoLoadingSpinner {
+
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+	}
+
+    100% {
+         transform: translate3d(-50%, -50%, 0) rotate(360deg);
+	}
+
 }

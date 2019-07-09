@@ -3,59 +3,100 @@ import 'intersection-observer';
 const images = document.querySelectorAll( '.c-progressive' );
 const imageLoadedEvent = new CustomEvent( 'progressiveImageLoaded' );
 
-function watchImages() {
+/**
+ * Create an intersection observer according to the Intersection Observer API
+ * to watch all of the "progressive" images on the page. This method is preferred
+ * now when lazy loading images/checking to see if the image is within the viewport.
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+ */
+function createProgressiveImageIntersectionObserver() {
 
-    const config = {
+    // If we don't have support for intersection observer, load all the images immediately
+    if ( ! ( 'IntersectionObserver' in window )) {
 
-        threshold: .3,
+        images.forEach( image =>  loadProgressiveImage( image ));
 
-    }
+    } else {
 
-    const observer = new IntersectionObserver( entries => {
+        const observerConfig  = {
+            rootMargin: '50px 0px',
+            threshold : 0,
+        }
 
-        entries.forEach( entry => {
+        // Using the new Intersection Observer API
+        const observer = new IntersectionObserver( handleImageVisible, observerConfig );
 
-            if ( entry.isIntersecting ) {
+        // Watch each of our images
+        images.forEach( image => {
 
-                triggerProgressiveLoad( entry.target );
-                observer.unobserve( entry.target );
-
-            }
+            observer.observe( image );
 
         });
 
 
-    }, config );
+    }
 
-    images.forEach( image => {
+}
 
-        observer.observe( image );
+/**
+ *
+ * @param {*} entries
+ * @param {*} observerInstance
+ */
+function handleImageVisible( entries, observerInstance ) {
+
+    entries.forEach( entry => {
+
+        // If the image is intersecting and has not been loaded yet, handle the loading process.
+        if( entry.isIntersecting ) {
+
+            // Stop watching and load the image
+            observerInstance.unobserve( entry.target );
+            loadProgressiveImage( entry.target );
+
+        }
 
     });
 
 }
 
-function triggerProgressiveLoad( element ) {
+/**
+ *
+ * @param {*} element
+ */
+function loadProgressiveImage( image ) {
 
-    const image = new Image();
-    const placeholder = element.querySelector( '.c-progressive__placeholder' );
-    const newImage = element.querySelector( '.c-progressive__image' );
+    // The direct child of `.c-progressive` is always the actual image element
+    const imageElement = image.firstElementChild;
+    const pseudoImage = new Image();
 
-    // Set the new image src to the real image, which triggers an image fetch
-    image.src = placeholder.getAttribute( 'data-src' );
+    pseudoImage.src = imageElement.getAttribute( 'data-progressive' );
 
-    // Wait until the image loads
-    image.onload = () => {
+    pseudoImage.onload = () => {
 
-        newImage.src = image.src;
-        placeholder.classList.add( '--hidden' );
-        newImage.classList.add( '--loaded' );
+        imageElement.classList.remove( '--not-loaded' );
+        imageElement.classList.add( '--loaded' );
 
-        // Dispatch DOM Event after a new image is laoded
-        newImage.dispatchEvent( imageLoadedEvent );
+        if ( imageElement.classList.contains( '.c-progressive__bg' )) {
+
+            imageElement.style['background-image'] = `url( ${imageElement.src} )`
+
+        }else{
+
+            imageElement.src = pseudoImage.src;
+
+        }
 
     }
 
 }
 
-document.addEventListener( 'DOMContentLoaded', watchImages );
+/**
+ * Create our intersection observer when the page loads
+ */
+window.addEventListener( 'load', () => {
+
+    createProgressiveImageIntersectionObserver();
+
+});

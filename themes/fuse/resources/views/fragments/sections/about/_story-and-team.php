@@ -47,6 +47,17 @@ use function Fuse\Controllers\render as render;
 
             </div>
 
+			<div class="c-featured-bio">
+
+				<div class="c-featured-bio__media">
+					<?= render( 'fragments/components/_c-progressive', $data['featured']['image'] ); ?>
+				</div>
+
+			</div>
+
+
+			</div>
+
             <?php if( $data['team']['team_members'] ){ ?>
 
                 <div class="c-collection--bios">

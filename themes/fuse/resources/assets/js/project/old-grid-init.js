@@ -1,7 +1,5 @@
 import throttle from 'lodash.throttle';
 
-const allGridItems = document.querySelectorAll( '.c-gallery--photo .c-gallery__media' );
-
 /**
  * Inspo :  https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb
  */
