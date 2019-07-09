@@ -39,7 +39,57 @@
 
 .c-gallery__grid-sizer,
 .c-gallery--photo .c-gallery__media{
-	width: 25%;
+
+	width: 100%;
+
+	@include breakpoint( xs ){
+
+		width: 49%;
+
+	}
+
+	@include breakpoint( s ){
+
+		width: 49%;
+
+	}
+
+	@include breakpoint( m ){
+
+		width: 32.75%;
+
+	}
+
+	@include breakpoint( l ){
+
+		width: 24.5%;
+
+	}
+
+}
+
+.c-gallery__gutter-sizer{
+
+	width: 0%;
+
+	@include breakpoint( xs ){
+
+		width: 2%;
+
+	}
+
+	@include breakpoint( m ){
+
+		width: .875%;
+
+	}
+
+	@include breakpoint( l ){
+
+		width: .667%;
+
+	}
+
 }
 
 .c-gallery--photo .c-gallery__media:hover{

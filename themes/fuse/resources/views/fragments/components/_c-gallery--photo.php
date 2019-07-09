@@ -26,6 +26,7 @@ use function Fuse\Controllers\render as render;
 <div class="c-gallery c-gallery--photo">
 
 	<div class="c-gallery__grid-sizer"></div>
+	<div class="c-gallery__gutter-sizer"></div>
 
 	<?php foreach( $data as $media ){ ?>
 

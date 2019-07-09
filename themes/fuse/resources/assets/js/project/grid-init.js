@@ -8,10 +8,11 @@ const grid = document.querySelector( '.c-gallery--photo' );
 
 const msnry = new Masonry( grid, {
 
-    gutter: 8,
     itemSelector: '.c-gallery__media',
-  	columnWidth: '.c-gallery__grid-sizer',
+    columnWidth: '.c-gallery__grid-sizer',
+    gutter: '.c-gallery__gutter-sizer',
     percentPosition: true,
+    transitionDuration: '0.2s',
 
 });
 
