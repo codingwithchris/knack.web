@@ -34,9 +34,7 @@ function setup(){
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_intro', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_featured_projects', 2);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_what_we_do', 3);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_image_banner', 4);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_clients', 5);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 6);
 
 	}
 }
@@ -176,25 +174,36 @@ function load_what_we_do(){
 
 		],
 
+		'headshots_island' => [
+
+			'title'		=> Acf::field( 'headshots_section_title' )->get(),
+			'copy'		=> Acf::field( 'headshots_section_copy' )->get(),
+			'type'		=> 'light',
+
+
+			'action'	=> [
+
+				'btn_text'	=> Acf::field( 'headshots_section_action_text' )->get(),
+				'btn_url'	=> Acf::field( 'headshots_section_action_link' )->get(),
+				'btn_type'	=> 'tertiary',
+				'btn_theme'	=> 'dark'
+
+			],
+
+			'background' => [
+
+				'media'	=> Acf::field( 'headshots_section_image' )->get(),
+				'type'	=> 'bg'
+
+			]
+
+
+		],
+
 	];
 
 	render( 'fragments/sections/home/_what-we-do', $section_data );
 
-
-}
-
-function load_image_banner(){
-
-
-	$section_data = [
-
-		'image' => [
-			'media' => Acf::field('image_banner')->get(),
-		]
-
-	];
-
-	render( 'fragments/sections/home/_image-banner', $section_data );
 
 }
 
@@ -218,37 +227,5 @@ function load_clients(){
 	];
 
 	render( 'fragments/sections/home/_clients', $section_data );
-
-}
-
-function load_cta(){
-
-	if( ! get_field( 'load_cta' ) ){
-		return;
-	}
-
-	global $post;
-
-	$cta_data = [
-
-		'type'			=> 'simple',
-		'title'			=> Acf::field( 'cta_title' )->escape( 'esc_html' )->get(),
-		'copy'			=> Acf::field( 'cta_copy' )->escape( 'esc_html' )->get(),
-		'modifier_class'	=> 'c-cta--home',
-		'action'	=> [
-
-			'btn_type'	=> 'primary',
-			'btn_text'	=> Acf::field( 'cta_action_text' )->escape()->get(),
-			'btn_url'	=> Acf::field( 'cta_action_link' )->default( home_url('/contact') )->escape( 'esc_url' )->get(),
-			'btn_theme'	=> 'white',
-
-		],
-		'bg_image'	=> [
-			'image_url' => Acf::field( 'cta_bg' )->default( 'https://picsum.photos/1920/500' )->get()
-		]
-
-	];
-
-	render( 'fragments/components/_c-cta', $cta_data );
 
 }

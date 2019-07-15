@@ -15,7 +15,7 @@
 namespace Fuse\Layout\Page;
 use function Fuse\Controllers\render as render;
 use Samrap\Acf\Acf;
-
+use Fuse\Helpers;
 
 // Fire our setup once we have all  Wordpress data
 add_action( 'wp', __NAMESPACE__ . '\setup');
@@ -26,9 +26,13 @@ function setup(){
 	if( is_page() && ! is_front_page() ){
 
 		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero', 1 );
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 10 );
 
 	}
+
+	if( is_page() ){
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 20 );
+	}
+
 }
 
 /*************************************************************
@@ -71,23 +75,25 @@ function load_cta(){
 
 	$cta_data = [
 
-		'type'			=> 'simple',
-		'title'			=> Acf::field( 'cta_title' )->escape( 'esc_html' )->get(),
-		'copy'			=> Acf::field( 'cta_copy' )->escape( 'esc_html' )->get(),
+		'type'			=> Acf::field( 'cta_type' )->get(),
+		'title'			=> Acf::field( 'cta_title' )->get(),
+		'copy'			=> Acf::field( 'cta_copy' )->get(),
 		'modifier_class'	=> 'c-cta--' . $post->post_name,
 		'action'	=> [
 
 			'btn_type'	=> 'primary',
-			'btn_text'	=> Acf::field( 'cta_action_text' )->escape()->get(),
-			'btn_url'	=> Acf::field( 'cta_action_link' )->default( home_url('/contact') )->escape( 'esc_url' )->get(),
-			'btn_theme'	=> 'white',
+			'btn_text'	=> Acf::field( 'cta_action_text' )->get(),
+			'btn_url'	=> Acf::field( 'cta_action_link' )->get(),
+			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'simple' ? 'white' : 'dark',
 
 		],
 		'bg_image'	=> [
-			'image_url' => Acf::field( 'cta_bg' )->default( 'https://picsum.photos/1920/500' )->get()
+			'image_url' => Acf::field( 'cta_bg' )->get()
 		]
 
 	];
+
+	$cta_data = Helpers\fuse_remove_empty_values( $cta_data );
 
 	render( 'fragments/components/_c-cta', $cta_data );
 

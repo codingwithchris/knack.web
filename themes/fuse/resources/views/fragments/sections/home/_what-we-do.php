@@ -25,6 +25,7 @@ use function Fuse\Controllers\render as render;
 
             <?php render( 'fragments/components/_c-island', $data['videography_island'] ); ?>
             <?php render( 'fragments/components/_c-island', $data['photography_island'] ); ?>
+            <?php render( 'fragments/components/_c-island', $data['headshots_island'] ); ?>
 
         </div>
 

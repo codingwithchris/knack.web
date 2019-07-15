@@ -44,7 +44,7 @@ $form_breakpoint: m;
 
 .gfield{
 
-    flex-direction: column;
+	flex-direction: column;
 
 }
 
@@ -295,11 +295,16 @@ $form_breakpoint: m;
     border-radius: 0px;
     color: c( gray--d );
     display: block;
-    padding: 10px 15px !important;
+	line-height: 1.4;
+	padding: 8px !important;
     font-size: 16px !important;
     transition: transition( form );
     width: 100%;
-    appearance: none;
+	appearance: none;
+
+	@include breakpoint( l ){
+		padding: 10px 15px !important;
+	}
 
 }
 

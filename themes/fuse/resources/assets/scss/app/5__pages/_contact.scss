@@ -21,7 +21,12 @@
 
 body.contact-us article{
 
-    display: flex;
+	display: flex;
+	flex-direction: column-reverse;
+
+	@include breakpoint( l ){
+		flex-direction: row;
+	}
 
 }
 
@@ -56,6 +61,7 @@ body.contact-us article{
 
    justify-content: space-between;
    height: 100%;
+   min-height: 100vh;
 
  }
 
@@ -67,6 +73,16 @@ body.contact-us article{
 
  }
 
+ .p-contact--left .c-overlay--white--70{
+
+	 opacity: .85;
+
+	@include breakpoint( l ){
+		opacity: .7;
+	}
+
+ }
+
 
 /**
  * Right Side
@@ -74,7 +90,7 @@ body.contact-us article{
  .p-contact--right{
 
     flex: 0 0 66.66%;
-    padding: spacer( component, l );
+    padding: spacer( component, xl );
 
  }
 

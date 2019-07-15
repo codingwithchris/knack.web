@@ -14,7 +14,7 @@
  */
 
 namespace Fuse\Layout\SingleProject;
-use Fuse\Controllers;
+use function Fuse\Controllers\render as render;
 use Fuse\AssetHandler;
 use Samrap\Acf\Acf;
 
@@ -26,7 +26,6 @@ function setup(){
 
 	// If we are on a normal page
 	if( is_singular( 'projects' ) ){
-
 
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_hero', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_media', 2);
@@ -86,7 +85,7 @@ function load_hero(){
 
 	];
 
-	Controllers\render( 'fragments/sections/single-project/_hero', $hero_data );
+	render( 'fragments/sections/single-project/_hero', $hero_data );
 
 }
 
@@ -100,35 +99,39 @@ function load_media(){
 
 	];
 
-	Controllers\render( 'fragments/sections/single-project/_media', $media_data );
+	render( 'fragments/sections/single-project/_media', $media_data );
 
 }
 
 
 function load_cta(){
 
+	if( ! get_field( 'load_cta' ) ){
+		return;
+	}
 
 	$cta_data = [
 
-		'type'			=> 'inverted',
-		'title'			=> 'A simple call to action',
-		'copy'			=> 'A short yet legit subtitle',
+		'type'			=> Acf::field( 'cta_type' )->get(),
+		'title'			=> Acf::field( 'cta_title' )->get(),
+		'copy'			=> Acf::field( 'cta_copy' )->get(),
 		'modifier_class'	=> 'c-cta--project',
 		'action'	=> [
 
 			'btn_type'	=> 'primary',
-			'btn_text'	=> 'Drop us a line',
-			'btn_url'	=> site_url( '/contact-us/' ),
-			'btn_theme'	=> 'dark',
+			'btn_text'	=> Acf::field( 'cta_action_text' )->get(),
+			'btn_url'	=> Acf::field( 'cta_action_link' )->get(),
+			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'simple' ? 'white' : 'dark',
 
 		],
 		'bg_image'	=> [
-			'image_url' => 'https://picsum.photos/1920/500'
+			'image_url' => Acf::field( 'cta_bg' )->get()
 		]
 
 	];
 
-	Controllers\render( 'fragments/components/_c-cta', $cta_data );
+	render( 'fragments/components/_c-cta', $cta_data );
+
 
 }
 

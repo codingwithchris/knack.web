@@ -20,8 +20,10 @@
 
 .c-collection--islands{
 
+	align-items: stretch;
     display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	flex-wrap: wrap;
     padding: spacer( component, s );
 
     @include breakpoint( m ){
@@ -32,16 +34,24 @@
 
 }
 
-.c-collection--islands .c-island:first-child{
 
-    margin-bottom: spacer( component, s );
-    margin-right: 0;
+.c-collection--islands .c-island{
 
-    @include breakpoint( m ){
+	border-bottom: 12px solid white;
+	flex-grow: 1;
+	min-width: 50%;
 
-        margin-bottom: 0;
-        margin-right: spacer( component, s );
+}
 
-    }
+
+.c-collection--islands .c-island:nth-child( even ){
+
+	border-left: none;
+
+	@include breakpoint( m ){
+
+		border-left: 12px solid white;
+
+	}
 
 }

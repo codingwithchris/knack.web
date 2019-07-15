@@ -23,17 +23,25 @@
 
     background-position: center center;
     background-size: cover;
-    padding: spacer( layout, 2xl ) spacer( layout, xl );
+    padding: spacer( layout, l ) spacer( component, s );
     position: relative;
     z-index: z( base );
 
     @include shadow( media--subtle );
 
-    &:not( :last-child ){
+	@include breakpoint( s ){
+		padding: spacer( layout, 2xl ) spacer( layout, xl );
+	}
 
-        margin-bottom: spacer( layout, 3xl );
+ }
 
-    }
+ .c-featured-project:not( :last-child ){
+
+	 margin-bottom: spacer( layout, 2xl );
+
+	@include breakpoint( s ){
+		margin-bottom: spacer( layout, 3xl );
+	}
 
  }
 
@@ -100,13 +108,28 @@
   .c-featured-project__card{
 
     background-color: c(  white );
-    padding: spacer(  layout, m );
+	padding: spacer(  layout, xs );
     position: relative;
-    top: -250px;
-    max-width: 450px;
+    top: -125px;
+	max-width: 450px;
+	margin: 0 auto;
     z-index: z( front );
 
-    @include shadow( media--subtle );
+	@include shadow( media--subtle );
+
+	@include breakpoint( s ){
+
+		top: -250px;
+
+	}
+
+	@include breakpoint( m ){
+		padding: spacer(  layout, m );
+	}
+
+	@include breakpoint( l ){
+		margin: 0;
+	}
 
   }
 

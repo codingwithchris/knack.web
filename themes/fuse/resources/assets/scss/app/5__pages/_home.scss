@@ -62,7 +62,11 @@
   .p-home--projects{
 
     background-color: c( gray--l );
-    padding: spacer( layout, 2xl ) 0;
+	padding: spacer( layout, xl ) 0;
+
+	@include breakpoint( s ){
+		padding: spacer( layout, 2xl ) 0;
+	}
 
   }
 
@@ -88,7 +92,11 @@
 
   .p-home--projects__content{
 
-    margin-top: spacer( layout, 3xl );
+	  margin-top: spacer( layout, 2xl );
+
+	@include breakpoint( s ){
+		margin-top: spacer( layout, 3xl );
+	}
 
   }
 
