@@ -96,82 +96,22 @@ function prepareProgressiveImage( element ) {
 
     }
 
-
     // eslint-disable-next-line
-	fullImage.src = element.dataset.src;
-    fullImage.className = 'c-progressive__image --full --revealing';
+	fullImage.className = 'c-progressive__image --full --revealing';
+    fullImage.src = element.dataset.src;
 
-    if( fullImage.complete ) {
+    fullImage.onload = () => {
 
-        loadImageByType( fullImage, previewImage, element );
+        const newImageElement = element.appendChild( fullImage );
 
-    } else {
+        newImageElement.addEventListener( 'animationend', ( event ) => {
 
-        fullImage.onload = loadImageByType( fullImage, previewImage, element );
+            element.removeChild( previewImage );
+            event.target.classList.remove( '--revealing' );
 
-    }
-
-
-}
-
-/**
- *
- * @param {*} fullImage
- * @param {*} element
- */
-function loadImageByType( fullImage, previewImage, element ) {
-
-    if(  element.dataset.type === 'img' ) {
-
-        loadAsImage( fullImage, previewImage, element );
+        });
 
     }
-
-    if(  element.dataset.type === 'bg' ) {
-
-        loadAsBackground( fullImage, previewImage, element );
-
-    }
-
-}
-
-/**
- *
- * @param {*} fullImage
- * @param {*} previewImage
- * @param {*} element
- */
-function loadAsImage( fullImage, previewImage, element ) {
-
-    element.appendChild( fullImage ).addEventListener( 'animationend', ( event ) => {
-
-        element.removeChild( previewImage );
-        event.target.classList.remove( '--revealing' );
-
-    });
-
-}
-
-/**
- *
- * @param {*} fullImage
- * @param {*} element
- */
-function loadAsBackground(  fullImage, previewImage, element ) {
-
-    element.appendChild( fullImage ).addEventListener( 'animationend', ( event ) => {
-
-        // eslint-disable-next-line
-        element.style['background-image'] = `url("${  fullImage.src  }")`;
-
-        element.removeChild( previewImage );
-
-        // eslint-disable-next-line
-		fullImage.style.display = 'none';
-
-        event.target.classList.remove( '--revealing' );
-
-    });
 
 }
 
