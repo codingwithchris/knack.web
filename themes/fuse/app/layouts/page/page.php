@@ -75,20 +75,22 @@ function load_cta(){
 
 	$cta_data = [
 
-		'type'			=> Acf::field( 'cta_type' )->get(),
-		'title'			=> Acf::field( 'cta_title' )->get(),
-		'copy'			=> Acf::field( 'cta_copy' )->get(),
+		'override_defaults' => Acf::field( 'override_cta_defaults' )->get(),
+		'type'				=> Acf::field( 'cta_type' )->get(),
+		'title'				=> Acf::field( 'cta_title' )->get(),
+		'copy'				=> Acf::field( 'cta_copy' )->get(),
 		'modifier_class'	=> 'c-cta--' . $post->post_name,
 		'action'	=> [
 
 			'btn_type'	=> 'primary',
 			'btn_text'	=> Acf::field( 'cta_action_text' )->get(),
 			'btn_url'	=> Acf::field( 'cta_action_link' )->get(),
-			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'simple' ? 'white' : 'dark',
+			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'standard' ? 'white' : 'dark',
 
 		],
-		'bg_image'	=> [
-			'image_url' => Acf::field( 'cta_bg' )->get()
+		'remove_bg'	=> Acf::field( 'cta_bg_remove' )->get(),
+		'bg'	=> [
+			'media' => Acf::field( 'cta_bg' )->get()
 		]
 
 	];

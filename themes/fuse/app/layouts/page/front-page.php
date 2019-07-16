@@ -126,6 +126,11 @@ function load_what_we_do(){
 
 		'videography_island' => [
 
+			'icon'	=> [
+				'name' 	=> 'video',
+				'title'	=> 'A video camera graphical icon',
+			],
+
 			'title'		=> Acf::field( 'videography_section_title' )->get(),
 			'copy'		=> Acf::field( 'videography_section_copy' )->get(),
 			'type'		=> 'light',
@@ -149,6 +154,11 @@ function load_what_we_do(){
 		],
 
 		'photography_island' => [
+
+			'icon'	=> [
+				'name' 	=> 'camera',
+				'title'	=> 'A photography camera graphical icon',
+			],
 
 			'title'		=> Acf::field( 'photography_section_title' )->get(),
 			'copy'		=> Acf::field( 'photography_section_copy' )->get(),
@@ -175,6 +185,11 @@ function load_what_we_do(){
 		],
 
 		'headshots_island' => [
+
+			'icon'	=> [
+				'name' 	=> 'camera',
+				'title'	=> 'A graphical icon representing headshots',
+			],
 
 			'title'		=> Acf::field( 'headshots_section_title' )->get(),
 			'copy'		=> Acf::field( 'headshots_section_copy' )->get(),

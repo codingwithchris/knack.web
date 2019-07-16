@@ -187,7 +187,7 @@ const config = {
                                 { removeUselessStrokeAndFill: true },
                                 { convertColors: { shorthex: false } },
                                 { convertShapeToPath: true },
-                                { removeAttrs: { attrs: '(stroke|fill)' } },
+                                //{ removeAttrs: { attrs: '(stroke|fill)' } },
                                 { removeMetadata: true },
                             ],
                         },

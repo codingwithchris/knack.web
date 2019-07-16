@@ -54,6 +54,9 @@ function load_quote(){
 
 }
 
+/**
+ *
+ */
 function load_philosophy(){
 
 	$section_data = [
@@ -67,30 +70,71 @@ function load_philosophy(){
 
 }
 
+/**
+ *
+ */
 function load_story_team(){
 
-	$section_data = [
+	$story_data = [
 
-		'story' => [
 
-			'title'		=> Acf::field( 'story_title' )->get(),
-			'copy'		=> Acf::field( 'story_copy' )->get(),
-			'image'	=> [
-				'image_url'	=> Acf::field( 'story_image' )->expect( 'string' )->default( 'https://picsum.photos/700/700' )->get(),
-			]
+		'title'		=> Acf::field( 'story_title' )->get(),
+		'copy'		=> Acf::field( 'story_copy' )->get(),
+		'image'	=> [
+			'image_url'	=> Acf::field( 'story_image' )->expect( 'string' )->default( 'https://picsum.photos/700/700' )->get(),
+		]
+
+
+	];
+
+	$squad_data = [
+
+		'title'			=> Acf::field( 'squad_intro_title' )->get(),
+		'subtitle'		=> Acf::field( 'squad_intro_copy' )->get(),
+
+	];
+
+	$founders_data = [
+
+		'image' => [
+			'media'	=> Acf::field( 'founders_featured_image' )->get()
+		],
+
+		'founder_1' => [
+
+			'name'	=> Acf::field( 'founders_founder_1_name' )->get(),
+			'roles'	=> Acf::field( 'founders_founder_1_roles' )->get(),
+			'insta'	=> Acf::field( 'founders_founder_1_instagram_link' )->get(),
+			'bio'	=> Acf::field( 'founders_founder_1_bio' )->get(),
 
 		],
 
-		'team'	=> [
+		'founder_2' => [
 
-			'title'			=> Acf::field( 'team_title' )->get(),
-			'subtitle'		=> Acf::field( 'team_subtitle' )->get(),
-			'team_members'	=> Acf::field( 'team_members' )->expect( 'array' )->default( [] )->get(),
+			'name'	=> Acf::field( 'founders_founder_2_name' )->get(),
+			'roles'	=> Acf::field( 'founders_founder_2_roles' )->get(),
+			'insta'	=> Acf::field( 'founders_founder_2_instagram_link' )->get(),
+			'bio'	=> Acf::field( 'founders_founder_2_bio' )->get(),
 
 		]
 
 	];
 
-	render( 'fragments/sections/about/_story-and-team', $section_data );
+	$team_members_data = [
+
+		'team_members'	=> Acf::field( 'team_members' )->expect( 'array' )->default( [] )->get(),
+
+	];
+
+	$section_data = [
+
+		'story'				=> $story_data,
+		'squad_intro'		=> $squad_data,
+		'founders'			=> $founders_data,
+		'team_members'		=> $team_members_data,
+
+	];
+
+	render( 'fragments/sections/about/_story', $section_data );
 
 }

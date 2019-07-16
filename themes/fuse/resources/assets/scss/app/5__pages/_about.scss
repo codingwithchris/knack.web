@@ -42,32 +42,50 @@
 }
 
 /**
- * Story and Team Section
+ * Story Section
  */
 
-.p-about--story-team{
+.p-about--story{
 
     background-color: c( gray--l );
     margin-top: spacer( layout, 3xl );
-    padding: spacer( layout, 2xl );
+    padding: spacer( layout, 2xl ) 0;
 
  }
 
- .p-about-story-team__story{
+ .p-about-story__story{
 
     margin-top: -375px;
 
  }
 
-.p-about-story-team__team{
+/**
+ * Squad Section
+ */
 
-    padding-top: spacer( layout, 3xl );
+.p-about-story__squad-intro{
+
+    padding-top: spacer( layout, 2xl );
 
 }
 
-.p-about-story-team__team .o-content-block{
+.p-about-story__squad-intro .o-content-block{
 
     margin-bottom: spacer( layout, l );
     max-width: 500px;
 
+}
+
+/**
+ * Founders Section
+ */
+ .p-about-story__founders{
+	 //
+ }
+
+/**
+ * Team Members Section
+ */
+.p-about-story__team-members{
+	//
 }

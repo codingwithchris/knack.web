@@ -17,7 +17,7 @@ namespace Fuse\Layout\SingleProject;
 use function Fuse\Controllers\render as render;
 use Fuse\AssetHandler;
 use Samrap\Acf\Acf;
-
+use Fuse\Helpers;
 
 // Fire our setup once we have all  Wordpress data
 add_action( 'wp', __NAMESPACE__ . '\setup');
@@ -112,23 +112,28 @@ function load_cta(){
 
 	$cta_data = [
 
-		'type'			=> Acf::field( 'cta_type' )->get(),
-		'title'			=> Acf::field( 'cta_title' )->get(),
-		'copy'			=> Acf::field( 'cta_copy' )->get(),
+		'override_defaults' => Acf::field( 'override_cta_defaults' )->get(),
+		'type'				=> Acf::field( 'cta_type' )->get(),
+		'title'				=> Acf::field( 'cta_title' )->get(),
+		'copy'				=> Acf::field( 'cta_copy' )->get(),
 		'modifier_class'	=> 'c-cta--project',
+
 		'action'	=> [
 
 			'btn_type'	=> 'primary',
 			'btn_text'	=> Acf::field( 'cta_action_text' )->get(),
 			'btn_url'	=> Acf::field( 'cta_action_link' )->get(),
-			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'simple' ? 'white' : 'dark',
+			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'standard' ? 'white' : 'dark',
 
 		],
-		'bg_image'	=> [
-			'image_url' => Acf::field( 'cta_bg' )->get()
+		'remove_bg'	=> Acf::field( 'cta_bg_remove' )->get(),
+		'bg'	=> [
+			'media' => Acf::field( 'cta_bg' )->get()
 		]
 
 	];
+
+	$cta_data = Helpers\fuse_remove_empty_values( $cta_data );
 
 	render( 'fragments/components/_c-cta', $cta_data );
 

@@ -26,8 +26,6 @@ $overlay_data = [
 
 ];
 
-
-
 /**
  * *************************************
  * Island • View Definition
@@ -39,6 +37,14 @@ $overlay_data = [
 <div class="c-island c-island--<?= $data['type']; ?>">
 
     <div class="c-island__content o-content-block">
+
+		<?php if( isset( $data['icon'] ) ){ ?>
+
+			<div class="c-island__icon">
+				<?= AssetHandler\get_svg( $data['icon'] ); ?>
+			</div>
+
+		<?php } ?>
 
         <div class="c-island__title">
 

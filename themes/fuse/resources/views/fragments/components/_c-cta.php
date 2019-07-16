@@ -25,7 +25,6 @@ if( is_singular( 'projects' ) ){
 
 $option_group_name = "cta_{$post_type}_defaults";
 
-
 // Default option sets for pag and project call to actions as defined in ACF
 $defaults = [
 
@@ -38,22 +37,24 @@ $defaults = [
 		'btn_type'	=> 'primary',
 		'btn_text'	=> Acf::option( "{$option_group_name}_action_text" )->get(),
 		'btn_url'	=> Acf::option( "{$option_group_name}_action_link" )->get(),
-		'btn_theme'	=> Acf::option( "{$option_group_name}_type" )->get() === 'simple' ? 'white' : 'dark',
+		'btn_theme'	=> Acf::option( "{$option_group_name}_type" )->get() === 'standard' ? 'white' : 'dark',
 
 	],
-	'bg_image'	=> [
-		'image_url' => Acf::option( "{$option_group_name}_bg" )->get()
+	'bg'	=> [
+		'media' => Acf::option( "{$option_group_name}_bg" )->get(),
+		'type'	=> 'bg'
 	]
 
 ];
 
- // Merge incoming data with defined defaults
+/**
+ * If the user elects to modify default data, then we can merge user data with our
+ * defaults array, otherwise, just use the defaults array as defined above.
+ */
 
-$data = \array_merge( $defaults, $data );
-
-
-// TODO -- handle merging in of arrays... like "action" for example - right now the whole array is getting wiped out
-
+$data = ( isset( $data['override_defaults'] ) && $data['override_defaults'] === true )
+        ? \array_replace_recursive( $defaults, $data )
+        : $defaults;
 
 /**
  * *************************************
@@ -95,8 +96,8 @@ $data = \array_merge( $defaults, $data );
     ?>
 
     <?php
-        if( $data['bg_image'] ){
-            render( 'fragments/components/_c-bg-image', $data['bg_image'] );
+        if( $data['bg'] && $data['remove_bg'] !== true ){
+            render( 'fragments/components/_c-progressive', $data['bg'] );
         }
     ?>
 

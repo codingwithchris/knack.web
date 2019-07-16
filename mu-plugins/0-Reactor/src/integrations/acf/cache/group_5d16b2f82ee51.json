@@ -11,22 +11,22 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "message": "Should a Call to Action load at the bottom of this page?",
+            "message": "Should a CTA load at the bottom of this page?",
             "default_value": 1,
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
         },
         {
-            "key": "field_5d2be21bcdcd4",
-            "label": "Type",
-            "name": "cta_type",
-            "type": "radio",
-            "instructions": "",
+            "key": "field_5d2cf3a2b5f72",
+            "label": "Override Defaults?",
+            "name": "override_cta_defaults",
+            "type": "true_false",
+            "instructions": "Do you want to override any default data for this CTA?",
             "required": 0,
             "conditional_logic": [
                 [
@@ -38,12 +38,44 @@
                 ]
             ],
             "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d2be21bcdcd4",
+            "label": "Type",
+            "name": "cta_type",
+            "type": "radio",
+            "instructions": "Override the default CTA type",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d16b310ce0e0",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2cf3a2b5f72",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "simple": "Simple",
+                "standard": "Standard",
                 "inverted": "Inverted"
             },
             "allow_null": 0,
@@ -58,12 +90,17 @@
             "label": "Title",
             "name": "cta_title",
             "type": "text",
-            "instructions": "",
+            "instructions": "Override the default CTA title",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_5d16b310ce0e0",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2cf3a2b5f72",
                         "operator": "==",
                         "value": "1"
                     }
@@ -85,12 +122,17 @@
             "label": "Copy",
             "name": "cta_copy",
             "type": "text",
-            "instructions": "",
+            "instructions": "Override the default CTA sub copy",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_5d16b310ce0e0",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2cf3a2b5f72",
                         "operator": "==",
                         "value": "1"
                     }
@@ -112,12 +154,17 @@
             "label": "Action",
             "name": "cta_action",
             "type": "group",
-            "instructions": "",
+            "instructions": "Override the default CTA Button Data",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_5d16b310ce0e0",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2cf3a2b5f72",
                         "operator": "==",
                         "value": "1"
                     }
@@ -186,7 +233,7 @@
             "label": "Background Image",
             "name": "cta_bg",
             "type": "image",
-            "instructions": "",
+            "instructions": "Override the default CTA background image",
             "required": 0,
             "conditional_logic": [
                 [
@@ -194,11 +241,21 @@
                         "field": "field_5d16b310ce0e0",
                         "operator": "==",
                         "value": "1"
+                    },
+                    {
+                        "field": "field_5d2cf3a2b5f72",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5d2cf9607dd70",
+                        "operator": "!=",
+                        "value": "1"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "75",
                 "class": "",
                 "id": ""
             },
@@ -212,6 +269,33 @@
             "max_height": 500,
             "max_size": "",
             "mime_types": "jpg"
+        },
+        {
+            "key": "field_5d2cf9607dd70",
+            "label": "Remove Background Image",
+            "name": "cta_bg_remove",
+            "type": "true_false",
+            "instructions": "Do you want to remove the background image for this call to action?",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d2cf3a2b5f72",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -253,5 +337,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563171868
+    "modified": 1563243249
 }
