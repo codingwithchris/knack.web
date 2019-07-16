@@ -1,0 +1,68 @@
+/**
+ * Type	: Component
+ * Name	: Team Members
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Team Members • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Team Members • Class Definitions
+ * ************************************
+ */
+
+ .c-team-members{
+	 display: grid;
+	 grid-column-gap: spacer( component, l );
+	 grid-row-gap: spacer( component, l );
+	 grid-template-columns: 1fr;
+	 grid-template-rows: auto;
+	 margin-left: auto;
+	 margin-right: auto;
+	 margin-top: spacer( layout, l );
+	 max-width: 550px;
+
+	 @include breakpoint( m ){
+		 grid-template-columns: 1fr 1fr;
+		 max-width: 100%;
+	}
+
+ }
+
+// Team Memmber Item
+.c-team-member{
+
+	background: white;
+
+}
+
+.c-team-member__body{
+
+	padding: spacer( component, l );
+
+}
+
+.c-team-member__role{
+
+	color: c( purple );
+	margin-bottom: spacer( component, l );
+
+}
+
+.c-team-member__footer{
+
+	margin-top: spacer( component, m );
+
+}
+
+.c-team-member__social{
+	justify-content: left !important;
+}

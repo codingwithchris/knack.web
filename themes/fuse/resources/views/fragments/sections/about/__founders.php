@@ -32,7 +32,7 @@ use function Fuse\Controllers\render as render;
 
 			<div class="c-founders-highlight__header">
 				<div class="c-founders-highlight__image">
-
+					<?= render( 'fragments/components/_c-progressive', $data['image'] ); ?>
 				</div>
 			</div>
 

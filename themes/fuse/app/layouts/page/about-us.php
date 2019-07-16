@@ -81,7 +81,8 @@ function load_story_team(){
 		'title'		=> Acf::field( 'story_title' )->get(),
 		'copy'		=> Acf::field( 'story_copy' )->get(),
 		'image'	=> [
-			'image_url'	=> Acf::field( 'story_image' )->expect( 'string' )->default( 'https://picsum.photos/700/700' )->get(),
+			'media'	=> Acf::field( 'story_image' )->get(),
+			'type'	=> 'bg'
 		]
 
 

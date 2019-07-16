@@ -18,3 +18,25 @@
  * Founder • Class Definitions
  * ************************************
  */
+
+.c-founder{
+
+	display: flex;
+	flex-direction: column;
+
+}
+
+.c-founder__role{
+	color: c( purple );
+	margin-bottom: spacer( component, l );
+}
+
+.c-founder__footer{
+
+	margin-top: spacer( component, m );
+
+}
+
+.c-founder__social{
+	justify-content: left !important;
+}

@@ -18,3 +18,39 @@
  * Founders Highlight • Class Definitions
  * ************************************
  */
+
+.c-founders-highlight{
+	background-color: c( white );
+}
+
+.c-founders-highlight__body{
+
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint( s ){
+		flex-direction: row;
+	}
+}
+
+.c-founders-highlight__half{
+
+	padding: spacer( component, xl );
+	width: 100%;
+
+	@include breakpoint( s ){
+		width: 50%;
+	}
+
+}
+
+.c-founders-highlight__right{
+
+	border-left: 0;
+	border-top: 1px solid c( gray--l );
+
+	@include breakpoint( s ){
+		border-left: 1px solid c( gray--l );
+		border-top: 0;
+	}
+}

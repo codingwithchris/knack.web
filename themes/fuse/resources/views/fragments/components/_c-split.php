@@ -52,7 +52,7 @@ use function Fuse\Controllers\render as render;
 
         <div class="c-split__media">
 
-            <?php render( 'fragments/components/_c-bg-image', $data['image'] ); ?>
+            <?php render( 'fragments/components/_c-progressive', $data['image'] ); ?>
 
         </div>
 

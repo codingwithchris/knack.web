@@ -49,8 +49,11 @@
  }
 
  .c-island__icon{
+
+	filter: grayscale(1);
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
+
  }
 
 .c-island__title{

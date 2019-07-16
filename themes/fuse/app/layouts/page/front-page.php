@@ -187,7 +187,7 @@ function load_what_we_do(){
 		'headshots_island' => [
 
 			'icon'	=> [
-				'name' 	=> 'camera',
+				'name' 	=> 'clapper',
 				'title'	=> 'A graphical icon representing headshots',
 			],
 

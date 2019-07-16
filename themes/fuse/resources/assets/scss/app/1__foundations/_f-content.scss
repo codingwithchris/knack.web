@@ -1,6 +1,6 @@
 /**
  * Type	: Foundation
- * Name	: Body
+ * Name	: Content
  *
  * @since 1.0.0
  * @author CreativeFuse
@@ -8,13 +8,19 @@
 
 /**
  * *************************************
- * Body • Settings
+ * Content • Settings
  * *************************************
  */
 
 
 /**
  * ************************************
- * Body • Class Definitions
+ * Content • Class Definitions
  * ************************************
  */
+ .f-content{
+
+	max-width: 2000px;
+    margin: 0 auto;
+
+ }

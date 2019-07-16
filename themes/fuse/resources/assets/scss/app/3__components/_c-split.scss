@@ -21,41 +21,54 @@
 
  .c-split{
 
-    display: flex;
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 0 auto;
+	max-width: 700px;
     position: relative;
 
-    @include shadow( media--subtle );
+	@include shadow( media--subtle );
+
+	@include breakpoint( l ){
+		flex-direction: row;
+		max-width: 100%;
+
+	}
 
  }
 
  .c-split__half{
 
-    flex: 1 0 50%;
-    overflow: hidden;
-    position: relative;
-    z-index: z( base );
+	flex: 1 0 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: z( base );
+
+	@include breakpoint( l ){
+		 flex: 1 0 50%;
+	}
 
  }
 
  .c-split__content{
 
-    background-color: c( white );
-    padding: spacer( layout, xl ) spacer( component, 4xl );
+	background-color: c( white );
+	padding: spacer( layout, l ) spacer( component, xl );
+
+	@include breakpoint( l ){
+		padding: spacer( layout, xl ) spacer( component, 4xl );
+	}
 
  }
 
  .c-split__media{
 
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+	height: 350px;
 
- }
+	@include breakpoint( l ){
 
- .c-split__media > .c-bg-image{
+		height: 100%;
 
-    background-position: center center;
+	}
 
  }
