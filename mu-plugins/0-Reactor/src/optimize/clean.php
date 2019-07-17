@@ -12,6 +12,10 @@ add_filter('style_loader_tag', __NAMESPACE__ . '\clean_style_tag');
 
 function clean_style_tag( $input ) {
 
+	if( is_admin() ){
+		return $input;
+	}
+
     preg_match_all("!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches);
 
     if (empty($matches[2])) {
@@ -35,6 +39,10 @@ function clean_style_tag( $input ) {
 add_filter('script_loader_tag', __NAMESPACE__ . '\clean_script_tag');
 
 function clean_script_tag( $input ) {
+
+	if( is_admin() ){
+		return $input;
+	}
 
     $input = str_replace( "type='text/javascript' ", '', $input );
 
@@ -171,7 +179,6 @@ function maybe_remove_dashicon() {
 		return;
 
 	wp_dequeue_style('dashicons');
-
 
 }
 
