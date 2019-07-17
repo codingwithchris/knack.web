@@ -1,0 +1,84 @@
+/**
+ * Type	: Page
+ * Name	: Studio Rental
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Studio Rental • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Studio Rental • Class Definitions
+ * ************************************
+ */
+
+ body.studio-rental p{
+
+	margin-bottom: spacer( component, m );
+
+ }
+
+ /**
+ * Rental Intro
+ */
+ .p-section--studio-rental__intro{
+
+	 padding: spacer( layout, xl ) 0;
+
+	@include breakpoint( m ){
+		padding: spacer( layout, 2xl ) 0;
+	}
+
+}
+
+.p-section--studio-rental__intro-content{
+
+	color: c( gray--m );
+	margin: 0 auto;
+	max-width: 750px;
+
+}
+
+.p-section--studio-rental__intro-action{
+
+	margin-top: spacer( component, xl );
+	text-align: center;
+
+}
+
+/**
+ * Rental Guidelines
+ */
+.p-section--studio-rental__guidelines{
+
+	background-color: c( gray--l );
+	padding: spacer( layout, xl ) 0;
+
+}
+
+/**
+ * Rental Gallery
+ */
+
+ .p-section--studio-rental__gallery{
+
+	 padding: spacer( component, xs ) spacer( component, xs ) 0 spacer( component, xs );
+
+ }
+
+ /**
+ * Rental Scheduler
+ */
+.p-section--studio-rental__scheduler{
+
+	background-color: c( gray--l );
+	padding: spacer( layout, xl ) 0 spacer( layout, xl ) 0;
+
+}

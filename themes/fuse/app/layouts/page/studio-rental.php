@@ -15,7 +15,7 @@
 
 namespace Fuse\Layout\StudioRentalPage;
 use function Fuse\Controllers\render as render;
-use Fuse\AssetHandlers;
+use Fuse\AssetHandler;
 use Samrap\Acf\Acf;
 
 
@@ -32,6 +32,9 @@ function setup(){
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_gallery', 2);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_embedded_scheduler', 2);
 
+		// Handle Custom Scripts & Styles
+		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_gallery_script', 1 );
+
 	}
 
 }
@@ -44,11 +47,32 @@ function setup(){
 function load_intro(){
 
 	$section_data = [
-		'title'		=> Acf::field( 'studio_rental_intro_title' )->get(),
-		'content'	=> Acf::field( 'studio_rental_intro_content' )->get(),
-		'action'	=> [
 
-		]
+		'image'		=> [
+			'media' => Acf::field( 'studio_rental_intro_image' )->get(),
+		],
+
+		'content'	=> Acf::field( 'studio_rental_intro_content' )->get(),
+
+		'gallery_action' => [
+
+			'btn_text'		=> Acf::field( 'studio_rental_intro_gallery_btn_text' )->get(),
+			'btn_url'		=> '#studio-rental-gallery',
+			'btn_type'		=> 'secondary',
+			'btn_theme'		=> 'dark',
+			'btn_modifier'	=> '',
+
+		],
+		'booking_action'	=> [
+
+			'btn_text'		=> Acf::field( 'studio_rental_intro_book_btn_text' )->get(),
+			'btn_url'		=> '#studio-rental-scheduler',
+			'btn_type'		=> 'primary',
+			'btn_theme'		=> 'purple',
+			'btn_modifier'	=> '',
+
+		],
+
 	];
 
 	render( 'fragments/sections/studio-rental/_intro', $section_data );
@@ -70,7 +94,8 @@ function load_gallery(){
 
 	$section_data = [
 		'title'		=> Acf::field( 'studio_rental_gallery_title' )->get(),
-		'content'	=> Acf::field( 'studio_rental_gallery_content' )->get(),
+		'photos'	=> Acf::field( 'studio_rental_gallery_photos' )->get(),
+
 	];
 
 	render( 'fragments/sections/studio-rental/_gallery', $section_data );
@@ -87,5 +112,11 @@ function load_embedded_scheduler(){
 	];
 
 	render( 'fragments/sections/studio-rental/_embedded-scheduler', $section_data );
+
+}
+
+function load_gallery_script(){
+
+	AssetHandler\get_gallery_script_bundle();
 
 }

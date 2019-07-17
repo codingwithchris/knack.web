@@ -21,13 +21,12 @@
 
  .c-split{
 
+	border: 1px solid c( gray--l );
 	display: flex;
 	flex-direction: column-reverse;
 	margin: 0 auto;
 	max-width: 700px;
     position: relative;
-
-	@include shadow( media--subtle );
 
 	@include breakpoint( l ){
 		flex-direction: row;

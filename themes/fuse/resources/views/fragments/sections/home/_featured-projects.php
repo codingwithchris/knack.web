@@ -22,13 +22,13 @@ use function Fuse\Controllers\render as render;
 <section id="home-projects" class="p-home--projects u-bgc--gray--l" data-anim-in="false">
     <div class="f-container f-container--width f-container--max--l">
 
-        <div class="p-home--projects__intro o-content-block">
+        <div class="c-flag o-content-block">
 
-            <div class="o-content-block__title u-mbn">
+            <div class="c-flag__title o-content-block__title u-mbn">
                 <h5 class="f-hw--b f-hs--xl">Featured Projects<h5>
             </div>
 
-            <div class="o-content-block__copy">
+            <div class="c-flag__copy o-content-block__copy">
                 <p class="f-b--s">Take a look at some of our favorite work.</p>
             </div>
 

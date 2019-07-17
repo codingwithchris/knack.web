@@ -90,13 +90,13 @@ $data = ( isset( $data['override_defaults'] ) && $data['override_defaults'] === 
     </div>
 
     <?php
-        if( $data['bg_overlay'] ){
+        if( isset( $data['bg_overlay'] ) ){
             render( 'fragments/components/_c-overlay', $data['bg_overlay'] );
         }
     ?>
 
     <?php
-        if( $data['bg'] && $data['remove_bg'] !== true ){
+        if( isset( $data['bg'] ) && isset( $data['remove_bg'] ) && $data['remove_bg'] !== true ){
             render( 'fragments/components/_c-progressive', $data['bg'] );
         }
     ?>

@@ -32,7 +32,7 @@ function setup(){
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 4);
 
 		// Handle Custom Scripts & Styles
-		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_projects_script', 1 );
+		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_gallery_script', 1 );
 
 		remove_filter ('acf_the_content', 'wpautop');
 
@@ -144,42 +144,8 @@ function load_cta(){
 /**
  * Load custom post page scripts.
  */
-function load_projects_script(){
+function load_gallery_script(){
 
-	$local_data = [];
-
-	$photos = Acf::field( 'photos' )->get();
-
-	if( $photos ){
-		foreach( $photos as $photo ){
-
-			$local_data[] = [
-
-				'src'	=> $photo['photo']['url'],
-				'w'		=> $photo['photo']['width'],
-				'h'		=> $photo['photo']['height'],
-				'msrc'	=> $photo['photo']['sizes']['thumbnail'],
-
-			];
-		}
-	}
-
-	$script = [
-
-		'handle' 			=> 'project-script',
-		'location'			=> AssetHandler\get_asset_from_manifest( 'project.js' ),
-		'dependencies'		=> ['app-script'],
-		'version'			=> null,
-		'load_in_footer'	=> 'true',
-		'local_var'			=> 'knackProjectPhotos',
-		'local_data'		=> $local_data,
-
-	];
-
-	wp_register_script( $script['handle'], $script['location'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
-
-	wp_enqueue_script( $script['handle'] );
-
-	wp_localize_script( $script['handle'], $script['local_var'], $script['local_data'] );
+	AssetHandler\get_gallery_script_bundle();
 
 }

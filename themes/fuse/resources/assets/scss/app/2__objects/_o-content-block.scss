@@ -64,12 +64,6 @@
 
 }
 
-.o-content-block__{
-
-   margin-top: spacer( component, 2xl );
-
-}
-
 /**
  * Content Block • Modifiers
  */
@@ -78,5 +72,20 @@
  .o-content-block__action--inline > * {
 
     margin: spacer( component, s ) spacer( component, m );
+
+ }
+
+
+ .o-content-block ul{
+
+	margin-bottom: spacer( component, m );
+	margin-left: spacer( component, l );
+
+}
+
+.o-content-block li{
+
+	list-style: disc;
+	margin-bottom: spacer( component, s );
 
  }

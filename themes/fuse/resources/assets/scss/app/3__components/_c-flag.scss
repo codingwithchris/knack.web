@@ -1,0 +1,39 @@
+/**
+ * Type	: Component
+ * Name	: Flag
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Flag • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Flag • Class Definitions
+ * ************************************
+ */
+ .c-flag{
+
+    background-color: c( white );
+    color: c( gray--d );
+    display: block;
+	margin-bottom: spacer( component, 2xl );
+	max-width: 700px;
+    padding: spacer( component, l ) spacer( component, 2xl );
+    width: 100%;
+
+    @include border( left, card, c( purple ) );
+
+  }
+
+  .c-flag .c-flag__copy{
+
+    margin-bottom: spacer( component, m );
+
+  }

@@ -216,7 +216,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "thumbnail",
+                    "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -291,7 +291,7 @@
             }
         ]
     ],
-    "menu_order": 8,
+    "menu_order": 9,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -301,5 +301,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563173338
+    "modified": 1563337696
 }

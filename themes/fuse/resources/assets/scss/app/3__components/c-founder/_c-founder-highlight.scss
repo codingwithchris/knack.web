@@ -21,6 +21,9 @@
 
 .c-founders-highlight{
 	background-color: c( white );
+
+	@include shadow( media--subtle );
+
 }
 
 .c-founders-highlight__body{

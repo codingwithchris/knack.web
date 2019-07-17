@@ -34,7 +34,7 @@ use function Fuse\Controllers\render as render;
 
             foreach( $data['client_logos'] as $logo ){ ?>
 
-                <img class="c-collection--logos__logo" src="<?= $logo['logo']['url']; ?>" alt="<?= $logo['logo']['url']; ?>" width="<?= $logo['logo']['width']; ?>" height="<?= $logo['width']['height']; ?>">
+                <img class="c-collection--logos__logo" src="<?= $logo['logo']['url']; ?>" alt="<?= $logo['logo']['url']; ?>" width="<?= $logo['logo']['width']; ?>" height="<?= $logo['logo']['height']; ?>">
 
             <?php }
 

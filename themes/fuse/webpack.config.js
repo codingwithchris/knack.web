@@ -57,7 +57,7 @@ const projectSettings = {
     jsEntryFiles: {
         app: './resources/assets/js/app.js',
         critical: './resources/assets/js/critical.js',
-        project: './resources/assets/js/project.js',
+        gallery: './resources/assets/js/gallery.js',
     },
 };
 
@@ -187,7 +187,7 @@ const config = {
                                 { removeUselessStrokeAndFill: true },
                                 { convertColors: { shorthex: false } },
                                 { convertShapeToPath: true },
-                                //{ removeAttrs: { attrs: '(stroke|fill)' } },
+                                // { removeAttrs: { attrs: '(stroke|fill)' } },
                                 { removeMetadata: true },
                             ],
                         },

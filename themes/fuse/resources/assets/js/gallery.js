@@ -3,5 +3,5 @@
  * This script will be loaded on Single Work Pages Only
  */
 
-import './project/grid-init';
-import './project/gallery-init';
+import './gallery/grid-init';
+import './gallery/gallery-init';
