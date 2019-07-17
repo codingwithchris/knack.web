@@ -25,7 +25,11 @@
 
 }
 
-.c-menu .c-menu__link{
+/**
+ * Primary Menu
+ */
+
+.c-menu--primary .c-menu__link{
 
     color: c( gray--m );
     padding: 5px;
@@ -40,7 +44,7 @@
 
 }
 
-.c-menu .menu-item:not( :last-child ){
+.c-menu--primary .menu-item:not( :last-child ){
 
     margin-right: 24px;
 
@@ -48,9 +52,14 @@
 
 
 // Active States
-.c-menu .current-menu-item .c-menu__link{
+.c-menu--primary .current-menu-item .c-menu__link{
 
     font-weight: 700;
     color: c( purple );
 
 }
+
+
+/**
+ * Mobile Menu
+ */
