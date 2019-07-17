@@ -8,8 +8,8 @@
  * @license         GPL-2.0+
  *
  * @wordpress-plugin
- * Plugin Name:     
- * Description:     
+ * Plugin Name:
+ * Description:
  *
  * Version:         1.0.0
  * Author:          CreativeFuse
@@ -88,7 +88,7 @@ class ShortcodeFactory{
 	public function store_config( $shortcode_name, $config ){
 
 		// Store the settings for this shortcode in our shortcode config by name
-		$this->config[ $shortcode_name ] = $config;
+		self::$config[ $shortcode_name ] = $config;
 
 	}
 
@@ -115,12 +115,12 @@ class ShortcodeFactory{
 		);
 
 
-	}	
+	}
 
 
 
 	public function process_shortcode_callback( $instance_args, $content, $shortcode_name ){
-	
+
 		/**
 		 * Get the config for the shortcode we are currently working with
 		 */
@@ -135,7 +135,7 @@ class ShortcodeFactory{
 			$shortcode_name
 
 		);
-		
+
 		// Determine if we need to process the shortcode within $content or not
 		if ( $content && $config['do_shortcode_within_content'] ) {
 
@@ -169,19 +169,19 @@ class ShortcodeFactory{
 	    // If we are passing in a key, let's get the value
 	    if( $key && ! $value){
 
-	        return $this->config[ $key ];
+	        return self::$config[ $key ];
 
 	    }
 
 	    // Let's handle getting nested values
 	    if( $key && $value){
 
-	        return $this->config[ $key ][ $value ];
+	        return self::$config[ $key ][ $value ];
 
 	    }
 
 	    // If no value is passed, let's just return
-	    return $this->config;
+	    return self::$config;
 
 	}
 
