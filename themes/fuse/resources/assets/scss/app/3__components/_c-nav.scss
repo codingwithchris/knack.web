@@ -21,10 +21,14 @@
 
  .c-nav--primary{
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: spacer( component, l ) 0;
+	 align-items: center;
+	 display: none;
+	 justify-content: space-between;
+	 padding: spacer( component, l ) 0;
+
+	 @include breakpoint( m ){
+		display: flex;
+	}
 
  }
 
@@ -38,5 +42,30 @@
  .c-nav--primary .f-logo:hover img{
 
     @include opacity( .75 );
+
+ }
+
+
+ /**
+  * Mobile Navigation
+  */
+
+  .c-nav--mobile{
+
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: spacer( component, s ) 0;
+
+	@include breakpoint( m ){
+		display: none;
+	}
+
+  }
+
+  .c-nav--mobile .f-logo{
+
+    max-width: 40px;
+    margin: 0 auto;
 
  }

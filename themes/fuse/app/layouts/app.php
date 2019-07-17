@@ -33,8 +33,8 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 
 
 // Render Site-wide Structural Header Components
-// add_action( 'fuse_header_content',	__NAMESPACE__ . '\load_utility_nav',	1 );
-add_action( 'fuse_header_content',	__NAMESPACE__ . '\load_primary_nav',	2 );
+add_action( 'fuse_header_content',	__NAMESPACE__ . '\load_primary_nav',	1 );
+add_action( 'fuse_header_content',	__NAMESPACE__ . '\load_mobile_nav',		2 );
 
 
 // Render Site-wide Structural Footer
@@ -139,18 +139,17 @@ function close_site(){
  * functionality across our entire site
  ************************************************************/
 
- function load_utility_nav(){
-
-	Controllers\render( 'fragments/components/nav/_c-nav--utility' );
-
-}
-
-
 function load_primary_nav(){
 
 	Controllers\render( 'fragments/components/nav/_c-nav--primary' );
 
- }
+}
+
+function load_mobile_nav(){
+
+	Controllers\render( 'fragments/components/nav/_c-nav--mobile' );
+
+}
 
 
  /**

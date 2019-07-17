@@ -31,7 +31,7 @@ function register_menus(){
 
 	register_nav_menus( array(
 		'primary'    => __( 'Primary Nav Menu', fuse()->config('theme', 'text_domain') ),
-		'utility'    => __( 'Utility Nav Menu', fuse()->config('theme', 'text_domain') )
+		'mobile'    => __( 'Mobile Nav Menu', fuse()->config('theme', 'text_domain') )
 	) );
 
 }

@@ -4,10 +4,10 @@ namespace Fuse\Components;
 wp_nav_menu(
 	array(
 
-		'theme_location' 	=> 'utility',
-		'menu_class' 	 	=> 'o-list--inline c-menu c-menu--utility',
+		'theme_location' 	=> 'mobile',
+		'menu_class' 	 	=> 'c-menu c-menu--mobile',
 		'container' 	 	=> false,
-    	'menu_id'        	=> 'utility-menu',
+    	'menu_id'        	=> 'mobile-menu',
     	'echo'              => true,
     	'before'            => '',
 	    'after'             => '',
