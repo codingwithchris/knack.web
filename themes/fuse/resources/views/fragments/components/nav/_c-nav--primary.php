@@ -26,7 +26,7 @@ use Fuse\Controllers;
 
 <nav class="c-nav c-nav--primary">
 
-        <a class="c-nav__logo" href="<?= esc_url( home_url('/') ); ?>" aria-label="Go to the store home page" title="Good Medicine Store">
+        <a class="c-nav__logo" href="<?= esc_url( home_url('/') ); ?>" aria-label="Go to the home page" title="Knack Creative Logo">
                 <?php Controllers\render( 'fragments/foundations/_f-logo' ); ?>
         </a>
 

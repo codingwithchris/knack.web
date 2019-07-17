@@ -52,10 +52,7 @@
 
   .c-nav--mobile{
 
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	padding: spacer( component, s ) 0;
+	display: block;
 
 	@include breakpoint( m ){
 		display: none;
@@ -63,9 +60,17 @@
 
   }
 
+  .c-nav--mobile__content{
+
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+
+  }
+
   .c-nav--mobile .f-logo{
 
-    max-width: 40px;
+    max-width: 36px;
     margin: 0 auto;
 
  }

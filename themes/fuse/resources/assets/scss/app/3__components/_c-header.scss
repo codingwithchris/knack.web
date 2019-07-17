@@ -18,3 +18,27 @@
  * Header • Class Definitions
  * ************************************
  */
+ .c-header{
+
+	background: white;
+	border-bottom: 1px solid c( gray--d );
+	display: block;
+	height: 48px;
+	left: 0;
+	max-height: none;
+	overflow-y: hidden;
+	position: fixed;
+    right: 0;
+	top: 0;
+	width: 100%;
+	z-index: z( nav );
+
+	@include breakpoint( m ){
+
+		border-bottom: 0;
+		position: relative;
+		height: auto;
+
+	}
+
+ }
