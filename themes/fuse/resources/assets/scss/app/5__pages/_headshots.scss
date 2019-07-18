@@ -46,3 +46,15 @@
 	text-align: center;
 
 }
+
+.p-headshots--intro .o-content-block__media{
+	margin-bottom: spacer( component, m );
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.p-headshots--intro .o-content-block__media,
+.p-headshots--intro .o-content-block__media svg{
+	height: 64px;
+	width: 64px;
+}

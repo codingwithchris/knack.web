@@ -14,9 +14,9 @@
  *
  */
 
-namespace Fuse\Layout\HeadshotsPage;
+namespace Fuse\Layout\ClientsPage;
 use function Fuse\Controllers\render as render;
-use Fuse\AssetHandler;
+use Fuse\AssetHandlers;
 use Samrap\Acf\Acf;
 
 
@@ -26,14 +26,9 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on the Front Page of our site
-	if( is_page('headshots') ){
+	if( is_page('clients') ){
 
-
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_intro', 1);
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_gallery', 2);
-
-		// Handle Custom Scripts & Styles
-		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_gallery_script', 1 );
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_clients', 1);
 
 	}
 }
@@ -43,41 +38,15 @@ function setup(){
  * setup() returns true.
  ************************************************************/
 
-function load_intro(){
+function load_clients(){
+
 
 	$section_data = [
 
-		'icon' => [
-
-			'name' 	=> 'clapper',
-			'title'	=> 'A graphical icon representing headshots',
-
-		],
-		'copy'		=> Acf::field( 'headshots_intro' )->get(),
+		'client_logos'	=> Acf::field('client_logos')->get(),
 
 	];
 
-	render( 'fragments/sections/headshots/_intro', $section_data );
-
-}
-
-function load_gallery(){
-
-	$section_data = [
-		'photos'	=> Acf::field( 'headshot_photos' )->get(),
-
-	];
-
-	if( $section_data['photos'] ){
-
-		render( 'fragments/sections/headshots/_gallery', $section_data );
-
-	}
-
-}
-
-function load_gallery_script(){
-
-	AssetHandler\get_gallery_script_bundle();
+	render( 'fragments/sections/clients/_logos', $section_data );
 
 }

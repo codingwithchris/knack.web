@@ -14,7 +14,7 @@
  *
  */
 
-namespace Fuse\Layout\projectsPage;
+namespace Fuse\Layout\ProjectsPage;
 use function Fuse\Controllers\render as render;
 use Fuse\AssetHandlers;
 use Samrap\Acf\Acf;
@@ -26,7 +26,7 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on the Front Page of our site
-	if( is_page('projects') ){
+	if( is_page('projects') || is_page('photography') || is_page('videography') ){
 
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 2);
 

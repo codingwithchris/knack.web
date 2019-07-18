@@ -10,6 +10,7 @@ use function Fuse\Controllers\render as render;
  * @author CreativeFuse
  */
 
+
 /**
  * *************************************
  * Headshots • Intro • View Definition
@@ -24,6 +25,10 @@ use function Fuse\Controllers\render as render;
     <div class="f-container f-container--width f-container--max--l">
 
         <div class="o-content-block">
+
+			<div class="o-content-block__media">
+				<?= AssetHandler\get_svg( $data['icon'] ); ?>
+			</div>
 
             <div class="o-content-block__copy u-mbn">
                 <h3 class="f-b--base">

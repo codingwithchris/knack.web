@@ -1,11 +1,11 @@
 {
-    "key": "group_5c157c9ed0c2f",
-    "title": "Section » Page Hero",
+    "key": "group_5d3096bb83a2f",
+    "title": "Page » Thank You • Content",
     "fields": [
         {
-            "key": "field_5c157cb40af12",
+            "key": "field_5d309a2910b91",
             "label": "Title",
-            "name": "hero_title",
+            "name": "title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,28 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c157cb90af13",
-            "label": "Subtitle",
-            "name": "hero_subtitle",
+            "key": "field_5d309a2f10b92",
+            "label": "Copy",
+            "name": "copy",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d309a3510b93",
+            "label": "Button Text",
+            "name": "button_text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -39,30 +58,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_5c157eb351eb4",
-            "label": "Background Image",
-            "name": "hero_bg",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         }
     ],
     "location": [
@@ -74,27 +69,20 @@
             },
             {
                 "param": "page",
-                "operator": "!=",
-                "value": "9"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
+                "operator": "==",
                 "value": "102"
             }
         ]
     ],
-    "menu_order": 10,
-    "position": "acf_after_title",
+    "menu_order": 9,
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "excerpt",
-        "discussion",
-        "comments"
+        "the_content"
     ],
     "active": 1,
     "description": "",
-    "modified": 1563480650
+    "modified": 1563480726
 }
