@@ -1,0 +1,48 @@
+/**
+ * Type	: Page
+ * Name	: Headshots
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Headshots • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Headshots • Class Definitions
+ * ************************************
+ */
+
+ body.headshots p{
+
+	margin-bottom: spacer( component, m );
+
+ }
+
+ /**
+ * Rental Intro
+ */
+ .p-headshots--intro{
+
+	 padding: spacer( layout, xl ) 0;
+
+	@include breakpoint( m ){
+		padding: spacer( layout, xl ) 0;
+	}
+
+}
+
+.p-headshots--intro .o-content-block{
+
+	color: c( gray--m );
+	margin: 0 auto;
+	max-width: 750px;
+	text-align: center;
+
+}

@@ -40,6 +40,7 @@ return [
         'layouts/page/page',
         'layouts/page/front-page',
         'layouts/page/about-us',
+        'layouts/page/headshots',
         'layouts/page/projects',
         'layouts/page/contact',
         'layouts/page/studio-rental',

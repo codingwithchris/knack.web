@@ -40,6 +40,7 @@ $defaults = [
 		'btn_theme'	=> Acf::option( "{$option_group_name}_type" )->get() === 'standard' ? 'white' : 'dark',
 
 	],
+	'remove_bg'	=> false,
 	'bg'	=> [
 		'media' => Acf::option( "{$option_group_name}_bg" )->get(),
 		'type'	=> 'bg'
@@ -96,7 +97,7 @@ $data = ( isset( $data['override_defaults'] ) && $data['override_defaults'] === 
     ?>
 
     <?php
-        if( isset( $data['bg'] ) && isset( $data['remove_bg'] ) && $data['remove_bg'] !== true ){
+        if( isset( $data['bg'] ) && ( isset( $data['remove_bg'] ) && $data['remove_bg'] !== true ) ){
             render( 'fragments/components/_c-progressive', $data['bg'] );
         }
     ?>
