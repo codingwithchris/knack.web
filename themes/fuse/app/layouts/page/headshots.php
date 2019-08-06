@@ -49,7 +49,7 @@ function load_intro(){
 
 		'icon' => [
 
-			'name' 	=> 'clapper',
+			'name' 	=> 'camera',
 			'title'	=> 'A graphical icon representing headshots',
 
 		],

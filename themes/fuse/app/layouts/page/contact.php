@@ -80,7 +80,7 @@ function load_left_section(){
 
 		'background_overlay' => [
 
-			'overlay_type'	=> 'white--70',
+			'overlay_type'	=> 'white--40',
 
 		]
 

@@ -25,17 +25,7 @@ use function Fuse\Controllers\render as render;
             <!-- Title -->
             <div class="p-contact__title-group o-content-block">
 
-                <div class="o-content-block__title">
-                    <h1 class="f-hw--b f-hs--2xl">
-                        <?= esc_html( $data['title'] ); ?>
-                    </h1>
-                </div>
 
-                <div class="o-content-block__copy">
-                    <h2 class="f-b--s">
-                        <?= esc_html( $data['subtitle'] ); ?>
-                    </h2>
-                </div>
 
             </div>
 

@@ -182,38 +182,7 @@ function load_what_we_do(){
 			]
 
 
-		],
-
-		'headshots_island' => [
-
-			'icon'	=> [
-				'name' 	=> 'clapper',
-				'title'	=> 'A graphical icon representing headshots',
-			],
-
-			'title'		=> Acf::field( 'headshots_section_title' )->get(),
-			'copy'		=> Acf::field( 'headshots_section_copy' )->get(),
-			'type'		=> 'light',
-
-
-			'action'	=> [
-
-				'btn_text'	=> Acf::field( 'headshots_section_action_text' )->get(),
-				'btn_url'	=> Acf::field( 'headshots_section_action_link' )->get(),
-				'btn_type'	=> 'tertiary',
-				'btn_theme'	=> 'dark'
-
-			],
-
-			'background' => [
-
-				'media'	=> Acf::field( 'headshots_section_image' )->get(),
-				'type'	=> 'bg'
-
-			]
-
-
-		],
+		]
 
 	];
 

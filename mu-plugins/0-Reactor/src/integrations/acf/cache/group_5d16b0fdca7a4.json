@@ -419,141 +419,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_5d2bdacd5179b",
-            "label": "Headshots",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5d2bdadf5179c",
-            "label": "Headshots Section Title",
-            "name": "headshots_section_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d2bdae35179d",
-            "label": "Headshots Section Copy",
-            "name": "headshots_section_copy",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d2bdae75179e",
-            "label": "Headshots Section Action",
-            "name": "headshots_section_action",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5d2bdae75179f",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5d2bdae7517a0",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "page"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 0,
-                    "multiple": 0
-                }
-            ]
-        },
-        {
-            "key": "field_5d2bdaed517a1",
-            "label": "Headshots Section Image",
-            "name": "headshots_section_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5d177e1c6be06",
             "label": "Clients",
             "name": "",
@@ -621,7 +486,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "thumbnail",
+                    "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -715,5 +580,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563243524
+    "modified": 1565112000
 }
