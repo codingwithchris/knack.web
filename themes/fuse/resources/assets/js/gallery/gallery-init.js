@@ -82,36 +82,41 @@ const handlePhotoClick = ( photo, index, event ) => {
 
 }
 
-/**
- *
- */
-photos.forEach(( photo, index ) => {
+// Make sure we have photos before we init
+if( photos ) {
 
-    photo.addEventListener( 'click', ( event ) => {
+    /**
+	 *
+	 */
+    photos.forEach(( photo, index ) => {
 
-        event.preventDefault();
-        handlePhotoClick( photo, index, event );
+        photo.addEventListener( 'click', ( event ) => {
+
+            event.preventDefault();
+            handlePhotoClick( photo, index, event );
+
+        });
 
     });
 
-});
+    /**
+	 *
+	 */
+    photos.forEach(( photo, index ) => {
 
-/**
- *
- */
-photos.forEach(( photo, index ) => {
+        const size = photo.getAttribute( 'data-size' ).split( 'x' );
 
-    const size = photo.getAttribute( 'data-size' ).split( 'x' );
+        const photoData = {
 
-    const photoData = {
+            src: photo.getAttribute( 'href' ),
+            w: parseInt( size[0], 10 ),
+            h: parseInt( size[1], 10 ),
+            msrc: photo.getAttribute( 'data-placeholder-url' ),
 
-        src: photo.getAttribute( 'href' ),
-        w: parseInt( size[0], 10 ),
-        h: parseInt( size[1], 10 ),
-        msrc: photo.getAttribute( 'data-placeholder-url' ),
+        }
 
-    }
+        galleryData.push ( photoData );
 
-    galleryData.push ( photoData );
+    });
 
-});
+}

@@ -5,21 +5,24 @@ import imagesLoaded from 'imagesloaded';
 // init with element
 const grid = document.querySelector( '.c-gallery--photo' );
 
+if( grid ) {
 
-const msnry = new Masonry( grid, {
+    const msnry = new Masonry( grid, {
 
-    itemSelector: '.c-gallery__media',
-    columnWidth: '.c-gallery__grid-sizer',
-    gutter: '.c-gallery__gutter-sizer',
-    percentPosition: true,
-    transitionDuration: '0.2s',
+        itemSelector: '.c-gallery__media',
+        columnWidth: '.c-gallery__grid-sizer',
+        gutter: '.c-gallery__gutter-sizer',
+        percentPosition: true,
+        transitionDuration: '0.2s',
 
-});
+    });
 
-const imgLoad = imagesLoaded( grid );
+    const imgLoad = imagesLoaded( grid );
 
-imgLoad.on( 'done', () => {
+    imgLoad.on( 'done', () => {
 
-    msnry.layout();
+        msnry.layout();
 
-});
+    });
+
+}
