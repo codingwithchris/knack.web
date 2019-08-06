@@ -1,7 +1,6 @@
 import 'intersection-observer';
 
 const progressiveImages = document.querySelectorAll( '.c-progressive' );
-const imageLoadedEvent = new CustomEvent( 'progressiveImageLoaded' );
 
 // inspo - https://www.sitepoint.com/how-to-build-your-own-progressive-image-loader/
 // inspo - https://github.com/thinker3197/progressively
