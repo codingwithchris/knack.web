@@ -11,7 +11,7 @@
  * Gallery - Video • Settings
  * *************************************
  */
-
+$video_border_size: 4px;
 
 /**
  * ************************************
@@ -21,16 +21,126 @@
 
 .c-gallery--video{
 
-	align-items: center;
+	align-items: stretch;
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
+
+	@include breakpoint( m ){
+
+        flex-direction: row;
+
+    }
 
 }
 
 .c-gallery--video .c-gallery__media{
 
-	flex: 1;
+	flex-grow: 1;
+	max-width: map_get( $grid_config, width--l );
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: spacer( component, xs );
+	min-width: 100%;
+
+	@include breakpoint( m ){
+		min-width: 50%;
+	}
 
 }
+
+.c-gallery--video .c-gallery__media:nth-child( even ){
+
+	// border-left: none;
+
+	// @include breakpoint( m ){
+
+	// 	border-left: 4px solid white;
+
+	// }
+
+}
+
+.c-gallery--video .c-gallery__media:nth-child( odd ){
+
+	// border-left: none;
+
+	// @include breakpoint( m ){
+
+	// 	border-right: 4px solid white;
+
+	// }
+
+}
+
+/**
+ * Video Grid with 1, 3, or 5 items
+ */
+ .c-gallery--video.--has1 .c-gallery__media:nth-child( even ),
+ .c-gallery--video.--has3 .c-gallery__media:nth-child( even ),
+ .c-gallery--video.--has5 .c-gallery__media:nth-child( even ){
+
+	border-right: none;
+
+	@include breakpoint( m ){
+
+		border-right: $video_border_size solid white;
+
+	}
+
+ }
+
+ .c-gallery--video.--has1 .c-gallery__media:nth-child( odd ),
+ .c-gallery--video.--has3 .c-gallery__media:nth-child( odd ),
+ .c-gallery--video.--has5 .c-gallery__media:nth-child( odd ){
+
+	border-left: none;
+
+	@include breakpoint( m ){
+
+		border-left: $video_border_size solid white;
+
+	}
+
+ }
+
+
+.c-gallery--video.--has1 .c-gallery__media.--item1,
+.c-gallery--video.--has3 .c-gallery__media.--item1,
+.c-gallery--video.--has5 .c-gallery__media.--item1{
+
+	border-left: none !important;
+	border-right: none !important;
+	width: 100%;
+
+}
+
+/**
+ * Video Grid with 2 or 4 Items
+ */
+
+.c-gallery--video.--has2 .c-gallery__media:nth-child( odd ),
+.c-gallery--video.--has4 .c-gallery__media:nth-child( odd ){
+
+	border-right: none;
+
+	@include breakpoint( m ){
+
+		border-right: $video_border_size solid white;
+
+	}
+
+}
+
+.c-gallery--video.--has2 .c-gallery__media:nth-child( even ),
+.c-gallery--video.--has4 .c-gallery__media:nth-child( even ){
+
+	border-left: none;
+
+	@include breakpoint( m ){
+
+		border-left: $video_border_size solid white;
+
+	}
+
+ }

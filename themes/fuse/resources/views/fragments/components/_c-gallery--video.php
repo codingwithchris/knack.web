@@ -23,11 +23,13 @@ use function Fuse\Controllers\render as render;
  */
 ?>
 
-<div class="c-gallery c-gallery--video">
+<div class="c-gallery c-gallery--video --has<?= count( $data ); ?>">
+
+	<?php $count = 1; ?>
 
 	<?php foreach( $data as $media ){ ?>
 
-		<div class="c-gallery__media">
+		<div class="c-gallery__media --item<?= $count; ?>">
 
 			<?php
 
@@ -42,6 +44,8 @@ use function Fuse\Controllers\render as render;
 			?>
 
 		</div>
+
+		<?php $count++; ?>
 
 	<?php } ?>
 

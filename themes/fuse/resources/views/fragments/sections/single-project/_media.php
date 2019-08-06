@@ -22,7 +22,7 @@ use function Fuse\Controllers\render as render;
 
 	<?php if( $data['videos'] ){ ?>
 
-		<div class="p-project__media__videos f-container f-container--max--l">
+		<div class="p-project__media__videos">
 			<?= render( 'fragments/components/_c-gallery--video', $data['videos'] ); ?>
 		</div>
 
