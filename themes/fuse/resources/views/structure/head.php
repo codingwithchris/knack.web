@@ -20,11 +20,6 @@
 
 <body <?php body_class(); ?>>
 
-	<?php
-
-		// Some analytics scripts must be loaded immediately after the body opens
-		do_action( 'fuse_load_analytics_body' );
-
-	?>
+	<?php wp_body_open(); ?>
 
   	<?php do_action( 'fuse_after_body_open' ); ?>
