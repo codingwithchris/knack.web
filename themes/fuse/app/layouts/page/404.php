@@ -13,7 +13,7 @@
  */
 
 namespace Fuse\Layout\ErrorPage;
-use Fuse\Controllers;
+use function Fuse\Controllers\render as render;
 use Samrap\Acf\Acf;
 
 
@@ -26,8 +26,9 @@ function setup(){
 	// If we are on a 404 page
 	if( is_404() ){
 
-		remove_action( 'fuse_header', 'Fuse\Structure\load_header', 1 );
-		remove_action( 'fuse_footer', 'Fuse\Structure\load_footer', 1 );
+		// remove_action( 'fuse_header', 'Fuse\Structure\load_header', 1 );
+		remove_action( 'fuse_before_content', 'Fuse\Layout\Page\load_hero', 1 );
+		// remove_action( 'fuse_footer', 'Fuse\Structure\load_footer', 1 );
 
         // Load 404 Content
 		add_action( 'fuse_no_content', __NAMESPACE__ . '\load_content', 1 );
@@ -50,20 +51,25 @@ function setup(){
   */
 function load_content(){
 
-    $data = [
+	$action_props = [
 
-        'media'     => [
-            'url'   => '',
-            'alt'   => ''
-        ],
-        'title'     => '',
-        'copy'      => '',
-        'action'    => [
+		'btn_text'		=> Acf::option( '404_action_text' )->get(),
+		'btn_url'		=> Acf::option( '404_action_link' )->get(),
+		'btn_type'		=> 'primary',
+		'btn_theme'		=> 'purple',
+		'btn_modifier'	=> '',
 
-        ],
+	];
+
+    $props = [
+
+        'logo'		=> render( 'fragments/foundations/_f-logo', [], false ),
+        'title'		=> Acf::option( '404_title' )->get(),
+		'copy'		=> Acf::option( '404_copy' )->get(),
+		'action'	=> render( 'fragments/components/_c-btn', $action_props, false )
 
     ];
 
-	Controllers\render( 'fragments/sections/404/_content', $data );
+	render( 'fragments/sections/404/_content', $props );
 
 }

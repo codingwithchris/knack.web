@@ -18,3 +18,52 @@
  * 404 - not found • Class Definitions
  * ************************************
  */
+
+ .p-404{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 85vh;
+	padding: spacer( component, m );
+	text-align: center;
+}
+
+.p-404 > *{
+
+	width: 100%;
+
+}
+
+.p-404__logo{
+
+	display: inline-block;
+	margin-bottom: spacer( component, m );
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 75px;
+
+	@include transition( 'link' );
+
+}
+
+.p-404__logo:hover{
+
+	@include opacity( .7 );
+
+}
+
+// Content
+.p-404__content{
+
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.p-404__content-title{
+
+	margin-bottom: spacer( component, s );
+
+}
