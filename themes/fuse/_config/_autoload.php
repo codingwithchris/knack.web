@@ -56,6 +56,7 @@ return [
 
         // Layout • Page Templates
         'layouts/template/landing',
+        'layouts/template/naked',
 
         // Layout • Mixed Page/Post Types
         'layouts/mixed/page-post'

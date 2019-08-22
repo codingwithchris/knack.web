@@ -37,7 +37,6 @@ function setup(){
 		add_action( 'fuse_content', __NAMESPACE__  . '\load_content', 2 );
 		add_action( 'fuse_content', __NAMESPACE__  . '\load_footer', 3 );
 
-
 	}
 
 
