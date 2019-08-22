@@ -44,6 +44,7 @@ return [
         'layouts/page/headshots',
         'layouts/page/projects',
         'layouts/page/contact',
+        'layouts/page/contact-thank-you',
         'layouts/page/studio-rental',
         'layouts/page/privacy-policy',
 

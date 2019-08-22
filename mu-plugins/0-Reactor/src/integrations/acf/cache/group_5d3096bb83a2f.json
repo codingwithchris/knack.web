@@ -1,6 +1,6 @@
 {
     "key": "group_5d3096bb83a2f",
-    "title": "Page » Thank You • Content",
+    "title": "Template » Landing",
     "fields": [
         {
             "key": "field_5d309a2910b91",
@@ -41,11 +41,11 @@
             "delay": 0
         },
         {
-            "key": "field_5d5f0142f4d62",
-            "label": "Video Embed URL",
-            "name": "video",
-            "type": "oembed",
-            "instructions": "",
+            "key": "field_5d5f0544a7f19",
+            "label": "Action",
+            "name": "action",
+            "type": "group",
+            "instructions": "Optional - leave blank to exclude from page",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -53,25 +53,61 @@
                 "class": "",
                 "id": ""
             },
-            "width": "",
-            "height": ""
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_5d5f054ca7f1a",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d5f0550a7f1b",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "54",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 0,
+                    "multiple": 0
+                }
+            ]
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post_template",
                 "operator": "==",
-                "value": "page"
-            },
-            {
-                "param": "page",
-                "operator": "==",
-                "value": "102"
+                "value": "page-templates\/landing.php"
             }
         ]
     ],
-    "menu_order": 9,
+    "menu_order": 13,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -81,5 +117,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1566521761
+    "modified": 1566523787
 }

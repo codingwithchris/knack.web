@@ -48,7 +48,7 @@ function render( $path, $args = [], $echo = true ) {
     }
 
     // Echo the partial and bail
-    if ($echo) {
+    if ( $echo ) {
 
         include( $partial_file );
 
@@ -57,12 +57,13 @@ function render( $path, $args = [], $echo = true ) {
     }
 
 
-    // Return the partial
+    // Return the partial using an output buffer
     ob_start();
 
-        include( locate_template( $partial_file ) );
+		include( $partial_file );
 
-    // Return & clean the output buffer
-    return ob_get_clean();
+	$output = ob_get_clean();
+
+    return $output;
 
 }

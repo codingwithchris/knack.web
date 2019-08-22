@@ -26,6 +26,9 @@ function setup(){
 	// If we are on a 404 page
 	if( is_404() ){
 
+		remove_action( 'fuse_header', 'Fuse\Structure\load_header', 1 );
+		remove_action( 'fuse_footer', 'Fuse\Structure\load_footer', 1 );
+
         // Load 404 Content
 		add_action( 'fuse_no_content', __NAMESPACE__ . '\load_content', 1 );
 
