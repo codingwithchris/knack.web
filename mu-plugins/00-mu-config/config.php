@@ -33,6 +33,7 @@ return array(
 	// The custom modules we need to load
 	'modules'	=> array(
 
+		'google-tag-manager',
 		'projects'
 
 	)
