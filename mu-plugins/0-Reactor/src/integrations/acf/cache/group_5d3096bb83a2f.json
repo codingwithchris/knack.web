@@ -25,7 +25,7 @@
             "key": "field_5d309a2f10b92",
             "label": "Copy",
             "name": "copy",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -35,16 +35,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_5d309a3510b93",
-            "label": "Button Text",
-            "name": "button_text",
-            "type": "text",
+            "key": "field_5d5f0142f4d62",
+            "label": "Video Embed URL",
+            "name": "video",
+            "type": "oembed",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,11 +53,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "width": "",
+            "height": ""
         }
     ],
     "location": [
@@ -84,5 +81,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563480726
+    "modified": 1566521761
 }
