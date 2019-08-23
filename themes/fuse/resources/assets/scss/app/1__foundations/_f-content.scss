@@ -18,8 +18,7 @@
  * Content • Class Definitions
  * ************************************
  */
-.f-site-wrapper,
-.f-content{
+.f-site-wrapper{
 
 	overflow-x: hidden;
 
@@ -27,6 +26,7 @@
 
  .f-content{
 
+	overflow: hidden;
 	max-width: 2000px;
 	margin: 0 auto;
 

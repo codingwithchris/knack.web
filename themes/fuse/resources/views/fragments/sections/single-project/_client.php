@@ -27,7 +27,7 @@ use function Fuse\Controllers\render as render;
 
 		<?php if( isset( $data['website'] ) ){ ?>
 			<a class="p-project__client-website f-b--xs" href="<?= esc_url( $data['website'] ); ?>" target="_blank" rel="noopener">
-				<?= preg_replace("(^https?://)", "", esc_url( $data['website'] ) ); ?>
+				<?= preg_replace("(^https?://)", "", esc_url( untrailingslashit( $data['website'] ) ) ); ?>
 			</a>
 		<?php } ?>
 
@@ -35,20 +35,6 @@ use function Fuse\Controllers\render as render;
 
 	<div class="p-project__client-description u-c--gray--d">
 			<p class="f-b--s"><?= esc_html( $data['description'] ); ?></p>
-	</div>
-
-	<div class="p-project__client-industries p-project__meta">
-
-		<div class="p-project__meta__title u-c--gray--d u-mbn">
-			<h3 class="f-hw--b f-hs--s"><?= esc_html( 'Client Industries' ); ?></h3>
-		</div>
-
-		<div class="p-project__meta__list u-mbn u-c--gray--d">
-
-			<p class="p-project__meta__item"><?= $data['industries']; ?></p>
-
-		</div>
-
 	</div>
 
 </div>

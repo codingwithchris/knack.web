@@ -53,25 +53,27 @@ function load_hero(){
 		'fields'		=> 'names',
 	));
 
-	$industries = get_terms( array(
+	$categories = get_terms( array(
 		'object_ids'	=> get_the_id(),
-		'taxonomy'		=> 'industry',
+		'taxonomy'		=> 'project_category',
 		'fields'		=> 'names',
 	));
 
 	$hero_data = [
 
 		'info'	=> [
-			'title'	=> get_the_title(),
-			'description' => Acf::field( 'long_description' )->get(),
-			'mediums'	=> implode( ', ', $mediums ),
+			'title'				=> get_the_title(),
+			'description' 		=> Acf::field( 'long_description' )->get(),
+			'mediums'			=> implode( ', ', $mediums ),
+			'medium_count'		=> count( $mediums ),
+			'categories'		=> implode( ', ', $categories ),
+			'category_count'	=> count( $categories )
 		],
 
 		'client' => [
 			'name' 			=> Acf::field( 'client_name' )->get(),
 			'website' 		=> Acf::field( 'client_website' )->get(),
 			'description' 	=> Acf::field( 'client_description' )->get(),
-			'industries'	=> implode( ', ', $industries ),
 		],
 
 		'image' => [
