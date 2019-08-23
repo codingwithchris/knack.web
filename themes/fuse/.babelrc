@@ -5,7 +5,12 @@
 	"env": {
 		"production": {
 			"presets": [
-				"minify"
+				[
+					"minify",
+					{
+						"builtIns": false
+					}
+				]
 			]
 		}
 	}
