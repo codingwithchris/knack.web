@@ -41,6 +41,4 @@ use Fuse\Controllers;
 
 	</div>
 
-	<?php Controllers\render( 'fragments/components/menu/_c-menu--mobile' ); ?>
-
 </nav>

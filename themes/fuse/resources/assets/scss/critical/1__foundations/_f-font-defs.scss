@@ -64,7 +64,8 @@ textarea{
 
 }
 
-.f-b--base{
+.f-b--base,
+.c-menu--mobile li a{
 
 	@include font-scale( m );
 

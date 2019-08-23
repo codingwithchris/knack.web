@@ -32,6 +32,14 @@ $transitions_config: (
 		duration: .45s,
 		timing: cubic-bezier(.23,1,.32,1),
 
+	),
+
+	mobile-menu :(
+
+		properties: all,
+		duration: .4s,
+		timing: cubic-bezier(.52,.16,.24,1),
+
 	)
 
 );

@@ -23,7 +23,7 @@
 
 <div class="c-bg-video">
 
-    <iframe src="<?= esc_url( "https://player.vimeo.com/video/{$data['video_id']}?background=1&autoplay=1&loop=1&byline=0&title=0" ); ?>"
+    <iframe src="<?= esc_url( "https://player.vimeo.com/video/{$data['video_id']}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&controls=0" ); ?>"
             frameborder="0"
             webkitallowfullscreen
             mozallowfullscreen

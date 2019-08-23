@@ -78,7 +78,7 @@ function load_hero(){
 				'type'	=> 'bg'
 			],
 			'video_id'		=> Acf::field( 'background_video_id' )->get(),
-			'overlay_type'	=> 'white--90'
+			'overlay_type'	=> 'white--85'
 		]
 
 	];

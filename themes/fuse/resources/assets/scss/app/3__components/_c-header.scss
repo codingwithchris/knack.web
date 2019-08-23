@@ -12,6 +12,7 @@
  * *************************************
  */
 
+ $mobile_header_height: 50px;
 
 /**
  * ************************************
@@ -21,24 +22,39 @@
  .c-header{
 
 	background: white;
-	border-bottom: 1px solid c( gray--d );
+	border-bottom: 1px solid c( gray--m );
 	display: block;
-	height: 48px;
+	height: $mobile_header_height;
 	left: 0;
 	max-height: none;
-	overflow-y: hidden;
+	overflow-y: visible;
 	position: fixed;
     right: 0;
 	top: 0;
 	width: 100%;
 	z-index: z( nav );
 
+	@include transition( mobile-menu );
+
+	+ .c-menu--mobile + .f-content{
+		margin-top: $mobile_header_height;
+	}
+
 	@include breakpoint( m ){
 
 		border-bottom: 0;
 		position: relative;
 		height: auto;
+		overflow-y: hidden;
+
+		+ .c-menu--mobile + .f-content{
+			margin-top: 0;
+		}
 
 	}
 
+ }
+
+ .c-header.--mobile-menu-open{
+	border-bottom: 1px solid c( white );
  }

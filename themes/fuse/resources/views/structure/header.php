@@ -1,6 +1,7 @@
 <?php
 use Reactor\Helpers;
 use Samrap\Acf\Acf;
+use Fuse\Controllers;
 ?>
 
 <a class="f-skip-link u-screen-reader" href="#site-content">
@@ -18,3 +19,5 @@ use Samrap\Acf\Acf;
 	</div>
 
 </header>
+
+<?php Controllers\render( 'fragments/components/menu/_c-menu--mobile' ); ?>

@@ -1,5 +1,5 @@
 const MobileMenuTrigger = document.querySelector( '.js-open-mobile-menu' );
-const MobileMenu = document.querySelector( '.c-menu--mobile' );
+const MobileMenu = document.getElementById( 'mobile-menu' );
 const header = document.querySelector( '.c-header' );
 const siteContent = document.getElementById( 'site-content' );
 const footer = document.querySelector( '.c-footer' );

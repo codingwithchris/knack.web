@@ -25,6 +25,7 @@
 	 display: none;
 	 justify-content: space-between;
 	 padding: spacer( component, l ) 0;
+	 z-index: z( nav );
 
 	 @include breakpoint( m ){
 		display: flex;
@@ -65,6 +66,15 @@
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
+	z-index: z( nav );
+
+  }
+
+  .c-nav--mobile .c-nav__logo{
+
+	position: relative;
+	top: 2px;
 
   }
 

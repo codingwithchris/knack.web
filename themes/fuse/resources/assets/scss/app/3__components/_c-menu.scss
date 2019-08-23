@@ -11,7 +11,7 @@
  * Menu • Settings
  * *************************************
  */
-
+ $mobile_header_height: 50px;
 
 /**
  * ************************************
@@ -61,53 +61,115 @@
 
 
 /**
- * Mobile Menu
+ * Mobile Menu Button
  */
 .c-mobile-menu-button{
+
 	appearance: none;
 	background-color: white;
-	height: 48px;
+	backface-visibility: hidden;
+	height: calc( #{$mobile_header_height} - 1px );
 	padding: 0;
 	position: relative;
-	width: 48px;
+	width: calc( #{$mobile_header_height} - 1px );
 	z-index: z( above-base );
+
+}
+
+.c-mobile-menu-button:active{
+
+	background-color: c( gray--l, light5 );
+
 }
 
 .c-mobile-menu-button__bread{
 
-	background-color: c( purple );
-	height: 1px;
+	background-color: c( purple, light10 );
+	backface-visibility: hidden;
+	height: 2px;
 	left: 15px;
 	position: absolute;
 	width: 17px;
 	z-index: z( base );
+
+	@include transition( mobile-menu );
 
 }
 
 .c-mobile-menu-button__bread.--top{
 
 	top: 19px;
+	transform-origin: 50% 0 0;
 
 }
 
 .c-mobile-menu-button__bread.--bottom{
 
-
 	top: 27px;
+	transform-origin: 50% 0 0;
 
 }
 
+.c-header.--mobile-menu-open .c-mobile-menu-button__bread.--top{
+
+	transform: translateY( 8px );
+
+}
+
+
+.c-header.--mobile-menu-open .c-mobile-menu-button__bread.--bottom{
+
+	//transform: translateY( -4px );
+
+}
+
+.c-header.--mobile-menu-open .c-mobile-menu-button__bread{
+
+	background-color: c( gray--m );
+
+}
+
+/**
+ * Mobile Menu
+ */
+
 .c-menu--mobile{
 
-	display: block;
+	background-color: c( white );
+	display: flex;
 	flex-direction: column;
-	height: 100%;
+	height: 100vh;
 	left: 0;
-	padding: spacer( component, l );
-	position: absolute;
-	top: 0;
+	padding: spacer( component, l ) spacer( component, 2xl );
+	position: fixed;
+	top: $mobile_header_height;
+	transform: translateY( -100% );
 	width: 100%;
+	z-index: z( below-nav );
 
+	@include transition( mobile-menu );
 	@include opacity( 0 );
+
+}
+
+.c-menu--mobile.--active{
+
+	transform: translateY( 0% );
+
+	@include opacity( 1 );
+
+}
+
+.c-menu--mobile li:not( :first-child ){
+
+	@include border( top, link, c( gray--l ) );
+
+}
+
+.c-menu--mobile li a{
+
+	color: c( gray--m );
+	display: inline-block;
+	padding: spacer( component, xs ) 0;
 
 }
