@@ -29,7 +29,7 @@ $projects->register();
  * Give Post Type Our Taxonomies
  */
 $projects->taxonomy( $taxonomy_settings['type']['names']['name'] );
-$projects->taxonomy( $taxonomy_settings['industry']['names']['name'] );
+$projects->taxonomy( $taxonomy_settings['project_category']['names']['name'] );
 $projects->taxonomy( $taxonomy_settings['featured']['names']['name'] );
 
 /**

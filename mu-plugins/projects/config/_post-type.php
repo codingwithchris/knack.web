@@ -56,7 +56,7 @@ return [
 
 			'featured',
 			'type',
-			'industry',
+			'project_category',
 
 		],
 

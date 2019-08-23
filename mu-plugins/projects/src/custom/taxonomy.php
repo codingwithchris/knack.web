@@ -24,15 +24,15 @@ $type = new Taxonomy(
 
 
 /**
- * Instantiate Our Industry Taxonomy
+ * Instantiate Our Project Category Taxonomy
  *
  * @since  1.0.0
  */
-$industry = new Taxonomy(
+$project_category = new Taxonomy(
 
-	$taxonomy_settings['industry']['names'],
-	$taxonomy_settings['industry']['options'],
-	$taxonomy_settings['industry']['labels']
+	$taxonomy_settings['project_category']['names'],
+	$taxonomy_settings['project_category']['options'],
+	$taxonomy_settings['project_category']['labels']
 
 );
 
@@ -51,5 +51,5 @@ $featured = new Taxonomy(
 
 // Register Taxonomies
 $type->register();
-$industry->register();
+$project_category->register();
 $featured->register();

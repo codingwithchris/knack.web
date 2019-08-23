@@ -12,7 +12,7 @@ while ( $projects->have_posts() ) {
 	// Set upo Variables
 	$image = Acf::field( 'featured_image' )->get();
 	$description = Acf::field( 'short_description' )->get();
-	$terms = wp_get_post_terms( get_the_id(), 'industry', array( 'fields' => 'names' ) );
+	$terms = wp_get_post_terms( get_the_id(), 'project_category', array( 'fields' => 'names' ) );
 	$services = wp_get_post_terms( get_the_id(), 'type', array( 'fields' => 'names' ) );
 	$formatted_terms = implode( $terms, ', ' );
 	$formatted_services = implode( $services, ', ' );

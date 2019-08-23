@@ -57,16 +57,16 @@ return [
 		],
 
 		/**
-		 * Industry Taxonomy
+		 * Project Category Taxonomy
 		 */
-		'industry' => [
+		'project_category' => [
 
 			'names' => [
 
-				'name' 		=> 'industry',
-			    'singular' 	=> 'Industry',
-			    'plural' 	=> 'Industries',
-				'slug' 		=> 'industry',
+				'name' 		=> 'project_category',
+			    'singular' 	=> 'Category',
+			    'plural' 	=> 'Categories',
+				'slug' 		=> 'project-category',
 
 			],
 
@@ -76,7 +76,7 @@ return [
 				'query_var'			=> true,
 				'rewrite'			=>[
 
-				 	'slug' 			=> 'industry',
+				 	'slug' 			=> 'project-category',
 				 	'with_front'	=> false
 
 				 ],
@@ -88,9 +88,9 @@ return [
 
 			'labels' => [
 
-				'edit_item'			=>  'Edit industry',
-				'add_new_item'		=>  'Add new industry',
-				'new_item_name'		=>  'New industry name',
+				'edit_item'			=>  'Edit project category',
+				'add_new_item'		=>  'Add new project category',
+				'new_item_name'		=>  'New project category name',
 
 			],
 
