@@ -83,6 +83,19 @@
 
 }
 
+.p-project__description a{
+
+	border-bottom: 1px solid c( purple, light10 );
+	color: c( purple, dark5 );
+
+	@include transition( link );
+
+	&:hover{
+		color: c( purple, light10 );
+	}
+
+}
+
 .p-project__mediums{
 	margin-bottom: spacer( component, m );
 }
@@ -107,6 +120,7 @@
 	margin-bottom: spacer( component, m );
 
 }
+
 
 /**
  * Project Media

@@ -25,11 +25,11 @@ use function Fuse\Controllers\render as render;
         <div class="c-flag o-content-block">
 
             <div class="c-flag__title o-content-block__title u-mbn">
-                <h5 class="f-hw--b f-hs--xl">Featured Projects<h5>
+                <h5 class="f-hw--b f-hs--xl"><?= $data['title']; ?><h5>
             </div>
 
             <div class="c-flag__copy o-content-block__copy">
-                <p class="f-b--s">Take a look at some of our favorite work.</p>
+                <p class="f-b--s"><?= $data['copy']; ?></p>
             </div>
 
         </div>
