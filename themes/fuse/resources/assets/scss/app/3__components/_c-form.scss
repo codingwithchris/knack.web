@@ -184,6 +184,19 @@ $form_breakpoint: m;
 
   }
 
+/**
+ * GForms Checkbox
+ */
+ .gfield_checkbox li{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .gfield_checkbox li input{
+	 margin-right: 10px;
+ }
+
 
 /**
  * This styles the "submit button" for Gravity Forms
@@ -198,8 +211,7 @@ $form_breakpoint: m;
 	font-weight: 700;
 	padding: spacer( component, m ) spacer( component, l );
 	text-transform: uppercase;
-    text-align: center;
-    transition: transition( btn_bg );
+	text-align: center;
 
 }
 
@@ -212,6 +224,8 @@ $form_breakpoint: m;
 
 .gform_button{
 
+	-webkit-appearance: none;
+	border-radius: 0;
     border: 1px solid c(purple);
     background-color: c( purple );
     color: c( white );
@@ -219,7 +233,9 @@ $form_breakpoint: m;
     &:focus,
     &:active{
         outline: none;
-    }
+	}
+
+	@include transition( btn );
 
 }
 
@@ -397,3 +413,11 @@ $form_breakpoint: m;
         display: none;
 
     }
+
+
+/**
+ * Make captcha text gold
+ */
+ .gfield_label[for="input_1_5"]{
+	 color: c( gold );
+ }
