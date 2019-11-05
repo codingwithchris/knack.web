@@ -208,9 +208,7 @@ $form_breakpoint: m;
 	border-radius: 0px;
     cursor: pointer !important;
 	letter-spacing: 1px;
-	font-weight: 700;
-	padding: spacer( component, m ) spacer( component, l );
-	text-transform: uppercase;
+	padding: spacer( component, m ) spacer( component, 2xl );
 	text-align: center;
 
 }
