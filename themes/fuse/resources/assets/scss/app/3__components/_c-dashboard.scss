@@ -34,6 +34,14 @@ $dashboard_breakpoint:  m;
 
   }
 
+  .c-dashboard-tile:last-child:nth-child( 2n - 2 ) {
+
+	  @include breakpoint( $dashboard_breakpoint ){
+		  grid-column: span 2;
+	}
+
+}
+
 
  .c-dashboard-tile.--link{
 
