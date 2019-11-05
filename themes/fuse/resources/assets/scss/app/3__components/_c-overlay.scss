@@ -132,3 +132,33 @@
    @include opacity( .95 );
 
 }
+
+
+/**
+ * Purple Overlay
+ */
+
+ .c-overlay--purple--90{
+
+	background-color: c( purple );
+
+	 @include opacity( .90 );
+
+}
+
+
+.c-overlay--purple--95{
+
+	background-color: c( purple );
+
+	 @include opacity( .95 );
+
+}
+
+.c-overlay--purple--100{
+
+	background-color: c( purple );
+
+	 @include opacity( 1 );
+
+}

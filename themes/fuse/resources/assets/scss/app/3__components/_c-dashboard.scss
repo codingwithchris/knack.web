@@ -1,0 +1,95 @@
+/**
+ * Type	: Component
+ * Name	: Dashboard
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Dashboard • Settings
+ * *************************************
+ */
+$dashboard_breakpoint:  m;
+
+/**
+ * ************************************
+ * Dashboard • Class Definitions
+ * ************************************
+ */
+
+ .c-dashboard{
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-template-rows: auto;
+	 grid-gap: spacer( component, l );
+	 margin: 0 auto;
+	 max-width: 1200px;
+	 padding: spacer( component, m );
+
+	@include breakpoint( $dashboard_breakpoint ){
+		grid-template-columns: repeat( 2, 1fr );
+	}
+
+  }
+
+
+ .c-dashboard-tile.--link{
+
+	// display: flex;
+	padding: spacer( component, l ) spacer( component, l );
+	position: relative;
+	overflow: hidden;
+
+	@include transition( link );
+
+ }
+
+ .c-dashboard-tile.--link:hover{
+
+	@include opacity( .8 );
+
+ }
+
+ .c-dashboard-tile__inner{
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+	min-height: 100px;
+	text-align: center;
+	width: 100%;
+	z-index: z( above-base );
+
+	@include breakpoint( $dashboard_breakpoint ){
+		min-height: 200px;
+	}
+
+ }
+
+.c-dashboard-tile__text{
+	color: c( white );
+}
+
+/**
+ * Special Signup Tile
+ */
+
+ .c-dashboard-tile.--signup{
+
+	align-items: center;
+	box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+	display: flex;
+	grid-column: span 1;
+	justify-content: center;
+	padding: spacer( layout, l ) spacer( component, l );
+	text-align: center;
+
+	@include breakpoint( $dashboard_breakpoint ){
+		grid-column: span 2;
+	}
+
+ }

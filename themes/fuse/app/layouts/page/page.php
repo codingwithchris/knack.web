@@ -23,13 +23,13 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on a normal page
-	if( is_page() && ! is_front_page() ){
+	if( is_page() && ! is_front_page() && ! is_page('dashboard') ){
 
 		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero', 1 );
 
 	}
 
-	if( is_page() ){
+	if( is_page() && ! is_page('dashboard') ){
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 20 );
 	}
 

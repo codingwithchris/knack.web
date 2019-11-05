@@ -45,7 +45,8 @@ return [
         'layouts/page/projects',
         'layouts/page/contact',
         'layouts/page/contact-thank-you',
-        'layouts/page/studio-rental',
+		'layouts/page/studio-rental',
+		'layouts/page/dashboard',
         'layouts/page/privacy-policy',
 
         // Layout • Archive

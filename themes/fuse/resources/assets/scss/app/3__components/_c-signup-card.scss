@@ -1,0 +1,36 @@
+/**
+ * Type	: Component
+ * Name	: Signup Card
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Signup Card • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Signup Card • Class Definitions
+ * ************************************
+ */
+.c-signup-card__title{
+	margin-bottom: spacer( component, s );
+}
+
+.c-signup-card__copy{
+
+	max-width: 375px;
+	margin: 0 auto;
+
+}
+
+.c-signup-card__form{
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}

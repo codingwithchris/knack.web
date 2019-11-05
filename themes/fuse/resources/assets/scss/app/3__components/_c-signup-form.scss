@@ -1,0 +1,97 @@
+/**
+ * Type	: Component
+ * Name	: Signup Form
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Signup Form • Settings
+ * *************************************
+ */
+
+ $signup-form-field-height--desktop: 55px;
+ $signup-form-field-height--mobile: 60px;
+ $signup-form-breakpoint: m;
+
+
+/**
+ * ************************************
+ * Signup Form • Class Definitions
+ * ************************************
+ */
+ .c-signup-form.--inline{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: spacer( component, m );
+
+	@include breakpoint( $signup-form-breakpoint ){
+		flex-direction: row;
+		margin-top: 0;
+	}
+
+}
+
+.c-signup-form__input{
+	background-color: c( gray--l, light5 );
+	border: none;
+	border-radius: 0;
+	display: block;
+	height: $signup-form-field-height--mobile;
+	flex: none;
+	padding: spacer( component, s );
+	width: 100%;
+
+	&:focus{
+
+		background-color: c( gray--l );
+
+	}
+
+	@include transition( btn );
+
+	@include breakpoint( $signup-form-breakpoint ){
+		height: $signup-form-field-height--desktop;
+		flex: 1;
+		width: auto;
+	}
+
+}
+
+.c-signup-form__submit{
+	background-color: c( gold );
+	border-radius: 0;
+	border: none;
+	cursor: pointer;
+	color: c( white );
+	display: block;
+	height: $signup-form-field-height--desktop;
+	font-weight: 700;
+	padding: spacer( component, s );
+	margin-top: spacer( component, s );
+	width: 100%;
+	-webkit-appearance: none;
+
+	&:hover{
+		background-color: c( gold, dark5 );
+	}
+
+	@include transition( btn );
+
+	@include breakpoint( $signup-form-breakpoint ){
+
+		margin-top: 0;
+		width: 150px;
+
+	}
+
+}
+
+
+.mc4wp-alert.mc4wp-success{
+	color: c( gold ) !important;
+}

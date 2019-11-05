@@ -1,0 +1,39 @@
+/**
+ * Type	: Page
+ * Name	: Dashboard
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Dashboard • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Dashboard • Class Definitions
+ * ************************************
+ */
+.p-dashboard--header{
+
+	padding: spacer( component, xl ) spacer( component, m ) spacer( component, 2xl );
+	text-align: center;
+
+}
+
+.p-dashboard--header__logo{
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: spacer( component, m );
+	max-width: 75px;
+
+}
+
+.p-dashboard--header__ig-link{
+	color: c( purple );
+}
