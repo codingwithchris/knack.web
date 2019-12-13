@@ -83,3 +83,4 @@ themes/fuse/_dist
 # Ignore Debug Files & Dev Tools
 mu-plugins/000-devtools/*
 mu-plugins/aa-devtools.php
+db-error.php
