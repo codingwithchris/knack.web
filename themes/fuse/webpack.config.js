@@ -20,11 +20,10 @@
  */
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
 const CleanObsoleteChunks = require( 'webpack-clean-obsolete-chunks' );
-const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
+const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const Sass = require( 'sass' );
 const ExtractCssChunks = require( 'extract-css-chunks-webpack-plugin' );
-const Fiber = require( 'fibers' );
 const FriendlyErrorsWebpackPlugin = require( 'friendly-errors-webpack-plugin' );
 const SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' );
 const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
@@ -128,7 +127,6 @@ const config = {
                         options: {
                             sourceMap: true,
                             implementation: Sass,
-                            fiber: Fiber,
                         },
                     },
                 ],
@@ -323,7 +321,7 @@ const config = {
 		 * @since  1.0.0
 		 * @see https://github.com/johnagan/clean-webpack-plugin/
 		 */
-        new CleanWebpackPlugin( '_dist', {}),
+        new CleanWebpackPlugin(),
 
         /**
 		 * CleanObsoleteChunks
