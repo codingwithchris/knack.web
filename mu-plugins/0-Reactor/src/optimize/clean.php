@@ -181,24 +181,3 @@ function maybe_remove_dashicon() {
 	wp_dequeue_style('dashicons');
 
 }
-
-
-/**
- * De-register the built in Wordpress Post Type and Taxonomies
- */
-
-add_action('init', __NAMESPACE__ . '\deregister_wp_default_taxonomies');
-
-function deregister_wp_default_taxonomies(){
-
-  Posts\deregister_taxonomy( array( 'category', 'post_tag' ) );
-
-}
-
- add_action('init', __NAMESPACE__ . '\deregister_wp_built_in_post_type');
-
- function deregister_wp_built_in_post_type(){
-
-    Posts\deregister_any_post_type( 'post' );
-
- }
