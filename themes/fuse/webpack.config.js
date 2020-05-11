@@ -57,6 +57,7 @@ const projectSettings = {
         app: './resources/assets/js/app.js',
         critical: './resources/assets/js/critical.js',
         gallery: './resources/assets/js/gallery.js',
+        post: './resources/assets/js/post.js',
     },
 };
 
@@ -172,7 +173,7 @@ const config = {
                             extract: true,
                             spriteFilename: devMode
                                 ? 'sprite.svg'
-                                : 'sprite.svg',
+                                : 'sprite.[hash:6].svg',
                         },
                     },
 
@@ -376,7 +377,19 @@ const config = {
 		 * @since  1.0.0
 		 * @see https://github.com/webdeveric/webpack-assets-manifest
 		 */
-        new WebpackAssetsManifest({}),
+        new WebpackAssetsManifest({
+            customize( entry, originalValue, manifest ) {
+
+			  if ( entry.key.toLowerCase().endsWith( '.svg' )) {
+
+                    const re = /(?=(sprite\.))(.*)(?=svg$)/;
+					entry.key = entry.key.replace( re, '$1' ) //eslint-disable-line
+
+                }
+			  return entry;
+
+            },
+		  }),
 
         /**
 		 * SpriteLoaderPlugin

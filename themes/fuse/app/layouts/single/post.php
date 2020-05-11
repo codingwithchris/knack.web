@@ -14,8 +14,8 @@
  */
 
 namespace Fuse\Layout\SinglePost;
-use Fuse\Controllers;
 use Fuse\AssetHandler;
+use function Fuse\Controllers\render as render;
 
 
 // Fire our setup once we have all  Wordpress data
@@ -26,14 +26,13 @@ function setup(){
 	// If we are on a normal page
 	if( is_singular( 'post' ) ){
 
-		// Handle Content Loading
-		add_action( 'fuse_header_content', __NAMESPACE__ . '\load_header_content' );
-		add_action( 'fuse_before_content', __NAMESPACE__ . '\load_hero' );
-		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 5);
-		add_action('fuse_footer_content', __NAMESPACE__ . '\load_footer_content');
-
-		// Handle Custom Scripts & Styles
 		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_posts_script', 1 );
+
+		add_filter( 'body_class', __NAMESPACE__ . '\add_template_class_to_body_class', 10, 1 );
+
+		// Handle Content Loading
+		add_action( 'fuse_hero', __NAMESPACE__ . '\load_hero', 1);
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 1 );
 
 	}
 
@@ -45,21 +44,57 @@ function setup(){
  ************************************************************/
 
 
-function load_header_content(){
 
-}
+function add_template_class_to_body_class( $classes ){
+
+	$classes[] = 'p-post';
+
+	return $classes;
+
+ }
+
 
 function load_hero(){
 
-}
+	global $post;
+
+	$terms = get_the_terms( $post, 'category');
+	$term_name = $terms ? $terms[0]->name : 'Unspecified';
+
+	$term_with_data = $term_name . ' • ' . get_the_date();
+	$title = get_the_title();
+
+ }
+
 
 function load_content(){
 
+	$featured_image_url = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
+
+	echo '<div class="p-post__container f-container f-container--max--xs f-container--width">';
+
+		if( ! empty( $featured_image_url ) ){
+
+			echo '<div class="p-post__featured-image">';
+				echo get_the_post_thumbnail();
+			echo '</div>';
+
+		}
+
+		render( 'fragments/components/_c-share' );
+
+		echo '<div class="p-post__content">';
+			the_content();
+
+			// Create an action to easily insert content before the post container closes
+			do_action( 'fuse_before_post_content_end' );
+
+		echo '</div>';
+
+	echo '</div>';
+
 }
 
-function load_footer_content(){
-
-}
 
 
 /**
@@ -67,18 +102,6 @@ function load_footer_content(){
  */
 function load_posts_script(){
 
-	$script = [
-
-		'handle' 			=> 'posts-script',
-		'location'			=> AssetHandler\get_asset_from_manifest( 'posts.js' ),
-		'dependencies'		=> ['app-script'],
-		'version'			=> null,
-		'load_in_footer'	=> 'true',
-
-	];
-
-	wp_register_script( $script['handle'], $script['location'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
-
-	wp_enqueue_script( $script['handle'] );
+	AssetHandler\get_post_script_bundle();
 
 }
