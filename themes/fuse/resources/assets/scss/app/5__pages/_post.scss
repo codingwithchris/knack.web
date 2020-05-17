@@ -41,7 +41,14 @@
 .p-post__container h2{
 
 	color: c( purple );
+	margin-top: spacer( component, xl );
+	margin-bottom: spacer( component, s );
 
+}
+
+.p-post__container h3 {
+	margin-top: spacer( component, l );
+	margin-bottom: spacer( component, s );
 }
 
 .p-post__container p img{

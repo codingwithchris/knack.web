@@ -15,6 +15,8 @@
 
 namespace Fuse\Layout\SinglePost;
 use Fuse\AssetHandler;
+use Fuse\Helpers;
+use Samrap\Acf\Acf;
 use function Fuse\Controllers\render as render;
 
 
@@ -33,6 +35,9 @@ function setup(){
 		// Handle Content Loading
 		add_action( 'fuse_hero', __NAMESPACE__ . '\load_hero', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 1 );
+
+		// Load Call to action after blog post
+		add_action( 'fuse_content', __NAMESPACE__ . '\load_cta', 20 );
 
 	}
 
@@ -61,8 +66,15 @@ function load_hero(){
 	$terms = get_the_terms( $post, 'category');
 	$term_name = $terms ? $terms[0]->name : 'Unspecified';
 
-	$term_with_data = $term_name . ' • ' . get_the_date();
 	$title = get_the_title();
+
+	$data = [
+		'title' => $title,
+		'date' => get_the_date(),
+		'category' => $term_name,
+	];
+
+	render( 'fragments/components/hero/_c-hero--post', $data );
 
  }
 
@@ -93,6 +105,38 @@ function load_content(){
 
 	echo '</div>';
 
+}
+
+function load_cta(){
+	if( ! get_field( 'load_cta' ) ){
+		return;
+	}
+
+	$cta_data = [
+
+		'override_defaults' => Acf::field( 'override_cta_defaults' )->get(),
+		'type'				=> Acf::field( 'cta_type' )->get(),
+		'title'				=> Acf::field( 'cta_title' )->get(),
+		'copy'				=> Acf::field( 'cta_copy' )->get(),
+		'modifier_class'	=> 'c-cta--post',
+		'action'	=> [
+
+			'btn_type'	=> 'primary',
+			'btn_text'	=> Acf::field( 'cta_action_text' )->get(),
+			'btn_url'	=> Acf::field( 'cta_action_link' )->get(),
+			'btn_theme'	=> Acf::field( 'cta_type' )->get() == 'standard' ? 'white' : 'dark',
+
+		],
+		'remove_bg'	=> Acf::field( 'cta_bg_remove' )->get(),
+		'bg'	=> [
+			'media' => Acf::field( 'cta_bg' )->get()
+		]
+
+	];
+
+	$cta_data = Helpers\fuse_remove_empty_values( $cta_data );
+
+	render( 'fragments/components/_c-cta', $cta_data );
 }
 
 

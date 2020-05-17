@@ -21,7 +21,7 @@
 
  .p-about--quote{
 
-    padding: spacer( layout, 2xl ) 0 spacer( layout, xl );
+    padding: spacer( layout, xl ) 0 spacer( layout, l );
     text-align: center;
 
 }
@@ -48,7 +48,7 @@
 .p-about--story{
 
     background-color: c( gray--l );
-    margin-top: spacer( layout, 3xl );
+    margin-top: spacer( layout, 2xl );
     padding: spacer( layout, 2xl ) 0;
 
  }

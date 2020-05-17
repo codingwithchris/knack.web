@@ -23,7 +23,8 @@
  */
 
  // Base link styles
- .f-link{
+ .f-link,
+ .p-post__container p a{
 
 	@include border( bottom, link, transparent );
 	@include transition( link );
@@ -32,7 +33,8 @@
 
 
 // Links against a light background
-.f-link--standard{
+.f-link--standard,
+.p-post__container p a{
 
 	color: $link__color--standard;
 
