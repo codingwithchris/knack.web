@@ -1,0 +1,156 @@
+/**
+ * Type	: Component
+ * Name	: Share
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Share • Settings
+ * *************************************
+ */
+ $share-icon-size: 24px;
+ $share-breakpoint: s;
+
+/**
+* ************************************
+* Share • Class Definitions
+* ************************************
+*/
+.c-share{
+	align-items: center;
+	border: 1px solid c( gray--l );
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: spacer( layout,  l );
+	padding: spacer( component, l );
+	width: 100%;
+
+	@include breakpoint( $share-breakpoint ){
+		flex-direction: row;
+	}
+
+}
+
+.c-share__pre{
+	align-items: center;
+	display: flex;
+	margin-bottom: spacer( component, m );
+	margin-right: 0;
+
+	@include breakpoint( $share-breakpoint ){
+		flex-direction: row;
+		margin-bottom: 0;
+		margin-right: spacer( component, m );
+	}
+
+}
+
+.c-share-actions{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	@include breakpoint( $share-breakpoint ){
+		max-width: 300px;
+	}
+
+}
+
+.c-share-action,
+.c-share-action__icon,
+.c-share-action__icon > svg{
+
+	height: $share-icon-size;
+	width: $share-icon-size;
+
+}
+
+.c-share-action{
+	align-items: center;
+	border-bottom: none;
+	display: flex;
+	fill: c( gray--m );
+	height: 32px;
+	justify-content: center;
+	margin-bottom: spacer( component, s );
+	width: 100%;
+
+	@include transition( link );
+
+	@include breakpoint( $share-breakpoint ){
+		margin-bottom: 0;
+		width: 75px;
+	}
+
+}
+
+.c-share-action:hover{
+	fill: c( purple );
+}
+
+.c-share-action:active{
+	fill: c( purple, light10 );
+}
+
+.c-share-action:not( :last-child ){
+
+	@include breakpoint( $share-breakpoint ){
+		margin-right: spacer( component, xs );
+	}
+
+}
+
+
+/**
+ * Handle Share Success
+ */
+.c-share-action.--url{
+	 position: relative;
+ }
+
+ .c-share-action__success{
+	 border-radius: 4px;
+	 background: c( gray--d );
+	 top: 120%;
+	 color: c( gray--l );
+	 display: block;
+	 padding: spacer( component, s );
+	 pointer-events: none;
+	 position: absolute;
+	 transform: translateY( 5px );
+	 width: 125px;
+	 z-index: z(front);
+
+	@include transition( btn );
+	@include opacity(0);
+
+ }
+
+ .c-share-action__success:before{
+
+	$share-success-triangle-width: 6px;
+
+	border: solid;
+	border-color: c( gray--d ) transparent;
+	border-width: 0 $share-success-triangle-width $share-success-triangle-width;
+	content: "";
+	display: block;
+	left: calc( 50% - #{$share-success-triangle_width} );
+	position: absolute;
+	top: -#{$share-success-triangle_width};
+
+ }
+
+.c-share-action__success.--visible{
+
+	transform: translateY( 0px );
+
+	@include opacity(1);
+
+}

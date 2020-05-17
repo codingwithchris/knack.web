@@ -13,7 +13,6 @@ add_action( 'wp_head', __NAMESPACE__ . '\inject_critical_scripts_and_styles', 1)
 
 // Get the heck out autop!!
 remove_filter ('acf_the_content', 'wpautop', 10, 1);
-remove_filter ('the_content', 'wpautop', 10, 1 );
 
 
 // Bring in site assets

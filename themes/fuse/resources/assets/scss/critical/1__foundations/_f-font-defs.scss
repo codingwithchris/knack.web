@@ -66,7 +66,10 @@ textarea{
 }
 
 .f-b--base,
-.c-menu--mobile li a{
+.c-menu--mobile li a,
+.p-post__container p,
+.p-post__container ul,
+.p-post__container ol{
 
 	@include font-scale( m );
 
@@ -93,7 +96,8 @@ textarea{
 }
 
 // Heading Weight Medium
-.f-hw--r{
+.f-hw--r,
+.p-post__container h2{
 
 	@include font( heading, regular );
 
@@ -125,7 +129,8 @@ textarea{
 
 }
 
-.f-hs--l{
+.f-hs--l,
+.p-post__container h2{
 
 	line-height: 1.3;
 

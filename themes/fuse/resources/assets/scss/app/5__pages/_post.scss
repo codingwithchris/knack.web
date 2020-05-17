@@ -1,0 +1,89 @@
+/**
+ * Type	: Template
+ * Name	: Post
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Post • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Post • Class Definitions
+ * ************************************
+ */
+
+ .p-post__featured-image{
+
+	margin-bottom: spacer( layout, l );
+	text-align: center;
+
+}
+
+.p-post__container{
+
+	padding-bottom: spacer( layout, l );
+
+}
+
+.p-post__container p:not( .c-share__pre ){
+
+	margin-bottom: spacer( component, m );
+
+}
+
+.p-post__container h2{
+
+	color: c( purple );
+	margin-top: spacer( component, xl );
+	margin-bottom: spacer( component, s );
+
+}
+
+.p-post__container h3 {
+	margin-top: spacer( component, l );
+	margin-bottom: spacer( component, s );
+}
+
+.p-post__container p img{
+
+	display: block;
+	margin: spacer( layout, m ) auto;
+	text-align: center;
+
+}
+
+.p-post__container p iframe{
+
+	display: block;
+	margin: spacer( layout, m ) auto;
+	text-align: center;
+
+}
+
+.p-post__container ul{
+
+	list-style: circle;
+	margin-bottom: spacer( component, l );
+
+}
+
+.p-post__container ul,
+.p-post__container ol{
+
+	margin-left: spacer( component, l );
+
+}
+
+.p-post__container ul > li,
+.p-post__container ol > li{
+
+	margin-bottom: spacer( component, m );
+
+}

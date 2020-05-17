@@ -11,7 +11,7 @@ if( function_exists('\Sober\Intervention\intervention') ){
 
 	intervention('remove-dashboard-items', ['all'], ['all'] );
 	intervention('remove-toolbar-items', ['comments', 'logo'], ['all']);
-	intervention('update-label-footer',  'Built with <3 by <a href="https://creativefuse.org" target="_blank" style="color:#BB1346">CreativeFuse</a>'  );
+	intervention('update-label-footer',  'Built with <3 by <a href="https://www.linkedin.com/in/christopher-a-hahn/" target="_blank" style="color:#BB1346">Chris Hahn</a>'  );
 	intervention('remove-help-tabs');
 	intervention('remove-howdy', 'Hey there,');
 

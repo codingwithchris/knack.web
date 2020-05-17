@@ -53,6 +53,7 @@ return [
         'layouts/archive/post',
 
         // Layout • Single
+        'layouts/single/post',
         'layouts/single/project',
 
         // Layout • Page Templates

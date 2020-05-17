@@ -34,3 +34,18 @@ function get_gallery_script_bundle(){
 	wp_enqueue_script( $script['handle'] );
 
 }
+
+function get_post_script_bundle(){
+	$script = [
+
+		'handle' 			=> 'post-script',
+		'location'			=> get_asset_from_manifest( 'post.js' ),
+		'dependencies'		=> ['app-script'],
+		'version'			=> null,
+		'load_in_footer'	=> 'true',
+
+	];
+
+	wp_register_script( $script['handle'], $script['location'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+	wp_enqueue_script( $script['handle'] );
+}

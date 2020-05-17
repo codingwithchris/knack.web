@@ -23,6 +23,11 @@ if( is_singular( 'projects' ) ){
 	$post_type = 'project';
 }
 
+if( is_singular( 'post' ) ){
+	$post_type = 'post';
+}
+
+
 $option_group_name = "cta_{$post_type}_defaults";
 
 // Default option sets for pag and project call to actions as defined in ACF
