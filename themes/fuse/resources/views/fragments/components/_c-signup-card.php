@@ -31,7 +31,7 @@ use Samrap\Acf\Acf;
 	<div class="c-signup-card__header o-content-block">
 
 		<div class="c-signup-card__title o-content-block__title">
-			<h2 class="f-hw--b f-hs--xl">
+			<h2 class="f-h f-hs--xl">
 				<?= $data['title']; ?>
 			</h2>
 		</div>

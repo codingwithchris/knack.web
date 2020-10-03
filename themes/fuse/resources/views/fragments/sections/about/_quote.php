@@ -24,7 +24,7 @@ use function Fuse\Controllers\render as render;
 
         <div class="f-blockquote">
 
-            <blockquote class="f-blockquote__copy f-hw--l f-hs--xl">
+            <blockquote class="f-blockquote__copy f-h f-hs--xl">
                 <?= esc_html( $data['copy'] ); ?>
             </blockquote>
 

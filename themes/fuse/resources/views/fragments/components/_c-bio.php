@@ -33,7 +33,7 @@ use function Fuse\Controllers\render as render;
     <div class="c-bio__content">
 
         <div class="c-bio__name">
-            <h3 class="f-hw--b f-hs--l">
+            <h3 class="f-h f-hs--l">
                 <?= esc_html( $data['name'] ); ?>
             </h3>
         </div>

@@ -48,7 +48,7 @@ $overlay_data = [
 
         <div class="c-island__title">
 
-            <h5 class="f-hw--b f-hs--xl">
+            <h5 class="f-h f-hs--xl">
                 <?= $data['title']; ?>
             </h5>
 

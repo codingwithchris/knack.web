@@ -43,7 +43,7 @@ use function Fuse\Controllers\render as render;
 					<div class="c-founder">
 
 						<div class="c-founder__title">
-							<h3 class="f-hw--b f-hs--l"><?= esc_html( $data['founder_1']['name'] ); ?></h3>
+							<h3 class="f-h f-hs--l"><?= esc_html( $data['founder_1']['name'] ); ?></h3>
 						</div>
 
 						<div class="c-founder__role">
@@ -77,7 +77,7 @@ use function Fuse\Controllers\render as render;
 					<div class="c-founder">
 
 						<div class="c-founder__title">
-							<h3 class="f-hw--b f-hs--l"><?= esc_html( $data['founder_2']['name'] ); ?></h3>
+							<h3 class="f-h f-hs--l"><?= esc_html( $data['founder_2']['name'] ); ?></h3>
 						</div>
 
 						<div class="c-founder__role">

@@ -69,7 +69,7 @@ $count = 1;
 
 			<div class="c-dashboard-tile__inner">
 
-				<p class="c-dashboard-tile__text f-hw--b f-hs--l">
+				<p class="c-dashboard-tile__text f-h f-hs--l">
 					<?= isset( $tile['text'] ) ? $tile['text'] : 'You must add text to your tile'; ?>
 				</p>
 

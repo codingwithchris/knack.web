@@ -24,7 +24,7 @@ use Samrap\Acf\Acf;
 			<?php if( isset( $data['title'] ) && $data['title'] ){ ?>
 
 				<div class="p-404__content-title o-content-block__title">
-					<h1 class="f-hw--m f-hs--xl u-c--dark-blue"><?= esc_html( $data['title'] ); ?></h1>
+					<h1 class="f-h f-hs--xl u-c--dark-blue"><?= esc_html( $data['title'] ); ?></h1>
 				</div>
 
 			<?php } ?>

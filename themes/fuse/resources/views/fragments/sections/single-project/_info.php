@@ -22,13 +22,13 @@ use function Fuse\Controllers\render as render;
 
 	<p class="p-project__info-header f-b--s">About this Project</p>
 
-	<h1 class="p-project__title f-hw--b f-hs--l"><?= esc_html( $data['title'] ); ?></h1>
+	<h1 class="p-project__title f-h f-hs--l"><?= esc_html( $data['title'] ); ?></h1>
 	<h2 class="p-project__description f-b--base"><?= wp_kses_post( $data['description'] ); ?></h2>
 
 	<div class="p-project__mediums p-project__meta">
 
 		<div class="p-project__meta__title u-mbn">
-			<h3 class="f-hw--b f-hs--s"><?= esc_html( _n( 'Project Medium', 'Project Mediums', $data['medium_count'] ) ); ?></h3>
+			<h3 class="f-h f-hs--s"><?= esc_html( _n( 'Project Medium', 'Project Mediums', $data['medium_count'] ) ); ?></h3>
 		</div>
 
 		<div class="p-project__meta__list u-mbn">
@@ -42,7 +42,7 @@ use function Fuse\Controllers\render as render;
 	<div class="p-project__client-industries p-project__meta">
 
 		<div class="p-project__meta__title u-c--dark-blue">
-			<h3 class="f-hw--b f-hs--s"><?= esc_html( _n( 'Project Category', 'Project Categories', $data['category_count'] ) ); ?></h3>
+			<h3 class="f-h f-hs--s"><?= esc_html( _n( 'Project Category', 'Project Categories', $data['category_count'] ) ); ?></h3>
 		</div>
 
 		<div class="p-project__meta__list u-c--dark-blue">

@@ -34,7 +34,7 @@ while ( $projects->have_posts() ) {
 					<?= esc_html( $formatted_services ); ?>
 				</p>
 
-				<p class="c-featured-project__title f-hw--b f-hs--l">
+				<p class="c-featured-project__title f-h f-hs--l">
 					<?= esc_html( get_the_title() ); ?>
 				</p>
 

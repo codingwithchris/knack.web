@@ -30,7 +30,7 @@ use function Fuse\Controllers\render as render;
 
             <div class="o-content-block__title">
                 <h3 class="f-hs--3xl">
-                    <span class="f-hw--b u-c--gold">Knack Creative</span>
+                    <span class="f-h u-c--gold">Knack Creative</span>
                 </h3>
             </div>
 

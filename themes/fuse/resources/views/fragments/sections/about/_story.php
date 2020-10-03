@@ -37,7 +37,7 @@ use function Fuse\Controllers\render as render;
 			<div class="o-content-block">
 
 				<div class="o-content-block__title u-mbn">
-					<h5 class="f-hw--b f-hs--xl"><?= esc_html( $data['squad_intro']['title'] ); ?></h5>
+					<h5 class="f-h f-hs--xl"><?= esc_html( $data['squad_intro']['title'] ); ?></h5>
 				</div>
 
 				<div class="o-content-block__copy">

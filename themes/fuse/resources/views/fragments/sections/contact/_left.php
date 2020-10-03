@@ -35,7 +35,7 @@ use function Fuse\Controllers\render as render;
                 <div class="p-contact__info__wrapper">
 
                     <div class="o-content-block__title">
-                        <h1 class="f-hw--b f-hs--m">
+                        <h1 class="f-h f-hs--m">
                             <?= esc_html( 'Contact Info' ); ?>
                         </h1>
                     </div>
