@@ -68,7 +68,7 @@ function load_intro(){
 			'btn_text'		=> Acf::field( 'studio_rental_intro_book_btn_text' )->get(),
 			'btn_url'		=> '#studio-rental-scheduler',
 			'btn_type'		=> 'primary',
-			'btn_theme'		=> 'purple',
+			'btn_theme'		=> 'navy',
 			'btn_modifier'	=> '',
 
 		],

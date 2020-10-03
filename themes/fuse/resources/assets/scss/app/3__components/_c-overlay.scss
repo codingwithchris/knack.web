@@ -135,29 +135,29 @@
 
 
 /**
- * Purple Overlay
+ * navy Overlay
  */
 
- .c-overlay--purple--90{
+ .c-overlay--navy--90{
 
-	background-color: c( purple );
+	background-color: c( navy );
 
 	 @include opacity( .90 );
 
 }
 
 
-.c-overlay--purple--95{
+.c-overlay--navy--95{
 
-	background-color: c( purple );
+	background-color: c( navy );
 
 	 @include opacity( .95 );
 
 }
 
-.c-overlay--purple--100{
+.c-overlay--navy--100{
 
-	background-color: c( purple );
+	background-color: c( navy );
 
 	 @include opacity( 1 );
 

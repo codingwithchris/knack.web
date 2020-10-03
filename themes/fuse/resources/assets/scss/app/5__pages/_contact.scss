@@ -176,7 +176,7 @@ body.contact-us article{
     color: c( gray--d );
     padding: spacer( component, xl );
 
-    @include border( top, card, c( purple ) );
+    @include border( top, card, c( navy ) );
     @include shadow( media--subtle );
 
   }
@@ -188,7 +188,7 @@ body.contact-us article{
    @include transition( link );
 
    &:hover{
-    color: c( purple );
+    color: c( navy );
    }
 
   }

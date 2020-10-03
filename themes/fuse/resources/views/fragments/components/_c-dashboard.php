@@ -49,7 +49,7 @@ $count = 1;
 		];
 
 		$tile_overlay = [
-			'overlay_type'	=> isset( $tile['bg_image'] ) ? 'purple--95' : 'purple--100'
+			'overlay_type'	=> isset( $tile['bg_image'] ) ? 'navy--95' : 'navy--100'
 		];
 
 		?>

@@ -57,7 +57,7 @@ function load_hero(){
 			'btn_text'		=> Acf::field( 'primary_action_text' )->get(),
 			'btn_url'		=> Acf::field( 'primary_action_link' )->get(),
 			'btn_type'		=> 'primary',
-			'btn_theme'		=> 'purple',
+			'btn_theme'		=> 'navy',
 			'btn_modifier'	=> '',
 
 		],
