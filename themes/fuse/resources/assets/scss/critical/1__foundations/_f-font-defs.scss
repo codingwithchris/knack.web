@@ -12,6 +12,14 @@
  * ************************************
  */
 
+ @font-face {
+    font-family: 'dm_serif_displayregular';
+    src: url('/wp-content/themes/fuse/resources/assets/fonts/dmserifdisplay-regular-webfont.woff') format('woff'), url('/wp-content/themes/fuse/resources/assets/fonts/dmserifdisplay-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
 body{
 
 	color: c( dark-blue );
@@ -91,7 +99,7 @@ textarea{
 // Heading Weight Bold
 .f-hw--b{
 
-	@include font( heading, bold );
+	@include font( heading, regular );
 
 }
 
@@ -106,7 +114,7 @@ textarea{
 // Heading Weight Light
 .f-hw--l{
 
-	@include font( heading, light );
+	@include font( heading, regular );
 
 }
 
@@ -114,14 +122,6 @@ textarea{
  * Scale/Size Classes
  * Heading Scale/Size: `hs`
  */
-
- .f-hs--s{
-	// declare base heading styles
-}
-
-.f-hs--base{
-	// declare base heading styles
-}
 
 .f-hs--m{
 
