@@ -283,10 +283,6 @@ const config = {
              *
              * Note 3 - Be sure to create a `.localhost-ssl` folder in your user root to hold your files.
              */
-            https: {
-                key: `${userHome}/.localhost-ssl/localhost.key`,
-                cert: `${userHome}/.localhost-ssl/localhost.crt`,
-            },
 
             // Which files trigger a page reload when modified?
             files: [
