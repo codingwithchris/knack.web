@@ -19,8 +19,9 @@ $colors : (
     // BASE COLORS
     navy-blue       : #0C3151,
     blush           : #B38180,
+    gold            : #C28C2C,
+
     onyx            : #2E393D,
-    trolley-grey    : #7A8183,
     platinum        : #E6E8E8,
     white           : #FFFFFF,
     error           : #FF0000,
@@ -69,6 +70,21 @@ $color_config: (
 
     ),
 
+
+    gold: (
+
+        light10 :   lighten( map-get( $colors, gold ), 10% ),
+
+        light5  :   lighten( map-get( $colors, gold ), 5% ),
+
+        base    :   map-get( $colors, gold ),
+
+        dark5   :   darken( map-get( $colors, gold ), 5% ),
+
+        dark10   :   darken( map-get( $colors, gold ), 10% ),
+
+    ),
+
     gray--d: (
 
         light10 :   lighten( map-get( $colors, onyx ), 10% ),
@@ -80,20 +96,6 @@ $color_config: (
         dark5   :   darken( map-get( $colors, onyx ), 5% ),
 
         dark10   :   darken( map-get( $colors, onyx ), 10% ),
-
-    ),
-
-    gray--m: (
-
-        light10 :   lighten( map-get( $colors, trolley-grey ), 10% ),
-
-        light5  :   lighten( map-get( $colors, trolley-grey ), 5% ),
-
-        base    :   map-get( $colors, trolley-grey ),
-
-        dark5   :   darken( map-get( $colors, trolley-grey ), 5% ),
-
-        dark10   :   darken( map-get( $colors, trolley-grey ), 10% ),
 
     ),
 

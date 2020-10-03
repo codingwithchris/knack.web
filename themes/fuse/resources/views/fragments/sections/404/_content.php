@@ -32,7 +32,7 @@ use Samrap\Acf\Acf;
 			<?php if( isset( $data['copy'] ) && $data['copy'] ){ ?>
 
 				<div class="p-404__content-copy o-content-block__copy u-mbn">
-					<h2 class="f-b--base u-c--gray--m"><?= esc_html( $data['copy'] ); ?></h2>
+					<h2 class="f-b--base u-c--gold"><?= esc_html( $data['copy'] ); ?></h2>
 				</div>
 
 			<?php } ?>

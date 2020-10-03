@@ -15,7 +15,7 @@
 		<?php if( isset( $data['copy'] ) && $data['copy'] ){ ?>
 
 			<div class="t-landing__content-copy o-content-block__copy u-mbn">
-				<h2 class="f-b--base u-c--gray--m"><?= wp_kses_post( $data['copy'] ); ?></h2>
+				<h2 class="f-b--base u-c--gold"><?= wp_kses_post( $data['copy'] ); ?></h2>
 			</div>
 
 		<?php } ?>

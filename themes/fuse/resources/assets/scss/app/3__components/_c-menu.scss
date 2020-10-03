@@ -31,7 +31,7 @@
 
 .c-menu--primary .c-menu__link{
 
-    color: c( gray--m );
+    color: c( gold );
     padding: 5px;
 
     @include transition( link );
@@ -125,7 +125,7 @@
 
 .c-header.--mobile-menu-open .c-mobile-menu-button__bread{
 
-	background-color: c( gray--m );
+	background-color: c( gold );
 
 }
 
@@ -168,7 +168,7 @@
 
 .c-menu--mobile li a{
 
-	color: c( gray--m );
+	color: c( gold );
 	display: inline-block;
 	padding: spacer( component, xs ) 0;
 

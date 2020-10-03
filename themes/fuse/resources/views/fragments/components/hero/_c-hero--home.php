@@ -36,7 +36,7 @@ use function Fuse\Controllers\render as render;
 
             </h1>
 
-            <h2 class="c-hero__subtitle o-content-block__copy f-hw--l f-hs--l u-c--gray--m">
+            <h2 class="c-hero__subtitle o-content-block__copy f-hw--l f-hs--l u-c--gold">
 
                 <?= $data['copy']; ?>
 
