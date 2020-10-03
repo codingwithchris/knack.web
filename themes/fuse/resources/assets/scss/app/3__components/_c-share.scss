@@ -116,7 +116,7 @@
 
  .c-share-action__success{
 	 border-radius: 4px;
-	 background: c( gray--d );
+	 background: c( ox-blood );
 	 top: 120%;
 	 color: c( gray--l );
 	 display: block;
@@ -137,7 +137,7 @@
 	$share-success-triangle-width: 6px;
 
 	border: solid;
-	border-color: c( gray--d ) transparent;
+	border-color: c( ox-blood ) transparent;
 	border-width: 0 $share-success-triangle-width $share-success-triangle-width;
 	content: "";
 	display: block;

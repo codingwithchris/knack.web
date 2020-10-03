@@ -81,17 +81,17 @@
 
 .c-btn--primary--dark{
 
-    background-color: c( gray--d );
+    background-color: c( ox-blood );
 
     &:hover{
 
-        background-color: c( gray--d, dark5 );
+        background-color: c( ox-blood, dark5 );
 
     }
 
     &:active{
 
-        background-color: c( gray--d, dark10 );
+        background-color: c( ox-blood, dark10 );
 
     }
 
@@ -100,7 +100,7 @@
 .c-btn--primary--white{
 
     background-color: c( white );
-    color: c( gray--d );
+    color: c( ox-blood );
 
     &:hover{
 

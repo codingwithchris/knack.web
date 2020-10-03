@@ -31,19 +31,19 @@
 
 .c-btn--secondary--dark{
 
-    border-color: c( gray--d );
-    color: c( gray--d );
+    border-color: c( ox-blood );
+    color: c( ox-blood );
 
     &:hover{
 
-        background-color: c( gray--d );
+        background-color: c( ox-blood );
         color: c(  white );
 
     }
 
     &:active{
 
-        background-color: c( gray--d, light10 );
+        background-color: c( ox-blood, light10 );
 
     }
 

@@ -41,11 +41,11 @@ use function Fuse\Controllers\render as render;
 
 	<div class="p-project__client-industries p-project__meta">
 
-		<div class="p-project__meta__title u-c--gray--d">
+		<div class="p-project__meta__title u-c--ox-blood">
 			<h3 class="f-hw--b f-hs--s"><?= esc_html( _n( 'Project Category', 'Project Categories', $data['category_count'] ) ); ?></h3>
 		</div>
 
-		<div class="p-project__meta__list u-c--gray--d">
+		<div class="p-project__meta__list u-c--ox-blood">
 
 			<p class="p-project__meta__item"><?= $data['categories']; ?></p>
 

@@ -30,7 +30,7 @@ use function Fuse\Controllers\render as render;
         <!-- Hero Content -->
         <div class="c--hero__content o-content-block">
 
-            <h1 class="c-hero__title o-content-block__title f-hw--m f-hs--xl u-c--gray--d u-mbn">
+            <h1 class="c-hero__title o-content-block__title f-hw--m f-hs--xl u-c--ox-blood u-mbn">
 
                 <?= esc_html( $data['title'] ); ?>
 
