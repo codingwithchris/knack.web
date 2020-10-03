@@ -17,7 +17,7 @@ use function Fuse\Controllers\render as render;
 
 $overlay_type = $data['type'] == 'light'
                 ? 'white--85'
-                : 'ox-blood--85';
+                : 'dark-blue--85';
 
 
 $overlay_data = [

@@ -21,7 +21,7 @@ $colors : (
     blush           : #B38180,
     gold            : #C28C2C,
 
-    ox-blood        : #2F1017,
+    inky-sky        : #091720,
     platinum        : #E6E8E8,
     white           : #FFFFFF,
     error           : #FF0000,
@@ -85,17 +85,17 @@ $color_config: (
 
     ),
 
-    ox-blood: (
+    dark-blue: (
 
-        light10 :   lighten( map-get( $colors, ox-blood ), 10% ),
+        light10 :   lighten( map-get( $colors, inky-sky ), 10% ),
 
-        light5  :   lighten( map-get( $colors, ox-blood ), 5% ),
+        light5  :   lighten( map-get( $colors, inky-sky ), 5% ),
 
-        base    :   map-get( $colors, ox-blood ),
+        base    :   map-get( $colors, inky-sky ),
 
-        dark5   :   darken( map-get( $colors, ox-blood ), 5% ),
+        dark5   :   darken( map-get( $colors, inky-sky ), 5% ),
 
-        dark10   :   darken( map-get( $colors, ox-blood ), 10% ),
+        dark10   :   darken( map-get( $colors, inky-sky ), 10% ),
 
     ),
 
