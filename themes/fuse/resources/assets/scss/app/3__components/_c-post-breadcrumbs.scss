@@ -1,0 +1,28 @@
+/**
+ * Type	: Component
+ * Name	: Post Breadcrumbs
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * *************************************
+ * Post Breadcrumbs • Settings
+ * *************************************
+ */
+
+
+/**
+ * ************************************
+ * Post Breadcrumbs • Class Definitions
+ * ************************************
+ */
+
+.c-post-breadcrumbs {
+    margin-top: spacer( layout, m );
+    max-width: 515px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -17,10 +17,11 @@
 $colors : (
 
     // BASE COLORS
-    dark-lavender   : #765688,
-    artichoke       : #9D9674,
-    onyx            : #2E393D,
-    trolley-grey    : #7A8183,
+    navy-blue       : #0C3151,
+    blush           : #B38180,
+    gold            : #C28C2C,
+
+    inky-sky        : #091720,
     platinum        : #E6E8E8,
     white           : #FFFFFF,
     error           : #FF0000,
@@ -38,62 +39,63 @@ $colors : (
 
 $color_config: (
 
-    purple: (
+    navy: (
 
 
-        light10 :   lighten( map-get( $colors, dark-lavender ), 10% ),
+        light10 :   lighten( map-get( $colors, navy-blue ), 10% ),
 
-        light5  :   lighten( map-get( $colors, dark-lavender ), 5% ),
+        light5  :   lighten( map-get( $colors, navy-blue ), 5% ),
 
-        base    :   map-get( $colors, dark-lavender ),
+        base    :   map-get( $colors, navy-blue ),
 
-        dark5   :   darken( map-get( $colors, dark-lavender ), 5% ),
+        dark5   :   darken( map-get( $colors, navy-blue ), 5% ),
 
-        dark10   :   darken( map-get( $colors, dark-lavender ), 10% ),
+        dark10   :   darken( map-get( $colors, navy-blue ), 10% ),
 
     ),
+
+    blush: (
+
+
+        light10 :   lighten( map-get( $colors, blush ), 10% ),
+
+        light5  :   lighten( map-get( $colors, blush ), 5% ),
+
+        base    :   map-get( $colors, blush ),
+
+        dark5   :   darken( map-get( $colors, blush ), 5% ),
+
+        dark10   :   darken( map-get( $colors, blush ), 10% ),
+
+
+    ),
+
 
     gold: (
 
+        light10 :   lighten( map-get( $colors, gold ), 10% ),
 
-        light10 :   lighten( map-get( $colors, artichoke ), 10% ),
+        light5  :   lighten( map-get( $colors, gold ), 5% ),
 
-        light5  :   lighten( map-get( $colors, artichoke ), 5% ),
+        base    :   map-get( $colors, gold ),
 
-        base    :   map-get( $colors, artichoke ),
+        dark5   :   darken( map-get( $colors, gold ), 5% ),
 
-        dark5   :   darken( map-get( $colors, artichoke ), 5% ),
-
-        dark10   :   darken( map-get( $colors, artichoke ), 10% ),
-
+        dark10   :   darken( map-get( $colors, gold ), 10% ),
 
     ),
 
-    gray--d: (
+    dark-blue: (
 
-        light10 :   lighten( map-get( $colors, onyx ), 10% ),
+        light10 :   lighten( map-get( $colors, inky-sky ), 10% ),
 
-        light5  :   lighten( map-get( $colors, onyx ), 5% ),
+        light5  :   lighten( map-get( $colors, inky-sky ), 5% ),
 
-        base    :   map-get( $colors, onyx ),
+        base    :   map-get( $colors, inky-sky ),
 
-        dark5   :   darken( map-get( $colors, onyx ), 5% ),
+        dark5   :   darken( map-get( $colors, inky-sky ), 5% ),
 
-        dark10   :   darken( map-get( $colors, onyx ), 10% ),
-
-    ),
-
-    gray--m: (
-
-        light10 :   lighten( map-get( $colors, trolley-grey ), 10% ),
-
-        light5  :   lighten( map-get( $colors, trolley-grey ), 5% ),
-
-        base    :   map-get( $colors, trolley-grey ),
-
-        dark5   :   darken( map-get( $colors, trolley-grey ), 5% ),
-
-        dark10   :   darken( map-get( $colors, trolley-grey ), 10% ),
+        dark10   :   darken( map-get( $colors, inky-sky ), 10% ),
 
     ),
 

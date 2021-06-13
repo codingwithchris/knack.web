@@ -8,46 +8,46 @@
 
 
 /**
- * Purple
+ * navy
  */
 
- .u-c--purple{
+ .u-c--navy{
 
-    color: c( purple );
-
- }
-
- .u-c--purple--l5{
-
-    color: c( purple, light5 );
+    color: c( navy );
 
  }
 
- .u-c--purple--d5{
+ .u-c--navy--l5{
 
-    color: c( purple, dark5 );
+    color: c( navy, light5 );
+
+ }
+
+ .u-c--navy--d5{
+
+    color: c( navy, dark5 );
 
  }
 
 
  /**
-  * gold
+  * blush
   */
- .u-c--gold{
+ .u-c--blush{
 
-    color: c( gold );
-
- }
-
- .u-c--gold--l5{
-
-    color: c( gold, light5 );
+    color: c( blush );
 
  }
 
- .u-c--gold--d5{
+ .u-c--blush--l5{
 
-    color: c( gold, dark5 );
+    color: c( blush, light5 );
+
+ }
+
+ .u-c--blush--d5{
+
+    color: c( blush, dark5 );
 
  }
 
@@ -61,9 +61,9 @@
 
 }
 
- .u-c--gray--m{
+ .u-c--gold{
 
-    color: c( gray--m );
+    color: c( gold );
 
  }
 
@@ -73,8 +73,8 @@
 
  }
 
- .u-c--gray--d{
+ .u-c--dark-blue{
 
-    color: c( gray--d );
+    color: c( dark-blue );
 
  }

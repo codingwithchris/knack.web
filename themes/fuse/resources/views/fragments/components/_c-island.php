@@ -17,7 +17,7 @@ use function Fuse\Controllers\render as render;
 
 $overlay_type = $data['type'] == 'light'
                 ? 'white--85'
-                : 'gray--d--85';
+                : 'dark-blue--85';
 
 
 $overlay_data = [
@@ -48,7 +48,7 @@ $overlay_data = [
 
         <div class="c-island__title">
 
-            <h5 class="f-hw--b f-hs--xl">
+            <h5 class="f-h f-hs--xl">
                 <?= $data['title']; ?>
             </h5>
 

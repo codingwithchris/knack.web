@@ -75,7 +75,7 @@
 	align-items: center;
 	border-bottom: none;
 	display: flex;
-	fill: c( gray--m );
+	fill: c( gold );
 	height: 32px;
 	justify-content: center;
 	margin-bottom: spacer( component, s );
@@ -91,11 +91,11 @@
 }
 
 .c-share-action:hover{
-	fill: c( purple );
+	fill: c( navy );
 }
 
 .c-share-action:active{
-	fill: c( purple, light10 );
+	fill: c( navy, light10 );
 }
 
 .c-share-action:not( :last-child ){
@@ -116,7 +116,7 @@
 
  .c-share-action__success{
 	 border-radius: 4px;
-	 background: c( gray--d );
+	 background: c( dark-blue );
 	 top: 120%;
 	 color: c( gray--l );
 	 display: block;
@@ -137,7 +137,7 @@
 	$share-success-triangle-width: 6px;
 
 	border: solid;
-	border-color: c( gray--d ) transparent;
+	border-color: c( dark-blue ) transparent;
 	border-width: 0 $share-success-triangle-width $share-success-triangle-width;
 	content: "";
 	display: block;

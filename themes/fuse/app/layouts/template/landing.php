@@ -79,7 +79,7 @@ function add_template_class_to_body_class( $classes ){
 			'btn_text'		=> Acf::field( 'action_text' )->get(),
 			'btn_url'		=> Acf::field( 'action_link' )->get(),
 			'btn_type'		=> 'primary',
-			'btn_theme'		=> 'purple',
+			'btn_theme'		=> 'navy',
 			'btn_modifier'	=> '',
 		],
 

@@ -10,7 +10,7 @@ use Samrap\Acf\Acf;
 		<div class="c-flag o-content-block">
 
 			<div class="c-flag__title o-content-block__title u-mbn">
-				<h5 class="f-hw--b f-hs--xl"><?= $data['title']; ?><h5>
+				<h5 class="f-h f-hs--xl"><?= $data['title']; ?><h5>
 			</div>
 
 		</div>

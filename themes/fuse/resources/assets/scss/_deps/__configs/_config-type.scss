@@ -13,7 +13,7 @@
 $type_config : (
 
 	root-font-size		:	100%,	// sets the base for our entire project
-	base-font-size		:	.875rem, // used for base body
+	base-font-size		:	0.95rem, // used for base body
 	base-line-height	:	1.5,
 
 	scale : (
@@ -34,13 +34,14 @@ $font_config : (
 	// used for our project's body
 	body: (
 
-		family 		: ( "Open Sans" ),
+		family 		: ( "facundolight" ),
 		fallback	: ( sans-serif ),
 		style		: normal,
 
 		// Delete weights you don't need
 		weights: (
 
+			light		:	300,
 			regular		:	400,
 			bold 		:	700,
 
@@ -52,8 +53,8 @@ $font_config : (
 	// project's headings
 	heading: (
 
-		family 		: ( "Lato" ),
-		fallback	: ( sans-serif ),
+		family 		: ( "dm_serif_displayregular" ),
+		fallback	: ( serif ),
 		style		: normal,
 
 		// Delete weights you don't need

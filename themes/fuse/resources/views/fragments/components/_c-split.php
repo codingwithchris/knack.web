@@ -31,7 +31,7 @@ use function Fuse\Controllers\render as render;
             <div class="o-content-block">
 
                 <div class="o-content-block__title">
-                    <h3 class="f-hw--b f-hs--l">
+                    <h3 class="f-h f-hs--l">
                         <?= esc_html( $data['title'] ); ?>
                     </h3>
                 </div>

@@ -110,7 +110,7 @@ body.contact-us article{
  .p-contact__logo{
 
    margin-bottom: spacer( component, s );
-   max-width: 75px;
+   max-width: 200px;
 
  }
 
@@ -133,7 +133,7 @@ body.contact-us article{
 
   .p-contact__title-group{
 
-    color: c( gray--d );
+    color: c( dark-blue );
     padding: spacer( component, xl );
 
     .o-content-block__title{
@@ -173,10 +173,10 @@ body.contact-us article{
   .p-contact__info__wrapper{
 
     background-color: c( white );
-    color: c( gray--d );
+    color: c( dark-blue );
     padding: spacer( component, xl );
 
-    @include border( top, card, c( purple ) );
+    @include border( top, card, c( navy ) );
     @include shadow( media--subtle );
 
   }
@@ -188,7 +188,7 @@ body.contact-us article{
    @include transition( link );
 
    &:hover{
-    color: c( purple );
+    color: c( navy );
    }
 
   }
@@ -214,7 +214,7 @@ body.contact-us article{
    */
    .p-contact__action{
 
-      background-color: c( gray--d );
+      background-color: c( dark-blue );
       color: c( white );
       display: block;
       margin-bottom: 0;
@@ -227,7 +227,7 @@ body.contact-us article{
 
       &:hover{
 
-        background-color: c( gray--d, light10 );
+        background-color: c( dark-blue, light10 );
 
       }
 

@@ -93,41 +93,41 @@
  * Dark Gray Overlay
  */
 
- .c-overlay--gray--d--30{
+ .c-overlay--dark-blue--30{
 
-  background-color: c( gray--d );
+  background-color: c( dark-blue );
 
    @include opacity( .3 );
 
 }
 
-.c-overlay--gray--d--40{
+.c-overlay--dark-blue--40{
 
-  background-color: c( gray--d );
+  background-color: c( dark-blue );
 
    @include opacity( .4 );
 
 }
 
-.c-overlay--gray--d--50{
+.c-overlay--dark-blue--50{
 
-  background-color: c( gray--d );
+  background-color: c( dark-blue );
 
    @include opacity( .5 );
 
 }
 
-.c-overlay--gray--d--60{
+.c-overlay--dark-blue--60{
 
-  background-color: c( gray--d );
+  background-color: c( dark-blue );
 
    @include opacity( .6 );
 
 }
 
-.c-overlay--gray--d--95{
+.c-overlay--dark-blue--95{
 
-  background-color: c( gray--d );
+  background-color: c( dark-blue );
 
    @include opacity( .95 );
 
@@ -135,29 +135,29 @@
 
 
 /**
- * Purple Overlay
+ * navy Overlay
  */
 
- .c-overlay--purple--90{
+ .c-overlay--navy--90{
 
-	background-color: c( purple );
+	background-color: c( navy );
 
 	 @include opacity( .90 );
 
 }
 
 
-.c-overlay--purple--95{
+.c-overlay--navy--95{
 
-	background-color: c( purple );
+	background-color: c( navy );
 
 	 @include opacity( .95 );
 
 }
 
-.c-overlay--purple--100{
+.c-overlay--navy--100{
 
-	background-color: c( purple );
+	background-color: c( navy );
 
 	 @include opacity( 1 );
 

@@ -1,29 +1,30 @@
 {
-  "name": "creativefuse/_Reactor",
+  "name": "knack/reactor",
   "description": "Our core plugin to customize and extend Wordpress.",
   "type": "wordpress-muplugin",
-  "keywords": ["wordpress", "wp", "plugin"],
+  "keywords": [
+    "wordpress",
+    "wp",
+    "plugin"
+  ],
   "authors": [
-      {
-          "name": "CreativeFuse",
-          "email": "support@creativefuse.org"
-      }
-   ],
+    {
+      "name": "CreativeFuse",
+      "email": "support@creativefuse.org"
+    }
+  ],
   "support": {
     "issues": "https://github.com/CreativeFuse/cf.mu.Reactor/issues"
   },
   "require": {
-
     "php": ">=7.1",
     "composer/installers": "~1.0",
     "soberwp/intervention": "~1.0",
     "jjgrainger/posttypes": "~2.0",
     "enshrined/svg-sanitize": "~0.8",
     "samrap/acf-fluent": "~0.4.0"
-
   },
   "config": {
     "vendor-dir": "assets/vendor"
   }
-
 }

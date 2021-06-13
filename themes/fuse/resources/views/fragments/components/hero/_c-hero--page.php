@@ -30,13 +30,13 @@ use function Fuse\Controllers\render as render;
         <!-- Hero Content -->
         <div class="c--hero__content o-content-block">
 
-            <h1 class="c-hero__title o-content-block__title f-hw--m f-hs--xl u-c--gray--d u-mbn">
+            <h1 class="c-hero__title o-content-block__title f-h f-hs--xl u-c--dark-blue u-mbn">
 
                 <?= esc_html( $data['title'] ); ?>
 
             </h1>
 
-            <h2 class="c-hero__subtitle o-content-block__copy f-b--base u-c--gray--m u-mbn">
+            <h2 class="c-hero__subtitle o-content-block__copy f-b--base u-c--gold u-mbn">
 
                 <?= esc_html( $data['copy'] ); ?>
 

@@ -51,7 +51,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const projectSettings = {
 
     // Replace with the local dev URL for your site
-    proxy: 'https://knack.build',
+    proxy: 'https://knack.local',
 
     jsEntryFiles: {
         app: './resources/assets/js/app.js',
@@ -283,10 +283,6 @@ const config = {
              *
              * Note 3 - Be sure to create a `.localhost-ssl` folder in your user root to hold your files.
              */
-            https: {
-                key: `${userHome}/.localhost-ssl/localhost.key`,
-                cert: `${userHome}/.localhost-ssl/localhost.crt`,
-            },
 
             // Which files trigger a page reload when modified?
             files: [

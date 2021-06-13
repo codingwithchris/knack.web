@@ -43,7 +43,7 @@
 	margin-bottom: spacer( component, 2xl );
 	max-width: 700px;
 
-	@include border( left, card, c( purple ) );
+	@include border( left, card, c( navy ) );
 	@include shadow( media--subtle );
 
 

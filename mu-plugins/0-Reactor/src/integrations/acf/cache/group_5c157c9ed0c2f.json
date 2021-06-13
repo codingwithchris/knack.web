@@ -84,17 +84,18 @@
             }
         ]
     ],
-    "menu_order": 10,
+    "menu_order": 12,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
+        "the_content",
         "excerpt",
         "discussion",
         "comments"
     ],
     "active": 1,
     "description": "",
-    "modified": 1563480650
+    "modified": 1623592318
 }
