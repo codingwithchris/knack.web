@@ -49,7 +49,7 @@ $count = 1;
 		];
 
 		$tile_overlay = [
-			'overlay_type'	=> isset( $tile['bg_image'] ) ? 'purple--95' : 'purple--100'
+			'overlay_type'	=> isset( $tile['bg_image'] ) ? 'navy--95' : 'navy--100'
 		];
 
 		?>
@@ -69,7 +69,7 @@ $count = 1;
 
 			<div class="c-dashboard-tile__inner">
 
-				<p class="c-dashboard-tile__text f-hw--b f-hs--l">
+				<p class="c-dashboard-tile__text f-h f-hs--l">
 					<?= isset( $tile['text'] ) ? $tile['text'] : 'You must add text to your tile'; ?>
 				</p>
 

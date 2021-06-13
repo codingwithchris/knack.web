@@ -56,7 +56,7 @@ use function Fuse\Controllers\render as render;
 						<div class="c-team-member__body">
 
 							<div class="c-team-member__title">
-								<h3 class="f-hw--b f-hs--l"><?= esc_html( $member['name'] ); ?></h3>
+								<h3 class="f-h f-hs--l"><?= esc_html( $member['name'] ); ?></h3>
 							</div>
 
 							<div class="c-team-member__role">

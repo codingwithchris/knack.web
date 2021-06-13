@@ -16,7 +16,6 @@ return [
         // Enqueues
         'asset-handlers/manifest',
         'asset-handlers/critical',
-        'asset-handlers/fonts',
         'asset-handlers/images',
         'asset-handlers/jquery',
         'asset-handlers/scripts',

@@ -24,7 +24,7 @@ use function Fuse\Controllers\render as render;
     <div class="o-content-block">
 
         <div class="o-content-block__title">
-            <h5 class="f-hw--b f-hs--l u-c--purple"><?= esc_html( $data['title'] ); ?><h5>
+            <h5 class="f-h f-hs--l u-c--navy"><?= esc_html( $data['title'] ); ?><h5>
         </div>
 
     </div>

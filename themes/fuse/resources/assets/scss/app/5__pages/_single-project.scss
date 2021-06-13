@@ -26,7 +26,7 @@
 
 .p-project__hero__left{
 
-	border-bottom: 1px solid c( gray--m );
+	border-bottom: 1px solid c( gold );
 	flex: 1;
 	padding-bottom: spacer( component, 2xl );
 	padding-right: 0;
@@ -64,7 +64,7 @@
 
 .p-project__client-header,
 .p-project__info-header{
-	color: c( purple );
+	color: c( navy );
 	margin-bottom: spacer( component, l );
 }
 
@@ -85,13 +85,13 @@
 
 .p-project__description a{
 
-	border-bottom: 1px solid c( purple, light10 );
-	color: c( purple, dark5 );
+	border-bottom: 1px solid c( navy, light10 );
+	color: c( navy, dark5 );
 
 	@include transition( link );
 
 	&:hover{
-		color: c( purple, light10 );
+		color: c( navy, light10 );
 	}
 
 }
@@ -107,7 +107,7 @@
 
 .p-project__client-website{
 
-	color: c( gold );
+	color: c( blush );
 
 }
 

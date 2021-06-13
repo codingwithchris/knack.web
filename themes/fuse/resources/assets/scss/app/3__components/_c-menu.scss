@@ -31,14 +31,14 @@
 
 .c-menu--primary .c-menu__link{
 
-    color: c( gray--m );
+    color: c( gold );
     padding: 5px;
 
     @include transition( link );
 
     &:hover{
 
-        color: c( gold );
+        color: c( blush );
 
     }
 
@@ -55,7 +55,7 @@
 .c-menu--primary .current-menu-item .c-menu__link{
 
     font-weight: 700;
-    color: c( purple );
+    color: c( navy );
 
 }
 
@@ -84,7 +84,7 @@
 
 .c-mobile-menu-button__bread{
 
-	background-color: c( purple, light10 );
+	background-color: c( navy, light10 );
 	backface-visibility: hidden;
 	height: 2px;
 	left: 15px;
@@ -125,7 +125,7 @@
 
 .c-header.--mobile-menu-open .c-mobile-menu-button__bread{
 
-	background-color: c( gray--m );
+	background-color: c( gold );
 
 }
 
@@ -168,7 +168,7 @@
 
 .c-menu--mobile li a{
 
-	color: c( gray--m );
+	color: c( gold );
 	display: inline-block;
 	padding: spacer( component, xs ) 0;
 

@@ -28,12 +28,6 @@ use function Fuse\Controllers\render as render;
                 <?= render( 'fragments/foundations/_f-logo' ); ?>
             </div>
 
-            <div class="o-content-block__title">
-                <h3 class="f-hs--3xl">
-                    <span class="f-hw--b u-c--gray--m">Knack Creative</span>
-                </h3>
-            </div>
-
             <div class="o-content-block__copy">
                 <h3 class="f-b--base"><?= esc_html( $data['copy'] ); ?></h3>
             </div>

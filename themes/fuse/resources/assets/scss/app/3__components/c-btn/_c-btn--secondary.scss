@@ -31,19 +31,19 @@
 
 .c-btn--secondary--dark{
 
-    border-color: c( gray--d );
-    color: c( gray--d );
+    border-color: c( dark-blue );
+    color: c( dark-blue );
 
     &:hover{
 
-        background-color: c( gray--d );
+        background-color: c( dark-blue );
         color: c(  white );
 
     }
 
     &:active{
 
-        background-color: c( gray--d, light10 );
+        background-color: c( dark-blue, light10 );
 
     }
 
@@ -56,16 +56,16 @@
 
 }
 
-.c-btn--secondary--purple{
+.c-btn--secondary--navy{
 
-    border-color: c( purple );
-    color: c( purple );
+    border-color: c( navy );
+    color: c( navy );
 
 }
 
-.c-btn--secondary--gold{
+.c-btn--secondary--blush{
 
-    border-color: c( gold );
-    color: c( gold );
+    border-color: c( blush );
+    color: c( blush );
 
 }

@@ -154,7 +154,7 @@ $form_breakpoint: m;
   .gfield_radio [class*="gchoice"]{
 
     align-items: center;
-    background-color: c( purple );
+    background-color: c( navy );
     border-radius: 0px;
     display: flex;
     justify-content: center;
@@ -224,8 +224,8 @@ $form_breakpoint: m;
 
 	-webkit-appearance: none;
 	border-radius: 0;
-    border: 1px solid c(purple);
-    background-color: c( purple );
+    border: 1px solid c(navy);
+    background-color: c( navy );
     color: c( white );
 
     &:focus,
@@ -239,15 +239,15 @@ $form_breakpoint: m;
 
 .gform_button:hover{
 
-    background-color: c( purple, dark5 );
-	border-color: c( purple, dar5 );
+    background-color: c( navy, dark5 );
+	border-color: c( navy, dar5 );
 
 }
 
 .gform_next_button{
 
-    border: 1px solid c( purple );
-    background-color: c( purple );
+    border: 1px solid c( navy );
+    background-color: c( navy );
     color: c( white );
 
     &:focus,
@@ -259,8 +259,8 @@ $form_breakpoint: m;
 
 .gform_next_button:hover{
 
-    background-color: c( purple, dark10 );
-	border-color: c( purple, dark10 );
+    background-color: c( navy, dark10 );
+	border-color: c( navy, dark10 );
     color: c( white );
 
 }
@@ -305,9 +305,9 @@ $form_breakpoint: m;
 
     background-color: c( white ) !important;
     border: none;
-    border-bottom: 1px solid c( gray--d );
+    border-bottom: 1px solid c( dark-blue );
     border-radius: 0px;
-    color: c( gray--d );
+    color: c( dark-blue );
     display: block;
 	line-height: 1.4;
 	padding: 8px !important;
@@ -362,7 +362,7 @@ $form_breakpoint: m;
 .gform_fields .ginput_container input[type="number"]:focus,
 .gform_fields .ginput_container input[type="tel"]:focus{
 
-    border-color: c( purple );
+    border-color: c( navy );
     outline: none;
 }
 
@@ -371,7 +371,7 @@ $form_breakpoint: m;
  */
 .gform_fields label.gfield_label .gfield_required{
 
-    color: c( purple );
+    color: c( navy );
 
 }
 
@@ -414,8 +414,8 @@ $form_breakpoint: m;
 
 
 /**
- * Make captcha text gold
+ * Make captcha text blush
  */
  .gfield_label[for="input_1_5"]{
-	 color: c( gold );
+	 color: c( blush );
  }

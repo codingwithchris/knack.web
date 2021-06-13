@@ -78,7 +78,7 @@ $data = ( isset( $data['override_defaults'] ) && $data['override_defaults'] === 
         <div class="c-cta__content o-content-block">
 
             <div class="c-cta__title o-content-block__title u-mbn">
-                <h5 class="f-hw--b f-hs--2xl">
+                <h5 class="f-h f-hs--2xl">
                     <?= $data['title']; ?>
                 <h5>
             </div>

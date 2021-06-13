@@ -63,7 +63,7 @@
 }
 
 .c-signup-form__submit{
-	background-color: c( gold );
+	background-color: c( blush );
 	border-radius: 0;
 	border: none;
 	cursor: pointer;
@@ -77,7 +77,7 @@
 	-webkit-appearance: none;
 
 	&:hover{
-		background-color: c( gold, dark5 );
+		background-color: c( blush, dark5 );
 	}
 
 	@include transition( btn );
@@ -93,5 +93,5 @@
 
 
 .mc4wp-alert.mc4wp-success{
-	color: c( gold ) !important;
+	color: c( blush ) !important;
 }

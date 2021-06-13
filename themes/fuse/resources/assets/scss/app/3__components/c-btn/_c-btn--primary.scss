@@ -81,17 +81,17 @@
 
 .c-btn--primary--dark{
 
-    background-color: c( gray--d );
+    background-color: c( dark-blue );
 
     &:hover{
 
-        background-color: c( gray--d, dark5 );
+        background-color: c( dark-blue, dark5 );
 
     }
 
     &:active{
 
-        background-color: c( gray--d, dark10 );
+        background-color: c( dark-blue, dark10 );
 
     }
 
@@ -100,7 +100,7 @@
 .c-btn--primary--white{
 
     background-color: c( white );
-    color: c( gray--d );
+    color: c( dark-blue );
 
     &:hover{
 
@@ -116,37 +116,37 @@
 
 }
 
-.c-btn--primary--purple{
+.c-btn--primary--navy{
 
-    background-color: c( purple );
+    background-color: c( navy );
 
     &:hover{
 
-        background-color: c( purple, light10 );
+        background-color: c( navy, light10 );
 
     }
 
     &:active{
 
-        background-color: c( purple, dark5 );
+        background-color: c( navy, dark5 );
 
     }
 
 }
 
-.c-btn--primary--gold{
+.c-btn--primary--blush{
 
-    background-color: c( gold );
+    background-color: c( blush );
 
     &:hover{
 
-        background-color: c( gold, dark5 );
+        background-color: c( blush, dark5 );
 
     }
 
     &:active{
 
-        background-color: c( gold, dark10 );
+        background-color: c( blush, dark10 );
 
     }
 

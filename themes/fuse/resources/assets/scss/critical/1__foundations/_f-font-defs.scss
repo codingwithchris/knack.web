@@ -12,13 +12,35 @@
  * ************************************
  */
 
+ @font-face {
+    font-family: 'dm_serif_displayregular';
+    src: url('/wp-content/themes/fuse/resources/assets/fonts/dmserifdisplay-regular.woff') format('woff'), url('/wp-content/themes/fuse/resources/assets/fonts/dmserifdisplay-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+ @font-face {
+    font-family: 'facundobold';
+    src: url('/wp-content/themes/fuse/resources/assets/fonts/latinotype_facundo_bold.woff') format('woff'), url('/wp-content/themes/fuse/resources/assets/fonts/latinotype_facundo_bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+ @font-face {
+    font-family: 'facundolight';
+    src: url('/wp-content/themes/fuse/resources/assets/fonts/latinotype_facundo_light.woff') format('woff'), url('/wp-content/themes/fuse/resources/assets/fonts/latinotype_facundo_light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
 body{
 
-	color: c( gray--d );
+	color: c( dark-blue );
 	line-height: map_get( $type_config, base-line-height );
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 
 	@include font( body, regular );
 	@include font-scale( base );
@@ -89,9 +111,9 @@ textarea{
 
 
 // Heading Weight Bold
-.f-hw--b{
+.f-h{
 
-	@include font( heading, bold );
+	@include font( heading, regular );
 
 }
 
@@ -106,7 +128,7 @@ textarea{
 // Heading Weight Light
 .f-hw--l{
 
-	@include font( heading, light );
+	@include font( heading, regular );
 
 }
 
@@ -114,14 +136,6 @@ textarea{
  * Scale/Size Classes
  * Heading Scale/Size: `hs`
  */
-
- .f-hs--s{
-	// declare base heading styles
-}
-
-.f-hs--base{
-	// declare base heading styles
-}
 
 .f-hs--m{
 

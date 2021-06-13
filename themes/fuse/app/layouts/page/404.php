@@ -56,7 +56,7 @@ function load_content(){
 		'btn_text'		=> Acf::option( '404_action_text' )->get(),
 		'btn_url'		=> Acf::option( '404_action_link' )->get(),
 		'btn_type'		=> 'primary',
-		'btn_theme'		=> 'purple',
+		'btn_theme'		=> 'navy',
 		'btn_modifier'	=> '',
 
 	];
