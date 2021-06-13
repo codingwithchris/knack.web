@@ -34,6 +34,10 @@ use function Fuse\Controllers\render as render;
                 <?= esc_html( $data['title'] ); ?>
             </h1>
 
+            <p class="c-hero__date f-b--base u-c--blush">
+                <?= esc_html( $data['date'] ); ?>
+            </p>
+
         </div>
 
         <!-- End Hero Content -->

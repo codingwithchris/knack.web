@@ -51,7 +51,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const projectSettings = {
 
     // Replace with the local dev URL for your site
-    proxy: 'https://knack.build',
+    proxy: 'https://knack.local',
 
     jsEntryFiles: {
         app: './resources/assets/js/app.js',

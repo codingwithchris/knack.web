@@ -33,6 +33,7 @@ function setup(){
 		add_filter( 'body_class', __NAMESPACE__ . '\add_template_class_to_body_class', 10, 1 );
 
 		// Handle Content Loading
+		add_action( 'fuse_before_main_div', __NAMESPACE__ . '\load_breadcrumbs', 1 );
 		add_action( 'fuse_hero', __NAMESPACE__ . '\load_hero', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 1 );
 
@@ -78,6 +79,15 @@ function load_hero(){
 
  }
 
+ function load_breadcrumbs() {
+
+	$crumb_data = [];
+
+	echo '<div class="f-container f-container--max--l f-container--width">';
+		render( 'fragments/components/_c-post-breadcrumbs', $crumb_data );
+	echo '</div>';
+ }
+
 
 function load_content(){
 
@@ -108,9 +118,12 @@ function load_content(){
 }
 
 function load_cta(){
+
 	if( ! get_field( 'load_cta' ) ){
 		return;
 	}
+
+	global $post;
 
 	$cta_data = [
 
@@ -118,7 +131,7 @@ function load_cta(){
 		'type'				=> Acf::field( 'cta_type' )->get(),
 		'title'				=> Acf::field( 'cta_title' )->get(),
 		'copy'				=> Acf::field( 'cta_copy' )->get(),
-		'modifier_class'	=> 'c-cta--post',
+		'modifier_class'	=> 'c-cta--' . $post->post_name,
 		'action'	=> [
 
 			'btn_type'	=> 'primary',
